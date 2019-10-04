@@ -1,3 +1,3 @@
-# Jekyll Step by Step Tutorial
+# My Personal Website
 
-This is the result from following along Jekyll's tutorial for starting your first site from scratch. Clone the repo to start your site.
+Hosted by the wonderful GitHub Pages and made using Jekyll
