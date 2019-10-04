@@ -1,6 +1,24 @@
-theme: jekyll-theme-minimal
-title: CJ Dunteman
-description: This is my personal website. It is a work in progress, so please excuse the mess.
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
