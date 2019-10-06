@@ -1,6 +1,6 @@
 title: CJ Dunteman
 logo: /assets/images/me.jpeg
 description: Welcome to my personal website!
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
