@@ -4,7 +4,7 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Blog](/blog.html).
+[Read My Blog!](/blog.html).
 
 There should be whitespace between paragraphs.
 
