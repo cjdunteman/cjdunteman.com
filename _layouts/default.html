@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% feed_meta %}
@@ -41,6 +41,13 @@
                 <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
             </ul>
             {% endif %}
+            <a href="https://www.linkedin.com/in/cjdunteman/">
+                <ion-icon name="logo-linkedin" size="large"></ion-icon>
+            </a>
+            <a href="https://github.com/cjdunteman">
+                <ion-icon name="logo-github" size="large"></ion-icon>
+            </a>
+            <!-- <ion-icon name="logo-twitter" size="large"></ion-icon> -->
         </header>
         <section>
 
@@ -68,6 +75,7 @@
         ga('send', 'pageview');
     </script>
     {% endif %}
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 
 </html>

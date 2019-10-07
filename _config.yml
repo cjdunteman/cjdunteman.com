@@ -1,7 +1,7 @@
 title: CJ Dunteman
 logo: /assets/images/me.jpeg
-description: Hi! I'm CJ. I am a student at the University of Wisconsin - Madison majoring in Computer Science. 
-show_downloads: false
+description: Hi! I'm CJ. I am a student at the University of Wisconsin - Madison majoring in Computer Science. On this website you can find out more about me. 
+show_downloads: "true"
 google_analytics:
 theme: jekyll-theme-minimal
 
