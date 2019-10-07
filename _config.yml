@@ -4,7 +4,31 @@ description: Hi! I'm CJ. I am a student at the University of Wisconsin - Madison
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
-theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# feed:
+#   path: atom.xml
+
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
