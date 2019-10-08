@@ -1,34 +1,65 @@
-title: CJ Dunteman
-logo: /assets/images/me.jpeg
-description: Hi! I'm CJ. I am a student at the University of Wisconsin - Madison majoring in Computer Science. On this website you can find out more about me. 
-show_downloads: "true"
-google_analytics:
-theme: jekyll-theme-minimal
+### Site Settings ###
+title               : CJ Dunteman
+description         : >-                               # >- means to ignore newlines until "url:"
+                      I am a student at UW - Madison majoring in Computer Science.
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+url                 : ""                               # base hostname & protocol for your site (e.g. http://example.com)
+baseurl             : ""                    # subpath of your site (e.g. /blog) [IMPORTANT: use "" if your are hosting at https://username.github.io directly]
+repository          : cjdunteman   # repository metadata on GitHub Pages [know more at https://help.github.com/en/articles/repository-metadata-on-github-pages]
+remote_theme       : YoussefRaafatNasry/portfolYOU    # uncomment this if you are using it as a remote theme
 
-# feed:
-#   path: atom.xml
+### Author Info ###
+author:
+  name              : CJ Dunteman
+  image             : /images/me.jpeg
+  # behance           : your_username
+# dribbble          : your_username
+  email             : cdunteman@wisc.edu
+  # facebook          : your_username
+  github            : cjdunteman
+# gitlab            : your_username
+# instagram         : your_username
+  linkedin          : cjdunteman
+  # medium            : your_username
+# soundcloud        : your_username
+# spotify           : your_username
+# stackoverflow     : your_user_id
+# tumblr            : your_username.tumblr.com
+# twitch            : your_username
+  twitter           : cj_dunteman
+# vimeo             : your_username
+# youtube           : your_channel_name
 
+
+### Pagination ###
+paginate: 6
+paginate_path: "/articles/page-:num/"
+
+
+### Posts Permalink ###
+permalink: articles/:title
+
+
+### Collections ###
 collections:
-  authors:
+  projects:
     output: true
+    permalink: /projects/:name
 
+
+### Defaults for collections ###
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "projects"
     values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+      layout: "page"
+
+
+### Exclude from processing ###
+exclude:
+- README.md
+- CONTRIBUTING.md
+- LICENSE
+- Gemfile
+- Gemfile.lock

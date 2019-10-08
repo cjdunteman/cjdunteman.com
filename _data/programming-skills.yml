@@ -1,0 +1,17 @@
+# colors: primary / secondary / success / danger / warning / info / light / dark (choose one only)
+
+- name: HTML5/CSS3
+  percentage: 70
+  color: dark
+
+- name: Java
+  percentage: 60
+  color: danger
+
+- name: JavaScript
+  percentage: 35 
+  color: warning
+
+- name: Python
+  percentage: 30
+  color: 

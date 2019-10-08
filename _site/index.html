@@ -1,239 +1,206 @@
 <!DOCTYPE html>
-<html lang="en-US">
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
 
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="CJ Dunteman" />
-    <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>CJ Dunteman | Hi! I’m CJ. I am a student at the University of Wisconsin - Madison majoring in Computer Science. On this website you can find out more about me.</title>
-<meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="CJ Dunteman" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Hi! I’m CJ. I am a student at the University of Wisconsin - Madison majoring in Computer Science. On this website you can find out more about me." />
-<meta property="og:description" content="Hi! I’m CJ. I am a student at the University of Wisconsin - Madison majoring in Computer Science. On this website you can find out more about me." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="CJ Dunteman" />
-<script type="application/ld+json">
-{"@type":"WebSite","url":"http://localhost:4000/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/me.jpeg"}},"name":"CJ Dunteman","headline":"CJ Dunteman","description":"Hi! I’m CJ. I am a student at the University of Wisconsin - Madison majoring in Computer Science. On this website you can find out more about me.","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I am a student at UW - Madison majoring in Computer Science.">
+
+  <title>CJ Dunteman</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
 </head>
 
-<body>
-    <div class="wrapper">
-        <header>
-            <h1><a href="http://localhost:4000/">CJ Dunteman</a></h1>
 
-            
-            <img src="/assets/images/me.jpeg" alt="Logo" />
-            
+<body class="d-flex flex-column h-100">
 
-            <p>Hi! I'm CJ. I am a student at the University of Wisconsin - Madison majoring in Computer Science. On this website you can find out more about me.</p>
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
 
-            
+  <a class="navbar-brand" href="/"><h5><b>CJ Dunteman</b></h5></a>
 
-            
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-            
-            <ul class="downloads">
-                <li><a href="">Download <strong>ZIP File</strong></a></li>
-                <li><a href="">Download <strong>TAR Ball</strong></a></li>
-                <li><a href="">View On <strong>GitHub</strong></a></li>
-            </ul>
-            
-            <a href="https://www.linkedin.com/in/cjdunteman/">
-                <ion-icon name="logo-linkedin" size="large"></ion-icon>
-            </a>
-            <a href="https://github.com/cjdunteman">
-                <ion-icon name="logo-github" size="large"></ion-icon>
-            </a>
-            <!-- <ion-icon name="logo-twitter" size="large"></ion-icon> -->
-        </header>
-        <section>
-
-            <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
-
-<p><a href="/blog.html">Check out my blog!</a></p>
-
-<p>There should be whitespace between paragraphs.</p>
-
-<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
-
-<h1 id="welcome">Welcome!</h1>
-
-<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
-
-<h2 id="header-2">Header 2</h2>
-
-<blockquote>
-  <p>This is a blockquote following a header.</p>
-
-  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-</blockquote>
-
-<h3 id="header-3">Header 3</h3>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h4 id="header-4">Header 4</h4>
-
-<ul>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-</ul>
-
-<h5 id="header-5">Header 5</h5>
-
-<ol>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-</ol>
-
-<h6 id="header-6">Header 6</h6>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">head1</th>
-      <th style="text-align: left">head two</th>
-      <th style="text-align: left">three</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good swedish fish</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">out of stock</td>
-      <td style="text-align: left">good and plenty</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="highlighter-rouge">oreos</code></td>
-      <td style="text-align: left">hmm</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="highlighter-rouge">zoute</code> drop</td>
-      <td style="text-align: left">yumm</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
-
-<hr />
-
-<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
-
-<ul>
-  <li>Item foo</li>
-  <li>Item bar</li>
-  <li>Item baz</li>
-  <li>Item zip</li>
-</ul>
-
-<h3 id="and-an-ordered-list">And an ordered list:</h3>
-
-<ol>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-  <li>Item four</li>
-</ol>
-
-<h3 id="and-a-nested-list">And a nested list:</h3>
-
-<ul>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item
-        <ul>
-          <li>level 3 item</li>
-          <li>level 3 item</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item</li>
-</ul>
-
-<h3 id="small-image">Small image</h3>
-
-<p><img src="https://github.githubassets.com/images/icons/emoji/octocat.png" alt="Octocat" /></p>
-
-<h3 id="large-image">Large image</h3>
-
-<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="Branching" /></p>
-
-<h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
-</code></pre></div></div>
-
-
-        </section>
-        <footer>
-            
-            <p><small>Hosted on GitHub Pages &mdash; Theme by <a
-                        href="https://github.com/orderedlist">orderedlist</a></small></p>
-        </footer>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="nav-item nav-link " href=" /projects/ ">Projects</a>
+          
+        
+      
+        
+          
+            <a class="nav-item nav-link " href=" /articles/ ">Articles</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="nav-item nav-link " href=" /resume/ ">Resume</a>
+          
+        
+      
     </div>
-    <script src="/assets/js/scale.fix.js"></script>
+  </div>
+
+</nav>
+  <div class="row justify-content-center align-items-center p-4">
+  <div class="col-lg-4 col-md-6 text-center mt-4">
+
+    <!-- Fine Circle Responsive Image -->
+    <div id="container" class="my-2">
+      <div id="dummy"></div>
+      <div id="element">
+        <img src="/images/me.jpeg" alt="CJ Dunteman" class="circle-image wow animated zoomIn" data-wow-delay=".1s">
+      </div>
+    </div>
+
+    <p class="text-muted wow animated slideInUp" data-wow-delay=".15s">I am a student at UW - Madison majoring in Computer Science.</p>
+
+  </div>
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>CJ Dunteman</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+
+  
+
+  
+
     
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+      
+
+    
+    
+      
+
+    
+    
+
+    
+    <a class="social mx-1"  href="mailto:cdunteman@wisc.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a>
+  
+  
+
+    
+    
+
+    
+    <a class="social mx-1"  href="https://www.github.com/cjdunteman"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a>
+  
+  
+
+    
+    
+
+    
+    <a class="social mx-1"  href="https://www.linkedin.com/in/cjdunteman"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+  
+  
+
+    
+    
+
+    
+    <a class="social mx-1"  href="https://www.twitter.com/cj_dunteman"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1da1f2'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a>
+  
+  
+
+</div>
+
+</footer>
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Card Animation jQuery -->
+<script src="/assets/js/card-animation.js"></script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
 </body>
 
 </html>

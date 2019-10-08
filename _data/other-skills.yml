@@ -1,0 +1,7 @@
+- name: Git and GitHub
+  percentage: 60
+  color: info
+
+- name: Algorithms
+  percentage: 35
+  color: success
