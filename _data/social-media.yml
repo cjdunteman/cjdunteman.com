@@ -31,6 +31,11 @@ gitlab:
   icon  : fab fa-gitlab
   color : fca326
 
+hackerrank:
+  url   : https://www.hackerrank.com/
+  icon  : fab fa-hackerrank
+  color : 
+
 instagram:
   url   : https://www.instagram.com/
   icon  : fab fa-instagram
