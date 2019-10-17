@@ -1,7 +1,22 @@
 - title: Student, University of Wisconsin - Madison
   from: 2017
   to: present
-  description: Currently a junior majoring in Computer Science.
+  description: Currently a junior majoring in Computer Science. Founded Badger Open Source. Artificial Intelligence Club and Toastmasters Madison.
+  cs-courses: CS 540 Introduction to Artificial Intelligence<br>
+          CS 400 Programming III<br>
+          CS 301 Intro to Data Programming<br>
+          CS 300 Programming II<br>
+          CS 252 Intro to Computer Engineering<br>
+          CS 240 Discrete Mathematics<br>
+          CS 200 Programming I<br>
+  other-courses:
+          REAL EST 306 The Real Estate Process<br>
+          MARKETING 300 Marketing Management<br>
+          MATH 222 Calculus & Analytic Geometry II<br>
+          ECON 102 Principles-Macroeconomics<br>
+          ECON 101 Principles-Microeconomics<br>
+          ACCT I S 100 Intro Financial Accounting<br>
+
 
 - title: Student, Lake Country Lutheran High School
   from: 2013
