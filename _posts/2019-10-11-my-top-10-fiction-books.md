@@ -21,6 +21,6 @@ external_url:
 
 ## Harry Potter and the Prisoner of Azkaban by J.K. Rowling
 
-## The Lion, The Witch, and The Wardrobe
+## The Lion, The Witch, and The Wardrobe by C.S. Lewis
 
 > There are two hard problems in Computer Science: cache invalidation and naming things.
