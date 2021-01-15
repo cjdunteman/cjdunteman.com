@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://cjdunteman.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'CJ Dunteman',
+  subtitle: 'Talking about tech and some other stuff.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -25,19 +25,19 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'CJ Dunteman',
     photo: '/photo.jpg',
     bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
     contacts: {
       email: '',
-      facebook: '#',
+      facebook: '',
       telegram: '#',
-      twitter: '#',
-      github: '#',
+      twitter: 'https://twitter.com/CJDunteman',
+      github: 'https://github.com/cjdunteman',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
+      linkedin: 'https://www.linkedin.com/in/cjdunteman/',
+      instagram: '',
       line: '',
       gitlab: '',
       weibo: '',
