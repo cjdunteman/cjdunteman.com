@@ -4,7 +4,7 @@ module.exports = {
   url: 'https://cjdunteman.com',
   pathPrefix: '/',
   title: 'CJ Dunteman',
-  subtitle: 'Talking about tech and some other stuff.',
+  subtitle: 'My personal website.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -27,7 +27,7 @@ module.exports = {
   author: {
     name: 'CJ Dunteman',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Talking about tech and stuff.',
     contacts: {
       email: '',
       facebook: '',

@@ -2,7 +2,7 @@
 title: Why I Believe in Crypto
 date: "2016-09-01T23:46:37.121Z"
 template: "post"
-draft: false
+draft: true
 slug: "perfecting-the-art-of-perfection"
 category: "Design Inspiration"
 tags:
