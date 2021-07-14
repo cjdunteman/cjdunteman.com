@@ -11,6 +11,10 @@ export default function Home() {
       </p>
       <br />
       <p>
+        I am interested in web dev, blockchain, artificial intelligence, investing, and startups. I also love skiing. ⛷️
+      </p>
+      <br />
+      <p>
         I'm always looking for new opportunities, so please reach out if you're hiring!
       </p>
       <br />
@@ -19,6 +23,8 @@ export default function Home() {
       </p>
       <br></br>
       <p><a id="resume" href="">Resume</a></p>
+      <br />
+      <p>PS - This is website is also hosted on <a id="ipfs" href="https://cjdunteman.on.fleek.co/">IPFS!</a>😮</p>
     </Layout >
   )
 }

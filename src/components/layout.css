@@ -50,3 +50,7 @@ a:hover {
 #resume, #resume:hover, #resume:focus, #resume:active {
     color: #da70d6;
 }
+
+#ipfs, #ipfs:hover, #ipfs:focus, #ipfs:active {
+    color: #5ab5be;
+}
