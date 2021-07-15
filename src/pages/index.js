@@ -27,6 +27,7 @@ function Host() {
       return <Ipfs />;
     }
   }
+  return null;
 }
 
 export default function Home() {
@@ -47,7 +48,7 @@ export default function Home() {
         You can find me on <a id="twitter" href="https://www.twitter.com/cjdunteman">Twitter</a>, scrutinize my code on <a id="github" href="https://www.github.com/cjdunteman">GitHub</a>, or get in touch with me on <a id="linkedin" href="https://www.linkedin.com/in/cjdunteman">LinkedIn</a>.
       </p>
       <br></br>
-      <Host />
+      {<Host />}
     </Layout >
   )
 }
