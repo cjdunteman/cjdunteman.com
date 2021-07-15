@@ -17,9 +17,10 @@ function Host() {
   const isBrowser = typeof window !== "undefined"
 
   if (isBrowser) {
+    console.log("in browser")
     const url = window.location.href;
 
-    if (url === "https://cjdunteman.com" || url === "http://localhost:8000/") {
+    if (url === "https://cjdunteman.com/" || url === "http://localhost:8000/") {
       return <Http />;
     }
 
