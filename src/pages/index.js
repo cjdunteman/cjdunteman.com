@@ -1,7 +1,32 @@
 import React from "react"
 import Layout from "../components/layout"
 
+function Http() {
+  return (
+    <p>This website is also hosted on <a id="ipfs" href="https://cjdunteman.on.fleek.co/">IPFS</a>! 😮</p>
+  )
+}
+
+function Ipfs() {
+  return (
+    <p>You're currently on IPFS. The site is also available via <a id="http" href="https://cjdunteman.com">HTTPS</a></p>
+  )
+}
+
+function Host() {
+  const url = window.location.href;
+
+  if (url === "https://cjdunteman.com" || url === "http://localhost:8000/") {
+    return <Http />;
+  }
+
+  if (url === "https://cjdunteman.on.fleek.co") {
+    return <Ipfs />;
+  }
+}
+
 export default function Home() {
+
   return (
     <Layout>
       <h1>I'm CJ Dunteman 👋</h1>
@@ -15,16 +40,10 @@ export default function Home() {
       </p>
       <br />
       <p>
-        I'm always looking for new opportunities, so please reach out if you're hiring!
-      </p>
-      <br />
-      <p>
-        You can find me on <a id="twitter" href="https://www.twitter.com/cjdunteman">Twitter</a>, scrutinise my code on <a id="github" href="https://www.github.com/cjdunteman">GitHub</a>, or get in touch with me on <a id="linkedin" href="https://www.linkedin.com/in/cjdunteman">LinkedIn</a>.
+        You can find me on <a id="twitter" href="https://www.twitter.com/cjdunteman">Twitter</a>, scrutinize my code on <a id="github" href="https://www.github.com/cjdunteman">GitHub</a>, or get in touch with me on <a id="linkedin" href="https://www.linkedin.com/in/cjdunteman">LinkedIn</a>.
       </p>
       <br></br>
-      <p><a id="resume" href="">Resume</a></p>
-      <br />
-      <p>PS - This is website is also hosted on <a id="ipfs" href="https://cjdunteman.on.fleek.co/">IPFS!</a>😮</p>
+      <Host />
     </Layout >
   )
 }
