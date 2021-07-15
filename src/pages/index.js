@@ -9,7 +9,7 @@ function Http() {
 
 function Ipfs() {
   return (
-    <p>You're currently on IPFS. The site is also available via <a id="http" href="https://cjdunteman.com">HTTPS</a></p>
+    <p>You are on <a id="ipfs" href="https://ipfs.io/">IPFS</a>! The site is also available via <a id="http" href="https://cjdunteman.com">HTTPS</a></p>
   )
 }
 
@@ -24,7 +24,7 @@ function Host() {
       return <Http />;
     }
 
-    if (url === "https://cjdunteman.on.fleek.co") {
+    if (url === "https://cjdunteman.on.fleek.co/") {
       return <Ipfs />;
     }
   }
