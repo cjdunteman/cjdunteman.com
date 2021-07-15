@@ -14,14 +14,18 @@ function Ipfs() {
 }
 
 function Host() {
-  const url = window.location.href;
+  const isBrowser = typeof window !== "undefined"
 
-  if (url === "https://cjdunteman.com" || url === "http://localhost:8000/") {
-    return <Http />;
-  }
+  if (isBrowser) {
+    const url = window.location.href;
 
-  if (url === "https://cjdunteman.on.fleek.co") {
-    return <Ipfs />;
+    if (url === "https://cjdunteman.com" || url === "http://localhost:8000/") {
+      return <Http />;
+    }
+
+    if (url === "https://cjdunteman.on.fleek.co") {
+      return <Ipfs />;
+    }
   }
 }
 
