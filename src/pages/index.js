@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 function Http() {
   return (
@@ -32,9 +32,10 @@ function Host() {
 }
 
 export default function Home() {
+  const { title, description } = useSiteMetadata();
 
   return (
-    <Layout>
+    <>
       <h1>I'm CJ Dunteman 👋</h1>
       <br />
       <p>
@@ -50,6 +51,6 @@ export default function Home() {
       </p>
       <br></br>
       {<Host />}
-    </Layout >
+    </ >
   )
 }
