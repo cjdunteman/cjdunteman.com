@@ -43,7 +43,11 @@ export default function Home() {
       </p>
       <br />
       <p>
-        I am interested in web dev, blockchain, artificial intelligence, investing, and startups. I also love skiing. ⛷️
+        I am interested in coding, cybersecurity, blockchain, web development, machine learning, investing, and startups. I also love to ski! ⛷️
+      </p>
+      <br />
+      <p>
+        I am looking for inernship opportunities for this fall or next summer. Please reach out if you think I'd be a good fit.
       </p>
       <br />
       <p>
