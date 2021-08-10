@@ -47,7 +47,7 @@ export default function Home() {
       </p>
       <br />
       <p>
-        I am looking for inernship opportunities for this fall or next summer. Please reach out if you think I'd be a good fit.
+        I am looking for internship opportunities for Summer '22. Please reach out if you think I'd be a good fit.
       </p>
       <br />
       <p>
