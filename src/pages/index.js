@@ -1,6 +1,7 @@
 import React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-import { withPrefix } from "gatsby-link"
+// import { withPrefix } from "gatsby-link"
+import { Link } from "gatsby"
 
 function Http() {
   return (
@@ -37,7 +38,10 @@ export default function Home() {
 
   return (
     <>
-      <h1>I'm CJ Dunteman 👋</h1>
+      <h1>I'm CJ Dunteman 👋
+        <span><Link to="/blog" style={{ color: "violet" }}>Blog</Link></span>
+        {/* <span style={{ color: "skyblue" }}>Projects</span> */}
+      </h1>
       <br />
       <p>
         I'm a student at UW - Madison studying Computer Science. 🧑‍🎓

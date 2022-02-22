@@ -1,56 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
 :root {
-    --font-color: #d6d6d6;
-    --font-link-color: #d6d6d6;
-    --font-link-hover-color: #a2a2a2;
-    --background-color: #16191b;
+  --font-color: #d6d6d6;
+  --font-link-color: #d6d6d6;
+  --font-link-hover-color: #a2a2a2;
+  --background-color: #16191b;
 }
 
 html {
-    color: var(--font-color);
-    background-color: var(--background-color);   
+  color: var(--font-color);
+  background-color: var(--background-color);
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 10px;
-    margin: 0 auto;
-    max-width: 1080px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 10px;
+  margin: 0 auto;
+  max-width: 1080px;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
+}
+
+span {
+  font-size: 1.2rem;
+  padding-left: 50px;
 }
 
 p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-#linkedin, #linkedin:hover, #linkedin:focus, #linkedin:active {
-    color: #0077b5;
+#linkedin,
+#linkedin:hover,
+#linkedin:focus,
+#linkedin:active {
+  color: #0077b5;
 }
 
-#github, #github:hover, #github:focus, #github:active {
-    color: #6a737d;
+#github,
+#github:hover,
+#github:focus,
+#github:active {
+  color: #6a737d;
 }
 
-#twitter, #twitter:hover, #twitter:focus, #twitter:active {
-    color: #1da2f2;
+#twitter,
+#twitter:hover,
+#twitter:focus,
+#twitter:active {
+  color: #1da2f2;
 }
 
-#resume, #resume:hover, #resume:focus, #resume:active {
-    color: #da70d6;
+#resume,
+#resume:hover,
+#resume:focus,
+#resume:active {
+  color: #da70d6;
 }
 
-#ipfs, #ipfs:hover, #ipfs:focus, #ipfs:active {
-    color: #5ab5be;
+#ipfs,
+#ipfs:hover,
+#ipfs:focus,
+#ipfs:active {
+  color: #5ab5be;
 }
