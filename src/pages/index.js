@@ -18,7 +18,7 @@ export default function Home() {
       </p>
       <br />
       <p>
-        I am interested in web3, cryptocurrencies, blockchain, and economics! I also love to ski! ⛷️
+        I am interested in software development, blockchain technology, and investing! I also love to ski! ⛷️
       </p>
       <br />
       <p>
