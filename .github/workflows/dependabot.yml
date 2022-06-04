@@ -1,22 +1,14 @@
-name: Dependabot
-on: 
-  pull_request:
-    branches:
-      - main
-
+version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    target-branch: main
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-      time: "03:00"
-      timezone: America/Chicago
+
+  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "sunday"
-      time: "03:00"
-      timezone: America/Chicago
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
