@@ -19,7 +19,7 @@
     "gatsby": "^4.0.0",
     "gatsby-plugin-mdx": "^2.9.0",
     "gatsby-source-filesystem": "^3.7.1",
-    "gatsby-source-strapi": "^1.0.2",
+    "gatsby-source-strapi": "^2.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-pdf": "^5.3.2"
