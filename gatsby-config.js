@@ -33,5 +33,6 @@ module.exports = {
     },
     `gatsby-plugin-mdx`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-postcss`,
   ]
 }

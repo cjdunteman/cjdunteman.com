@@ -1,3 +1,4 @@
-import { rootWrapper } from "./root-wrapper";
+//import { rootWrapper } from "./root-wrapper";
+import './src/styles/global.css'
 
-export const wrapPageElement = rootWrapper;
+//export const wrapPageElement = rootWrapper;
