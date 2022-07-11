@@ -4,13 +4,13 @@
 
 @layer base {
     body {
-        @apply bg-black;
+        @apply bg-lightGray;
     }
     h1 {
         @apply text-4xl;
     }
     p {
-        @apply text-2xl;
+        @apply text-xl;
     }
     a {
         @apply decoration-0;
