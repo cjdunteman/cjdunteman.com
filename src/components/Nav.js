@@ -3,15 +3,17 @@ import React from "react"
 
 export const Nav = () => {
     return (
-        <nav className="flex justify-between">
-            <h1 className="flex weight-bold">CJ.</h1>
+        <nav className="flex justify-between items-center py-6">
+            <div>
+                <h1 className="text-darkPurple">CJ</h1>
+            </div>
             <div className="flex gap-4">
                 <Link to="/" activeClassName="font-semibold">Home</Link>
                 <Link to="/blog" activeClassName="font-semibold">Blog</Link>
                 {/* <Link to="/projects">Project</Link> */}
             </div>
-            <div className="flex gap-4">
-                <a href="#">Test</a>
+            <div className="">
+                <a href="mailto: hello@cjdunteman.com">Contact</a>
             </div>
         </nav>
     )

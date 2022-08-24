@@ -5,12 +5,12 @@ export default function Blog({ data }) {
     return (
         <>
             <div className="flex justify-center">
-                {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
+                {data.allMdx.nodes.map(({ id, excerpt, frontmatter }) => (
                     <div key={id} className="">
-                        <h2><a href={`/${slug}`}>{frontmatter.title}</a></h2>
+                        <h2><a href={`/${frontmatter.slug}`}>{frontmatter.title}</a></h2>
                         <h3>{frontmatter.date}</h3>
                         <p>{excerpt}</p>
-                        <p><a href={`/${slug}`}>Read more</a></p>
+                        <p><a href={`/${frontmatter.slug}`}>Read more</a></p>
                     </div>
                 ))}
             </div>
