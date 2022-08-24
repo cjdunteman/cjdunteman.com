@@ -7,7 +7,7 @@ export default function Books() {
             Books
         </h1>
         <br></br>
-        <p>A list of some of my favorite books, sorted by genre and then the product of (recommended * obscurity).</p>
+        <p>A list of some of my favorite books (or series), sorted by genre and then the product of (recommended * obscurity).</p>
         <br></br>
         <h1>Historical Fiction</h1>
         <p>The Kite Runner <span className="text-gray">by Khaled Hosseini</span></p>

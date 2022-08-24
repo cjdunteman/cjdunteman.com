@@ -14,6 +14,9 @@ module.exports = {
       gray: '#8E8792',
       lightGray: '#F6F3EE',
     },
+      fontSizes: {
+
+      },
     extend: {
     },
   },
