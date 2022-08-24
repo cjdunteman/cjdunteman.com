@@ -24,14 +24,14 @@ module.exports = {
     //     queryLimit: 1000,
     //   },
     // }
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/posts`,
         name: `posts`,
+        path: `${__dirname}/src/posts`,
       },
     },
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-postcss`,
   ]

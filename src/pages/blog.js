@@ -23,10 +23,10 @@ export const query = graphql`
         allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
             nodes {
             id
-            slug
             excerpt(pruneLength: 250)
             frontmatter {
                 title
+                slug
                 date(formatString: "YYYY MMMM Do")
             }
             }
