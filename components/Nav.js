@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Nav({}) {
   return (
     <nav className="flex justify-between items-center py-6 font-4xl">
-      <div>
+      <div className="">
         <h1 className="text-4xl">CJ</h1>
       </div>
       <div className="flex gap-4">

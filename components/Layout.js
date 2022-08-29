@@ -1,13 +1,10 @@
 import Nav from "../components/Nav";
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <div className="container mx-auto text-dark">
-      <Nav>
-        <main>{children}</main>
-      </Nav>
+      <Nav />
+      <main>{children}</main>
     </div>
   );
-};
-
-export default Layout;
+}

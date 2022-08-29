@@ -32,8 +32,6 @@ export default function Blog({ posts }) {
         <title>Contentlayer Blog Example</title>
       </Head>
 
-      <h1 className="mb-8 text-3xl font-bold">Contentlayer Blog Example</h1>
-
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
