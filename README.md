@@ -1,5 +1,7 @@
 # [cjdunteman.com](https://cjdunteman.com)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e54246bc-04fb-4c0e-998c-d37e30fe02e1/deploy-status)](https://app.netlify.com/sites/cjdunteman/deploys)
+Built with NextJS and Tailwind. Hosted on Vercel.
 
-Built with GatsbyJS, Tailwind and Strapi. Hosted on Netlify.
+I am using contentlayer to serve local markdown files as blog posts.
+
+Every sunday dependabot creates prs for dependency updates, and if they are semver-minor or semver-patch they will be automatically merged.

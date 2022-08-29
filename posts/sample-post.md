@@ -1,6 +1,5 @@
 ---
 title: Sample Post
-slug: sample-post
 date: 2022-05-14
 ---
 
