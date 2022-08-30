@@ -16,11 +16,29 @@ export default function Home() {
         <br></br>
         <p>About</p>
         <br></br>
-        <p className="dark:text-lightGray">
-          I am a developerI am a developer. I am a developerI am a developerI am
-          a developerI am a developerI am a developerI am a developerI am a
-          developer.
-        </p>
+        <p className="dark:text-lightGray">I'm a developer</p>
+        <br></br>
+        <br></br>
+        <p>Contact</p>
+        <br></br>
+        <div className="grid grid-cols-12">
+          <div className="grid col-span-3">
+            <p>Email</p>
+            <p>Twitter</p>
+            <p>LinkedIn</p>
+          </div>
+          <div>
+            <a href="mailto: hello@cjdunteman.com" className="text-bold">
+              [redacted]
+            </a>
+            <p>
+              <a href="https://twitter.com/cjdunteman">@cjdunteman</a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/in/cjdunteman/">@cjdunteman</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
