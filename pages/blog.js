@@ -15,7 +15,7 @@ function PostCard(post) {
     <div className="mb-6">
       <h2 className="text-lg">
         <Link href={post.url}>
-          <a className="text-2xl hover:underline decoration-green-light">
+          <a className="text-2xl text-blue hover:text-lightBlue">
             {post.title}
           </a>
         </Link>
@@ -30,12 +30,12 @@ function PostCard(post) {
 
 export default function Blog({ posts }) {
   return (
-    <div className="mx-auto max-w-xl py-16">
+    <div className="mx-auto max-w-2xl py-8">
       <Head>
         <title>CJ's Writing</title>
       </Head>
 
-      <p>Writing</p>
+      <p className="text-lg text-bold dark:text-bold dark:text-lg">Writing</p>
       <hr className="text-lightGray dark:text-darkGray"></hr>
       <br></br>
       <br></br>

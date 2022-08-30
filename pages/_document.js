@@ -10,7 +10,7 @@ export default function Document() {
         />
       </Head>
 
-      <body className="bg-white dark:bg-dark text-black dark:text-white">
+      <body className="bg-white text-black dark:bg-black dark:text-white">
         <Main />
         <NextScript />
       </body>

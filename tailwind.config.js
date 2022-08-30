@@ -9,13 +9,17 @@ module.exports = {
       xs: "540px",
     },
     colors: {
-      white: "#fcfcfc",
-      darkGray: "#666666",
-      gray: "#888888",
+      white: "#ffffff",
+      black: "#000000",
+      // light mode specific
+      gray: "#696969",
+      // dark mode specific
       lightGray: "#a8a5a1",
       dark: "#232120",
-      black: "#000000",
-      purple: "#a130e8",
+      // undetermined
+      darkGray: "#666666",
+      blue: "#0070f3",
+      lightBlue: "#839fff",
     },
     fontFamily: {
       sans: "Inter",

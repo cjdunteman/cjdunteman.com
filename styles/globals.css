@@ -27,12 +27,8 @@
   p {
     @apply text-base;
   }
-  a {
-    @apply underline;
-    @apply decoration-gray;
-  }
   a:hover {
-    @apply decoration-lightGray;
+    @apply text-black;
   }
 }
 

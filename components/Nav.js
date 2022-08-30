@@ -1,5 +1,4 @@
 import Link from "next/link";
-// import Dropdown from "../components/Dropdown";
 import ThemeSwitch from "./ThemeChanger";
 
 export default function Nav({}) {
@@ -7,21 +6,23 @@ export default function Nav({}) {
     <nav className="flex justify-between items-center py-6 font-4xl">
       <ThemeSwitch className="" />
       <div className="flex gap-8">
-        <Link href="/" activeClassName="font-semibold">
-          <a className="hover:underline decoration-gray">Home</a>
+        <Link href="/">
+          <a className="text-gray hover:text-black dark:text-lightGray">Home</a>
         </Link>
-        <Link href="/blog" activeClassName="font-semibold">
-          <a className="hover:underline decoration-gray">Blog</a>
+        <Link href="/blog">
+          <a className="text-gray dark:text-lightGray hover:text-black">Blog</a>
         </Link>
         <div>
-          <button className="peer">Projects</button>
+          <button className="text-gray hover:text-black dark:text-lightGray peer">
+            Projects
+          </button>
           <div
             className="absolute left hidden peer-hover:flex hover:flex
          w-[200px]
-         flex-col bg-green-light rounded-md"
+         flex-col rounded-md"
           >
             <a
-              className="px-5 py-3"
+              className="text-gray hover:text-black px-5 py-3 m-1 shadow-md rounded dark:bg-white"
               href="https://frontend-mentor-challenges-rosy.vercel.app/"
             >
               Frontend Mentor
@@ -29,8 +30,11 @@ export default function Nav({}) {
           </div>
         </div>
       </div>
-      <div className="bg-green-light rounded-md p-2">
-        <a href="mailto: hello@cjdunteman.com" className="text-bold">
+      <div className="rounded-md p-2">
+        <a
+          href="mailto: hello@cjdunteman.com"
+          className="text-gray dark:text-lightGray hover:text-black text-bold"
+        >
           Contact
         </a>
       </div>
