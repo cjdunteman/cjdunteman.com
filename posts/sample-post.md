@@ -1,6 +1,7 @@
 ---
 title: Sample Post
 date: 2022-05-14
+description: A post about the beginning of madness.
 ---
 
 This is some example test.

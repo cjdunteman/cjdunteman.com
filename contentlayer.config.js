@@ -14,6 +14,11 @@ export const Post = defineDocumentType(() => ({
       description: "The date of the post",
       required: true,
     },
+    description: {
+      type: "markdown",
+      description: "Brief descripiton of the post",
+      required: true,
+    },
   },
   computedFields: {
     url: {

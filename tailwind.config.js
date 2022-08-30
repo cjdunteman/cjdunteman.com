@@ -5,23 +5,21 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    container: {
-      center: true,
+    screens: {
+      xs: "540px",
     },
     colors: {
-      white: "#FFFFFF",
-      dark: "#1c0732",
-      light: "#fefefe",
-      purple: {
-        light: "#B37FEE",
-        DEFAULT: "#9e5dea",
-        dark: "#7A1FE2",
-      },
-      green: {
-        light: "#75CAAA",
-        DEFAULT: "#429777",
-        dark: "#214C3C",
-      },
+      white: "#fcfcfc",
+      darkGray: "#666666",
+      gray: "#888888",
+      lightGray: "#a8a5a1",
+      dark: "#232120",
+      black: "#000000",
+      purple: "#a130e8",
+    },
+    fontFamily: {
+      sans: "Inter",
+      mono: "SFMono-Regular",
     },
     // fontSizes: {
     //   sm: ["14px", { lineHeight: "18px", letterSpacing: "-0.03em" }],
@@ -35,4 +33,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  darkMode: "class",
 };

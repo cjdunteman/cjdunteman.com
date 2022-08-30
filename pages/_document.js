@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
@@ -10,7 +10,7 @@ export default function Document() {
         />
       </Head>
 
-      <body>
+      <body className="bg-white dark:bg-dark text-black dark:text-white">
         <Main />
         <NextScript />
       </body>

@@ -13,25 +13,32 @@ export async function getStaticProps() {
 function PostCard(post) {
   return (
     <div className="mb-6">
-      <time dateTime={post.date} className="block text-sm text-slate-600">
-        {format(parseISO(post.date), "LLLL d, yyyy")}
-      </time>
       <h2 className="text-lg">
         <Link href={post.url}>
-          <a className="text-blue-700 hover:text-blue-900">{post.title}</a>
+          <a className="text-2xl hover:underline decoration-green-light">
+            {post.title}
+          </a>
         </Link>
       </h2>
+      <time dateTime={post.date} className="text-sm text-darkGray">
+        {format(parseISO(post.date), "LLLL d, yyyy")}
+      </time>
+      <div>{post.description.raw}</div>
     </div>
   );
 }
 
 export default function Blog({ posts }) {
   return (
-    <div className="mx-auto max-w-2xl py-16 text-center">
+    <div className="mx-auto max-w-xl py-16">
       <Head>
-        <title>Contentlayer Blog Example</title>
+        <title>CJ's Writing</title>
       </Head>
 
+      <p>Writing</p>
+      <hr className="text-lightGray dark:text-darkGray"></hr>
+      <br></br>
+      <br></br>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}

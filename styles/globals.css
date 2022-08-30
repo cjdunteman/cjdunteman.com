@@ -27,6 +27,13 @@
   p {
     @apply text-base;
   }
+  a {
+    @apply underline;
+    @apply decoration-gray;
+  }
+  a:hover {
+    @apply decoration-lightGray;
+  }
 }
 
 /* ---------------- */
@@ -49,3 +56,7 @@
     scroll-behavior: auto !important;
   }
 } */
+
+select {
+  outline: none;
+}
