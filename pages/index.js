@@ -4,6 +4,8 @@ export default function Home() {
   return (
     <>
       <div className="flex-col max-w-3xl mx-auto">
+        <br></br>
+        <br></br>
         <p>
           I am interested in web development, cloud computing, artificial
           intelligence, blockchain technology, and investing! I also love to
