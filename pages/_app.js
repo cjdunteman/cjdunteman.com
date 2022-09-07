@@ -1,14 +1,17 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
 import { ThemeProvider } from "next-themes";
+import Inspect from "inspx";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute="class">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <Inspect margin size padding>
+      <ThemeProvider attribute="class">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </Inspect>
   );
 }
 

@@ -16,14 +16,11 @@ export default function Home() {
         <p>I code things.</p>
         <br></br>
         <p>
-          I currently use Next.js with TaildwindCSS for all of my web dev
-          projects. Depending on the requirements I'll add Turborepo on top of
-          that.{" "}
+          The PLs I am most comfortable with are C and Python. For web dev projects I use Next.js with TaildwindCSS.
         </p>
         <br></br>
         <p>
-          If you would like to work with me on your new web project, please
-          reach out.
+          I am looking for new opportunities, please reach out if you are interested in talking with me.
         </p>
       </div>
       <div>
@@ -35,15 +32,15 @@ export default function Home() {
             <p>Twitter</p>
             <p>LinkedIn</p>
           </div>
-          <div>
-            <a href="mailto: hello@cjdunteman.com" className="text-bold">
-              [redacted]
+          <div className="">
+            <a href="mailto: hello@cjdunteman.com" className="text-bold hover:text-blue">
+              hello@cjdunteman.com
             </a>
             <p>
-              <a href="https://twitter.com/cjdunteman">@cjdunteman</a>
+              <a href="https://twitter.com/cjdunteman" className="text-bold hover:text-blue">@cjdunteman</a>
             </p>
             <p>
-              <a href="https://www.linkedin.com/in/cjdunteman/">@cjdunteman</a>
+              <a href="https://www.linkedin.com/in/cjdunteman/" className="text-bold hover:text-blue">@cjdunteman</a>
             </p>
           </div>
         </div>
