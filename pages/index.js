@@ -13,10 +13,10 @@ export default function Home() {
       </div>
       <div className="text-gray dark:text-lightGray">
         <p className="text-black font-semibold dark:text-white">About</p>
-        <p>I code things.</p>
+        <p>I like to code, learn about all things tech, invest, and ski.</p>
         <br></br>
         <p>
-          The PLs I am most comfortable with are C and Python. For web dev projects I use Next.js with TaildwindCSS.
+          The programming languages I am most comfortable with are C and Python. For front-end web dev I like to use Next.js with TailwindCSS.
         </p>
         <br></br>
         <p>
