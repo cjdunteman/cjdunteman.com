@@ -9,7 +9,8 @@
     "build": "next build",
     "dev": "next dev",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "next start"
+    "start": "next start",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.2",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.11",
+    "cypress": "^10.8.0",
     "inspx": "^0.0.1-alpha.6",
     "postcss": "^8.4.14",
     "prettier": "2.7.1",
