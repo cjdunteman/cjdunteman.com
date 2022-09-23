@@ -35,7 +35,7 @@ export default function Blog({ posts }) {
         <title>CJ's Writing</title>
       </Head>
 
-      <p className="text-lg text-bold dark:text-bold dark:text-lg">Writing</p>
+      <h1 className="text-lg text-bold dark:text-bold dark:text-lg">Writing</h1>
       <hr className="text-lightGray dark:text-darkGray"></hr>
       <br></br>
       <br></br>
