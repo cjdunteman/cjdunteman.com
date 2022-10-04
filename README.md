@@ -1,9 +1,9 @@
 # [cjdunteman.com](https://cjdunteman.com)
 
-Built with NextJS and Tailwind. Hosted on Vercel.
+## Stack
 
-I am using contentlayer to serve local markdown files as blog posts.
-
-Every sunday dependabot creates prs for dependency updates, and if they are semver-minor or semver-patch they will be automatically merged.
-
-Tailwind @base is an opinionated set of base styles (like resetting your css)
+- Framework: Next.js
+- Styling: TailwindCSS
+- Content: Markdown w/ ContentLayer
+- Deployment: Vercel
+- Testing: Cypress

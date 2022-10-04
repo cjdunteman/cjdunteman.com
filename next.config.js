@@ -7,5 +7,24 @@ const nextConfig = {
 };
 
 module.exports = withContentlayer({
+  async redirects() {
+    return [
+      {
+        source: "/twitter",
+        destination: "https://twitter.com/cjdunteman",
+        permanent: true,
+      },
+      {
+        source: "/linkedin",
+        destination: "https://www.linkedin.com/in/cjdunteman",
+        permanent: true,
+      },
+      {
+        source: "/github",
+        destination: "https://github.com/cjdunteman",
+        permanent: true,
+      },
+    ];
+  },
   ...nextConfig,
 });
