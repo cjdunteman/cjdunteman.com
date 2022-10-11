@@ -1,0 +1,5 @@
+- Added a light and dark mode
+- Added a contact button for email
+- Updated layout of the blog page
+- Switched to TailwindCSS for styling
+- Migrated from GatsbyJS to NextJS
