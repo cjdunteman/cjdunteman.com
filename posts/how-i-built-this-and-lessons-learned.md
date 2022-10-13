@@ -26,8 +26,21 @@ I built most of this website without TypeScript, as I wanted to make sure I had 
 
 Adding a `?` to an array fores to check if it exists before run `map()`.
 
-```javascript
+```js
 data.comments?.map((comment) => (
     ...
 ))
+
+console.log("Hello");
+```
+
+## Blog Posts
+
+The blog posts are written in markdown and sourced locally using ContentLayer. In order to style the markdown while using Tailwind, I needed to install the tailwindcss/typography plugin.
+
+Then in order to add my custom color theme:
+https://tailwindcss.com/docs/typography-plugin#adding-custom-color-themes
+
+```
+
 ```

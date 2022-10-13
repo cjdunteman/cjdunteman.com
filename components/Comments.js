@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import Login from "../components/login.js";
+// import Login from "../components/login.js";
 
 export default function Comments() {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -12,7 +12,7 @@ export default function Comments() {
 
   return (
     <div>
-      <Login />
+      {/* <Login /> */}
       <form action="">
         <input placeholder="Leave a comment..."></input>
         <button onClick={postComment}>Submit</button>

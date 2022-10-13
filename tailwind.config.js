@@ -34,8 +34,23 @@ module.exports = {
     //   "3xl": ["48px", { lineHeight: "56px", letterSpacing: "-0.032em" }],
     //   "4xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.032" }],
     // },
-    extend: {},
+    extend: {
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.white"),
+            a: {
+              color: theme("colors.white"),
+            },
+            "h1, h2": {
+              color: theme("colors.white"),
+            },
+            code: { color: theme("colors.lightBlue") },
+          },
+        },
+      }),
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   darkMode: "class",
 };

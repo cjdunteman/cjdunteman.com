@@ -27,7 +27,7 @@ const PostLayout = ({ post }) => {
       <Head>
         <title>{post.title}</title>
       </Head>
-      <article className="mx-auto max-w-2xl pb-16">
+      <article className="mx-auto max-w-2xl pb-16 prose">
         <div className="mb-6 text-center">
           <h1 className="mb-1 text-3xl font-bold">{post.title}</h1>
           <time dateTime={post.date} className="text-sm text-slate-600">
