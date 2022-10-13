@@ -38,19 +38,30 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            color: theme("colors.white"),
+            color: theme("colors.black"),
             a: {
-              color: theme("colors.white"),
+              color: theme("colors.blue"),
             },
+            "h1, h2": {
+              color: theme("colors.black"),
+            },
+            code: { color: theme("colors.lightBlue") },
+          },
+        },
+        dark: {
+          css: {
+            color: theme("colors.white"),
             "h1, h2": {
               color: theme("colors.white"),
             },
-            code: { color: theme("colors.lightBlue") },
           },
         },
       }),
     },
   },
   plugins: [require("@tailwindcss/typography")],
+  // variants: {
+  //   typography: ["dark"],
+  // },
   darkMode: "class",
 };

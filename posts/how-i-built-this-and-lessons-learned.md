@@ -4,13 +4,17 @@ date: 2022-05-14
 description: An overly detailed documentation of how I built this website, including everything I learned during the process.
 ---
 
+This post is continually being updated as I learn and build this website.
+
 The main stack consists of:
 
-- Frontend Framework: Next.js
+# The Stack
 
-* Styling: TailwindCSS
-* Hosting: Vercel
-* Database: PlanetScale
+- Frontend Framework: [Next.js](https://nextjs.org/)
+- Styling: [TailwindCSS](https://tailwindcss.com/)
+- Hosting: [Vercel](https://vercel.com/)
+- Database: [PlanetScale](https://planetscale.com/)
+- Testing: [Cypress](https://www.cypress.io/)
 
 ## PlanetScale and Prisma
 
