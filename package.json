@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.3",
-    "@mdx-js/react": "^2.1.4",
+    "@mdx-js/react": "^2.1.5",
     "@prisma/client": "^4.4.0",
     "cmdk": "^0.1.20",
     "contentlayer": "^0.2.8",
