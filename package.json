@@ -13,7 +13,7 @@
     "cypress": "cypress open"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.3",
+    "@headlessui/react": "^1.7.4",
     "@mdx-js/react": "^2.1.5",
     "@prisma/client": "^4.5.0",
     "cmdk": "^0.1.20",
