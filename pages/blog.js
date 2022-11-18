@@ -14,10 +14,11 @@ function PostCard(post) {
   return (
     <div className="mb-6">
       <h2 className="text-lg">
-        <Link href={post.url}>
-          <a className="text-2xl text-blue hover:text-lightBlue">
-            {post.title}
-          </a>
+        <Link
+          href={post.url}
+          className="text-2xl text-blue hover:text-lightBlue"
+        >
+          {post.title}
         </Link>
       </h2>
       <time dateTime={post.date} className="text-sm text-darkGray">

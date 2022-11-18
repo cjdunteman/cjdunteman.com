@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import Layout from "../components/Layout";
 import { ThemeProvider } from "next-themes";
 import Inspect from "inspx";
 import Head from "next/head";
@@ -21,9 +20,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       <SessionProvider session={session}>
         <Inspect margin size padding>
           <ThemeProvider attribute="class">
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
+            {/* <Layout> */}
+            <Component {...pageProps} />
+            {/* </Layout> */}
           </ThemeProvider>
         </Inspect>
       </SessionProvider>

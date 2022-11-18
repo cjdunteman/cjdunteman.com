@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
@@ -21,10 +22,10 @@ module.exports = {
       blue: "#0070f3",
       lightBlue: "#839fff",
     },
-    fontFamily: {
-      sans: "Inter",
-      mono: "SFMono-Regular",
-    },
+    // fontFamily: {
+    //   sans: "Inter",
+    //   mono: "SFMono-Regular",
+    // },
     // fontSizes: {
     //   sm: ["14px", { lineHeight: "18px", letterSpacing: "-0.03em" }],
     //   md: ["16px", { lineHeight: "24px", letterSpacing: "-.03em" }],
@@ -55,6 +56,9 @@ module.exports = {
               color: theme("colors.white"),
             },
           },
+        },
+        fontFamily: {
+          sans: ["var(--font-inter"],
         },
       }),
     },

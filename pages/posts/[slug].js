@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import Comments from "../../components/Comments.js";
