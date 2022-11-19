@@ -7,13 +7,14 @@ export default function Component() {
     return (
       <>
         <p>Signed in as {session.user.email}</p>
+        <button onClick={() => signOut()}>Sign out</button>
       </>
     );
   }
   return (
     <>
       Not signed in <br />
-      <Link href="/api/auth/signin">Sign in</Link>
+      <button onClick={() => signIn()}>Sign in</button>
     </>
   );
 }

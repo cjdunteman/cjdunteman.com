@@ -10,11 +10,18 @@ The main stack consists of:
 
 # The Stack
 
-- Frontend Framework: [Next.js](https://nextjs.org/)
+- Framework: [Next.js](https://nextjs.org/)
 - Styling: [TailwindCSS](https://tailwindcss.com/)
 - Hosting: [Vercel](https://vercel.com/)
+- Authentication: [NextAuth.js](https://next-auth.js.org/)
 - Database: [PlanetScale](https://planetscale.com/)
 - Testing: [Cypress](https://www.cypress.io/)
+
+## Styling
+
+I am using Tailwind to set up a mini design system in the config file.
+
+The [Typography](https://tailwindcss.com/docs/typography-plugin) plugin allows me to add styling to HTML rendered from Markdown. It would also work if I was using a CMS.
 
 ## PlanetScale and Prisma
 
@@ -24,11 +31,9 @@ In order to implement the comments on blog posts, I used a MySQL database on Pla
 
 I built most of this website without TypeScript, as I wanted to make sure I had practical knowledge of JavaScript before moving on.
 
-## The `lib` folder
-
 ## Other Tidbits
 
-Adding a `?` to an array fores to check if it exists before run `map()`.
+Adding a `?` to an array forces to check if it exists before running `map()`.
 
 ```js
 data.comments?.map((comment) => (

@@ -31,18 +31,22 @@ function PostCard(post) {
 
 export default function Blog({ posts }) {
   return (
-    <div className="mx-auto max-w-2xl py-8">
-      <Head>
-        <title>CJs Writing</title>
-      </Head>
+    <div className="container mx-auto max-w-3xl">
+      <div className="mx-auto max-w-2xl py-8">
+        <Head>
+          <title>CJ&apos;s Blog</title>
+        </Head>
 
-      <h1 className="text-lg text-bold dark:text-bold dark:text-lg">Writing</h1>
-      <hr className="text-lightGray dark:text-darkGray"></hr>
-      <br></br>
-      <br></br>
-      {posts.map((post, idx) => (
-        <PostCard key={idx} {...post} />
-      ))}
+        <h1 className="text-lg text-bold dark:text-bold dark:text-lg">
+          Writing
+        </h1>
+        <hr className="text-lightGray dark:text-darkGray"></hr>
+        <br></br>
+        <br></br>
+        {posts.map((post, idx) => (
+          <PostCard key={idx} {...post} />
+        ))}
+      </div>
     </div>
   );
 }
