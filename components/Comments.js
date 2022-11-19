@@ -17,6 +17,7 @@ export default function Comments() {
         <input placeholder="Leave a comment..."></input>
         <button onClick={postComment}>Submit</button>
       </form>
+      {error}
       <ul>
         {data.comments?.map((comment) => (
           <li key={comment.id}>{comment.body}</li>

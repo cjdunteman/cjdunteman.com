@@ -1,4 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 
 export default function Component() {
   const { data: session, status } = useSession();
@@ -12,7 +13,7 @@ export default function Component() {
   return (
     <>
       Not signed in <br />
-      <a href="/api/auth/signin">Sign in</a>
+      <Link href="/api/auth/signin">Sign in</Link>
     </>
   );
 }

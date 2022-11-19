@@ -1,6 +1,6 @@
 // Root Layout (required)
 import "../styles/globals.css";
-import { Oswald } from '@next/font/google';
+import { Inter } from '@next/font/google';
 import { Providers } from './providers'
 import Link from "next/link";
 import Inspect from "inspx";
@@ -8,8 +8,9 @@ import Inspect from "inspx";
 
 //TODO - font not working
 
-const oswald = Oswald({
+const inter = Inter({
   variable: '--font-inter',
+  subsets: ["latin"]
 })
 
 export default function RootLayout({ children }: {
@@ -18,8 +19,8 @@ export default function RootLayout({ children }: {
     children: React.ReactNode;
   }) {
     return (
-      <html lang="en">
-        <body className="bg-white text-black dark:bg-black dark:text-white ${inter.variable} font-sans container mx-auto max-w-3xl">
+      <html lang="en" className={`${inter.variable} font-sans`}>
+        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-3xl font-sans">
             <Providers>
             <nav className="flex justify-between items-center py-6 font-4xl">
       {/* <ThemeSwitch className="" /> */}

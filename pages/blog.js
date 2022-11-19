@@ -33,7 +33,7 @@ export default function Blog({ posts }) {
   return (
     <div className="mx-auto max-w-2xl py-8">
       <Head>
-        <title>CJ's Writing</title>
+        <title>CJs Writing</title>
       </Head>
 
       <h1 className="text-lg text-bold dark:text-bold dark:text-lg">Writing</h1>
