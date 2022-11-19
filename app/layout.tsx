@@ -5,6 +5,7 @@ import { Providers } from './providers'
 import Link from "next/link";
 import Inspect from "inspx";
 import { unstable_getServerSession } from "next-auth";
+import ThemeSwitch from './ThemeSwitch'
 // import { SessionProvider } from "next-auth/react";
 
 //TODO - font not working
@@ -24,10 +25,9 @@ export default async function RootLayout({
   // This will be populated with nested layouts or pages
     return (
       <html lang="en" className={`${inter.variable} font-sans`}>
-        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-3xl font-sans">
+        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl font-sans">
             <Providers session={session}>
               <nav className="flex justify-between items-center py-6 font-4xl">
-                {/* <ThemeSwitch className="" /> */}
                 <div className="flex gap-8">
                   <Link
                     href="/"
@@ -61,14 +61,7 @@ export default async function RootLayout({
                     </div>
                   </div>
                 </div>
-                <div className="rounded-md p-2">
-                  <a
-                    href="mailto: hello@cjdunteman.com"
-                    className="text-gray dark:text-lightGray hover:text-black text-bold"
-                  >
-                    Contact
-                  </a>
-                </div>
+                <ThemeSwitch></ThemeSwitch>
               </nav>
               {children}
             </Providers>

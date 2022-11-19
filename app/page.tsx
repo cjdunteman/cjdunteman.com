@@ -26,7 +26,6 @@ export default function Home() {
         </p>
       </div>
       <div>
-        <p className="font-semibold">Contact</p>
         <br></br>
         <div className="grid grid-cols-12 text-gray dark:text-lightGray">
           <div className="grid col-span-3">
