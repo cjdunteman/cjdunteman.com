@@ -5,9 +5,10 @@ import codeTitles from "rehype-code-titles";
 import autolinkHeadings from "rehype-autolink-headings";
 import prism from "rehype-prism-plus";
 
-export const Post = defineDocumentType(() => ({
+const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: `**/*.md`,
+  filePathPattern: `**/*.mdx`,
+  bodyType: "mdx",
   fields: {
     title: {
       type: "string",
@@ -17,6 +18,11 @@ export const Post = defineDocumentType(() => ({
     date: {
       type: "date",
       description: "The date of the post",
+      required: true,
+    },
+    dateModified: {
+      type: "date",
+      description: "The date the post was last updated",
       required: true,
     },
     description: {
@@ -33,11 +39,13 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
-export default makeSource({
+const contentLayerConfig = makeSource({
   contentDirPath: "posts",
   documentTypes: [Post],
-  markdown: {
+  mdx: {
     remarkPlugins: [gfm],
     rehypePlugins: [slug, codeTitles, autolinkHeadings, prism],
   },
 });
+
+export default contentLayerConfig;

@@ -5,6 +5,7 @@ import { Providers } from './providers'
 import Link from "next/link";
 import Inspect from "inspx";
 import ThemeSwitch from './ThemeSwitch'
+import { AnalyticsWrapper } from './components/analytics'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -56,10 +57,11 @@ export default async function RootLayout({
                   </div>
                   </div>
                 </div>
-                <ThemeSwitch></ThemeSwitch>
+                <ThemeSwitch />
               </nav>
               {children}
             </Providers>
+            <AnalyticsWrapper />
           </body>
       </html>
     );

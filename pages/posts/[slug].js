@@ -27,12 +27,24 @@ const PostLayout = ({ post }) => {
       </Head>
       <div className="container mx-auto max-w-3xl">
         <article className="mx-auto max-w-2xl pb-16 prose dark:prose-dark">
-          <div className="mb-6 text-center">
+          <div className="mb-6">
             <br></br>
             <h1 className="mb-1 text-4xl font-bold">{post.title}</h1>
-            <time dateTime={post.date} className="text-sm text-slate-600">
-              {format(parseISO(post.date), "LLLL d, yyyy")}
-            </time>
+            {post.date === post.dateModified ? (
+              <time dateTime={post.date} className="text-sm text-slate-600">
+                {format(parseISO(post.date), "LLLL d, yyyy")}
+              </time>
+            ) : (
+              <p className="text-sm text-slate-600">
+                Updated{" "}
+                <time
+                  dateTime={post.dateModified}
+                  className="text-sm text-slate-600"
+                >
+                  {format(parseISO(post.dateModified), "LLLL d, yyyy")}
+                </time>
+              </p>
+            )}
           </div>
           <div
             className="cl-post-body"
