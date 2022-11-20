@@ -36,6 +36,9 @@ module.exports = {
     //   "4xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.032" }],
     // },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {

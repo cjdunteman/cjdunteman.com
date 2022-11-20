@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../app/globals.css";
 import { ThemeProvider } from "next-themes";
 import Inspect from "inspx";
 import Head from "next/head";
@@ -18,9 +18,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       </Head>
       <Inspect margin size padding>
         <ThemeProvider attribute="class">
-          {/* <Layout> */}
           <Component {...pageProps} />
-          {/* </Layout> */}
         </ThemeProvider>
       </Inspect>
     </>

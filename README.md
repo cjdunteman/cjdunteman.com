@@ -10,7 +10,7 @@
 
 ## To Do
 
-- Complete skills section w/ icons and color
+- Add colored borders to skills
 - Footer w/ all links and socials
 - Add logos to 'stack' page
 - Connect running page to Strava

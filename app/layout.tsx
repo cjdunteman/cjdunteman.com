@@ -1,10 +1,9 @@
 // Root Layout (required)
-import "../styles/globals.css";
+import "./globals.css";
 import { Inter } from '@next/font/google';
 import { Providers } from './providers'
 import Link from "next/link";
 import Inspect from "inspx";
-import { unstable_getServerSession } from "next-auth";
 import ThemeSwitch from './ThemeSwitch'
 
 const inter = Inter({
@@ -21,7 +20,7 @@ export default async function RootLayout({
   // This will be populated with nested layouts or pages
     return (
       <html lang="en" className={`${inter.variable} font-sans`}>
-        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl font-sans">
+        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2x">
             <Providers>
               <nav className="flex justify-between items-center py-6 mb-6 font-4xl border-solid border-gray rounded-md bg-whitish">
                 <div className="flex gap-8">
