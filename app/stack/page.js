@@ -5,11 +5,13 @@ export default function Stack() {
       <hr className="text-lightGray dark:text-darkGray"></hr>
       <p>Tools and apps that I use.</p>
       <br></br>
-      <br></br>
       <p>Next.js</p>
       <p>TailwindCSS</p>
       <p>Vercel</p>
-      <p>Visual Studio Code</p>
+      <p>VS Code</p>
+      <p>Figma</p>
+      <p>Raycast</p>
+      <p>Warp</p>
     </div>
   );
 }

@@ -1,23 +1,25 @@
 import React from "react";
 // import Link from "next/link";
-// import ThemeChanger from "../components/ThemeChanger";
+import Skills from "./Skills";
 
 export default function Home() {
   return (
-    <div className="flex max-w-2xl mx-auto flex-col py-8 gap-16">
+    <div>
       <div>
         <h1 className="text-black font-semibold dark:text-white text-lg text-bold dark:text-bold">
           CJ Dunteman
         </h1>
         <p className="text-gray dark:text-lightGray">Madison, Wisconsin</p>
+        <br></br>
       </div>
       <div className="text-gray dark:text-lightGray">
         <p className="text-black font-semibold dark:text-white">About</p>
-        <p>I like to code, learn about all things tech, invest, and ski.</p>
+        <p>I like to code, learn about all things tech, and ski.</p>
         <br></br>
         <p>
-          The programming languages I am most comfortable with are C and Python.
-          For front-end web dev I like to use Next.js with TailwindCSS.
+          The programming languages I am most comfortable with are JavaScript
+          and Python. For front-end web dev I like to use Next.js with
+          TailwindCSS.
         </p>
         <br></br>
         <p>
@@ -25,8 +27,11 @@ export default function Home() {
           interested in talking with me.
         </p>
       </div>
+      <br></br>
+      <Skills />
       <div>
         <br></br>
+        <p className="text-black font-semibold dark:text-white">Contact</p>
         <div className="grid grid-cols-12 text-gray dark:text-lightGray">
           <div className="grid col-span-3">
             <p>Email</p>

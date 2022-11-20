@@ -9,7 +9,6 @@ export default function Books() {
         A list of some of my favorite books (or series), in no particular order.
       </p>
       <br></br>
-      <br></br>
       <p>
         The Kite Runner{" "}
         <span className="text-gray dark:text-darkGray">by Khaled Hosseini</span>
