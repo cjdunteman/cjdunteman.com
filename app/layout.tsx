@@ -21,7 +21,7 @@ export default async function RootLayout({
   // This will be populated with nested layouts or pages
     return (
       <html lang="en" className={`${inter.variable} font-sans`}>
-        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2x">
+        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl">
             <Providers>
               <nav className="flex justify-between items-center py-6 mb-6 font-4xl border-solid border-gray rounded-md bg-whitish">
                 <div className="flex gap-8">

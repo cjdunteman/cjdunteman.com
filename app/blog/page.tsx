@@ -30,10 +30,6 @@ export default function BlogPage() {
 
     return (
       <div>
-        <h1 className="text-lg text-bold dark:text-bold dark:text-lg">
-          Writing
-        </h1>
-        <hr className="text-lightGray dark:text-darkGray"></hr>
         {posts?.map((post, idx) => (
           <PostCard key={idx} {...post} />
         ))}
