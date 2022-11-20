@@ -5,7 +5,7 @@ import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 
-export async function fetchPosts() {
+async function fetchPosts() {
   const posts = allPosts.sort((a, b) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
@@ -31,7 +31,7 @@ function PostCard(post) {
   );
 }
 
-export default function Blog({ posts }) {
+export default function Blog({ }) {
   return (
     <div className="container mx-auto max-w-3xl">
       <div className="mx-auto max-w-2xl py-8">
@@ -45,9 +45,9 @@ export default function Blog({ posts }) {
         <hr className="text-lightGray dark:text-darkGray"></hr>
         <br></br>
         <br></br>
-        {posts?.map((post, idx) => (
+        {/* {posts?.map((post, idx) => (
           <PostCard key={idx} {...post} />
-        ))}
+        ))} */}
       </div>
     </div>
   );
