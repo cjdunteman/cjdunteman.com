@@ -6,9 +6,6 @@ import Link from "next/link";
 import Inspect from "inspx";
 import { unstable_getServerSession } from "next-auth";
 import ThemeSwitch from './ThemeSwitch'
-// import { SessionProvider } from "next-auth/react";
-
-//TODO - font not working
 
 const inter = Inter({
   variable: '--font-inter',
@@ -19,16 +16,13 @@ export default async function RootLayout({
   children, }: {
     children: React.ReactNode; 
   }) {
-    const session = await unstable_getServerSession();
-
-    // className="flex max-w-2xl mx-auto flex-col py-8 gap-16"
 
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
     return (
       <html lang="en" className={`${inter.variable} font-sans`}>
         <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl font-sans">
-            <Providers session={session}>
+            <Providers>
               <nav className="flex justify-between items-center py-6 mb-6 font-4xl border-solid border-gray rounded-md bg-whitish">
                 <div className="flex gap-8">
                   <Link

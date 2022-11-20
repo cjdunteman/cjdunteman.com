@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import Inspect from "inspx";
 import Head from "next/head";
-import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
@@ -17,15 +16,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           content="CJ Dunteman's personal developer website."
         />
       </Head>
-      <SessionProvider session={session}>
-        <Inspect margin size padding>
-          <ThemeProvider attribute="class">
-            {/* <Layout> */}
-            <Component {...pageProps} />
-            {/* </Layout> */}
-          </ThemeProvider>
-        </Inspect>
-      </SessionProvider>
+      <Inspect margin size padding>
+        <ThemeProvider attribute="class">
+          {/* <Layout> */}
+          <Component {...pageProps} />
+          {/* </Layout> */}
+        </ThemeProvider>
+      </Inspect>
     </>
   );
 }

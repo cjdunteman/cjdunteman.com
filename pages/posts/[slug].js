@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
-import Comments from "../../components/Comments.js";
 
 export async function getStaticPaths() {
   const paths = allPosts.map((post) => post.url);
@@ -40,7 +39,6 @@ const PostLayout = ({ post }) => {
             dangerouslySetInnerHTML={{ __html: post.body.html }}
           />
         </article>
-        <Comments />
       </div>
     </>
   );
