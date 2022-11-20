@@ -4,6 +4,8 @@ date: 2022-05-14
 description: An overly detailed documentation of how I built this website, including everything I learned during the process.
 ---
 
+I recognize the stack I used for this website may be considered "overengineering". This could all be done with HTML, CSS, and JavaScript. The reason for this is I wanted to try out and practice these technologies!
+
 This post is continually being updated as I learn and build this website.
 
 The main stack consists of:
