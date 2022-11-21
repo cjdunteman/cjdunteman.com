@@ -10,6 +10,7 @@
 
 ## To Do
 
+- Extract nav to a component
 - Add colored borders to skills
 - Footer w/ all links and socials
 - Add logos to 'stack' page

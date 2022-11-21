@@ -6,6 +6,7 @@ import Link from "next/link";
 import Inspect from "inspx";
 import ThemeSwitch from './ThemeSwitch'
 import { AnalyticsWrapper } from './components/analytics'
+import Footer from "./footer";
 
 const inter = Inter({
   variable: '--font-inter',
@@ -20,23 +21,21 @@ export default async function RootLayout({
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
     return (
-      <html lang="en" className={`${inter.variable} font-sans`}>
-        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl">
+      <html lang="en" className={`${inter.variable} font-sans min-h-full`}>
+        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl min-h-screen">
             <Providers>
-              <nav className="flex justify-between items-center py-6 mb-6 font-4xl border-solid border-gray rounded-md bg-whitish">
+              <nav className="flex justify-between items-center py-6 mb-6 font-4xl">
                 <div className="flex gap-8">
                   <Link
                     href="/"
                     className="text-gray hover:text-black dark:text-lightGray"
                   >
-                    {/* <a className="text-gray hover:text-black dark:text-lightGray">Home</a> */}
                     Home
                   </Link>
                   <Link
                     href="/blog"
                     className="text-gray dark:text-lightGray hover:text-black"
                   >
-                    {/* <a className="text-gray dark:text-lightGray hover:text-black">Blog</a> */}
                     Blog
                   </Link>
                 <div>
@@ -62,6 +61,7 @@ export default async function RootLayout({
               {children}
             </Providers>
             <AnalyticsWrapper />
+            {/* <Footer /> */}
           </body>
       </html>
     );

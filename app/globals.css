@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* html {
-    font-family: Inter;
-  } */
   h1 {
     @apply text-6xl;
   }
@@ -28,6 +25,7 @@
     @apply text-base;
   }
   a:hover {
+    @apply dark:text-white;
     @apply text-black;
   }
 }
@@ -41,17 +39,6 @@
 *::after {
   box-sizing: border-box;
 }
-
-/* @media (prefers-reduced-motion: reduce) {  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-} */
 
 select {
   outline: none;

@@ -9,20 +9,16 @@ module.exports = {
     screens: {
       xs: "540px",
     },
-    colors: {
-      white: "#ffffff",
-      black: "#000000",
-      // light mode specific
-      gray: "#696969",
-      // dark mode specific
-      lightGray: "#a8a5a1",
-      dark: "#232120",
-      // undetermined
-      darkGray: "#666666",
-      blue: "#0070f3",
-      lightBlue: "#839fff",
-    },
     extend: {
+      colors: {
+        white: "#F4F5F8",
+        black: "#000000",
+        purple: "#5E6AD2",
+        gray: "#222326",
+        lightGray: "#a8a5a1",
+        dark: "#232120",
+        darkGray: "#666666",
+      },
       fontFamily: {
         sans: ["var(--font-inter)"],
       },
@@ -31,12 +27,12 @@ module.exports = {
           css: {
             color: theme("colors.black"),
             a: {
-              color: theme("colors.blue"),
+              color: theme("colors.purple"),
             },
             "h1, h2": {
               color: theme("colors.black"),
             },
-            code: { color: theme("colors.lightBlue") },
+            code: { color: theme("colors.purple") },
           },
         },
         dark: {

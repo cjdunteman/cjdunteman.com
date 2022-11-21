@@ -29,7 +29,7 @@ export default function Home() {
       </div>
       <br></br>
       <Skills />
-      <div>
+      <div className="border-dashed border-purple">
         <br></br>
         <p className="text-black font-semibold dark:text-white">Contact</p>
         <div className="grid grid-cols-12 text-gray dark:text-lightGray">
@@ -38,25 +38,19 @@ export default function Home() {
             <p>Twitter</p>
             <p>LinkedIn</p>
           </div>
-          <div className="">
-            <a
-              href="mailto: hello@cjdunteman.com"
-              className="text-bold hover:text-blue"
-            >
+          <div className="text-purple">
+            <a href="mailto: hello@cjdunteman.com" className="text-bold">
               hello@cjdunteman.com
             </a>
             <p>
-              <a
-                href="https://twitter.com/cjdunteman"
-                className="text-bold hover:text-blue"
-              >
+              <a href="https://twitter.com/cjdunteman" className="text-bold">
                 @cjdunteman
               </a>
             </p>
             <p>
               <a
                 href="https://www.linkedin.com/in/cjdunteman/"
-                className="text-bold hover:text-blue"
+                className="text-bold"
               >
                 @cjdunteman
               </a>
