@@ -1,9 +1,10 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
-import gfm from "remark-gfm";
-import slug from "rehype-slug";
-import codeTitles from "rehype-code-titles";
-import autolinkHeadings from "rehype-autolink-headings";
-import prism from "rehype-prism-plus";
+
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypeCodeTitles from "rehype-code-titles";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypePrism from "rehype-prism-plus";
 
 const Post = defineDocumentType(() => ({
   name: "Post",
@@ -43,8 +44,20 @@ const contentLayerConfig = makeSource({
   contentDirPath: "posts",
   documentTypes: [Post],
   mdx: {
-    remarkPlugins: [gfm],
-    rehypePlugins: [slug, codeTitles, autolinkHeadings, prism],
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeCodeTitles,
+      rehypePrism,
+      [
+        rehypeAutolinkHeadings,
+        {
+          properties: {
+            className: ["anchor"],
+          },
+        },
+      ],
+    ],
   },
 });
 

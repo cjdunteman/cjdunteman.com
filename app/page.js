@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <div>
-        <h1 className="text-black font-semibold dark:text-white text-lg text-bold dark:text-bold">
+        <h1 className="text-black font-semibold dark:text-white text-bold dark:text-bold">
           CJ Dunteman
         </h1>
         <p className="text-gray dark:text-lightGray">Madison, Wisconsin</p>

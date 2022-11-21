@@ -32,7 +32,6 @@ module.exports = {
             "h1, h2": {
               color: theme("colors.black"),
             },
-            code: { color: theme("colors.purple") },
           },
         },
         dark: {
@@ -42,9 +41,6 @@ module.exports = {
               color: theme("colors.white"),
             },
           },
-        },
-        fontFamily: {
-          sans: ["var(--font-inter"],
         },
       }),
     },
