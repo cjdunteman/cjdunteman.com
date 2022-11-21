@@ -48,7 +48,7 @@ const contentLayerConfig = makeSource({
     rehypePlugins: [
       rehypeSlug,
       rehypeCodeTitles,
-      rehypePrism,
+      [rehypePrism, { ignoreMissing: true }],
       [
         rehypeAutolinkHeadings,
         {

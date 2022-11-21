@@ -27,7 +27,7 @@ export default function PostLayout({ params }) {
         </p>
       )}
       <div
-        // className="cl-post-body"
+        className="cl-post-body"
         dangerouslySetInnerHTML={{ __html: post.body.html }}
       />
     </article>
