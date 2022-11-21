@@ -9,7 +9,8 @@ import rehypePrism from "rehype-prism-plus";
 const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.mdx`,
-  bodyType: "mdx",
+  contentType: "mdx",
+  // bodyType: "mdx",
   fields: {
     title: {
       type: "string",

@@ -9,16 +9,16 @@ module.exports = {
     screens: {
       xs: "540px",
     },
+    colors: {
+      white: "#F4F5F8",
+      black: "#000000",
+      purple: "#5E6AD2",
+      gray: "#222326",
+      lightGray: "#a8a5a1",
+      dark: "#232120",
+      darkGray: "#666666",
+    },
     extend: {
-      colors: {
-        white: "#F4F5F8",
-        black: "#000000",
-        purple: "#5E6AD2",
-        gray: "#222326",
-        lightGray: "#a8a5a1",
-        dark: "#232120",
-        darkGray: "#666666",
-      },
       fontFamily: {
         sans: ["var(--font-inter)"],
       },

@@ -1,7 +1,7 @@
 ---
 title: How I Built This Website, Lessons Learned, and Future Plans
-date: 2022-05-14
-dateModified: 2022-11-20
+date: 2022-08-14
+dateModified: 2022-11-21
 description: An overly detailed documentation of how I built this website, including everything I learned during the process.
 ---
 
@@ -18,29 +18,6 @@ I recognize the stack I used for this website may be considered "overengineering
 
 ## Styling
 
-```js:sample.js showLineNumbers
-import { Button } from '@acme/core/src';
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-
-<Meta title="Components/Button" component={Button} />
-
-# Button
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
-
-## Props
-
-<Props of={Box} />
-
-## Examples
-
-<Preview>
-  <Story name="Default">
-    <Button>Hello</Button>
-  </Story>
-</Preview>
-```
-
 I am using Tailwind to set up a mini design system in the config file.
 
 The [Typography](https://tailwindcss.com/docs/typography-plugin) plugin enables adding styling to HTML rendered from Markdown. It would also work with a CMS.
@@ -56,10 +33,7 @@ The blog posts are written in markdown and sourced locally using ContentLayer. I
 Then in order to add my custom color theme:
 https://tailwindcss.com/docs/typography-plugin#adding-custom-color-themes
 
-## Testing
-
-## Analytics
-
 ## Future Plans
 
 - Add sign in capability and commenting on blog posts using NextAuth for Authentication and PlanetScale as a DB
+- Add mobile design (dropdown menu)

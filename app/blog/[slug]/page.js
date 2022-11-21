@@ -1,5 +1,6 @@
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
+import { useMDXComponent } from "next-contentlayer/hooks";
 
 export default function PostLayout({ params }) {
   const rawPost = allPosts.find(
@@ -10,6 +11,8 @@ export default function PostLayout({ params }) {
     ...rawPost,
     date: format(parseISO(rawPost.date), "LLLL d, yyyy"),
   };
+
+  const MDXContent = useMDXComponent(post.body.code);
 
   return (
     <article className="prose dark:prose-dark">
@@ -26,10 +29,7 @@ export default function PostLayout({ params }) {
           </time>
         </p>
       )}
-      <div
-        className="cl-post-body"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
+      <MDXContent />
     </article>
   );
 }
