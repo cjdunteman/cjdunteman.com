@@ -23,7 +23,7 @@ export default function Skills() {
   return (
     <div>
       <p className="text-black font-semibold dark:text-white pb-1">Skills</p>
-      <div className="text-gray dark:text-lightGray flex flex-wrap">
+      <div className="text-black dark:text-white flex flex-wrap">
         {skills.map((skill, index) => {
           return (
             <li

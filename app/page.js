@@ -6,14 +6,12 @@ export default function Home() {
   return (
     <div>
       <div>
-        <h1 className="text-black font-semibold dark:text-white text-bold dark:text-bold">
-          CJ Dunteman
-        </h1>
-        <p className="text-gray dark:text-lightGray">Madison, Wisconsin</p>
+        <h1 className="text-black font-bold dark:text-white">CJ Dunteman</h1>
+        <p className="">Madison, Wisconsin</p>
         <br></br>
       </div>
-      <div className="text-gray dark:text-lightGray">
-        <p className="text-black font-semibold dark:text-white">About</p>
+      <div className="">
+        <p className="font-semibold dark:text-white">About</p>
         <p>I like to code, learn about all things tech, and ski.</p>
         <br></br>
         <p>
@@ -32,7 +30,7 @@ export default function Home() {
       <div className="border-dashed border-purple">
         <br></br>
         <p className="text-black font-semibold dark:text-white">Contact</p>
-        <div className="grid grid-cols-12 text-gray dark:text-lightGray">
+        <div className="grid grid-cols-12 text-black dark:text-white">
           <div className="grid col-span-3">
             <p>Email</p>
             <p>Twitter</p>

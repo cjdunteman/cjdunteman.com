@@ -12,7 +12,8 @@ module.exports = {
     colors: {
       white: "#F4F5F8",
       black: "#000000",
-      purple: "#5E6AD2",
+      // purple: "#5E6AD2",
+      purple: "hsl(234, 56.3%, 59.6%)",
       gray: "#222326",
       dark: "hsl(250, 24%, 9%)",
     },

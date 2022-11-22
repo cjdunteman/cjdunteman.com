@@ -67,8 +67,8 @@ select {
   }
   
   .prose .anchor:after {
-	@apply text-purple;
-	content: '#';
+    @apply text-purple;
+    content: '#';
   }
   
   .prose *:hover > .anchor {
@@ -114,7 +114,7 @@ select {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #ff79c6;
+	color: hsl(44, 95%, 48%);
 }
 
 .token.boolean,

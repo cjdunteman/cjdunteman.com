@@ -24,7 +24,7 @@ export default async function RootLayout({
   // This will be populated with nested layouts or pages
     return (
       <html lang="en" className={`${inter.variable} font-sans min-h-full`}>
-        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl min-h-screen px-2">
+        <body className="text-black dark:text-white bg-white dark:bg-dark container mx-auto max-w-2xl min-h-screen px-2">
             <Providers>
               <Nav />
               {children}

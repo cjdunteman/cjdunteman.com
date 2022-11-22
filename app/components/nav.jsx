@@ -4,22 +4,22 @@ import ThemeSwitch from "app/ThemeSwitch"
 
 export default function nav() {
     return (
-    <nav className="flex justify-between items-center py-6 mb-6 font-4xl">
+    <nav className="flex justify-between items-center py-6 mb-6 font-4xl text-black dark:text-white">
         <div className="flex gap-8">
         <Link
             href="/"
-            className="text-gray hover:text-black dark:text-lightGray"
+            className="hover:text-black"
         >
             Home
         </Link>
         <Link
             href="/blog"
-            className="text-gray dark:text-lightGray hover:text-black"
+            className=""
         >
             Blog
         </Link>
         <div>
-            <button className="text-gray hover:text-black dark:text-lightGray peer">
+            <button className="">
             Projects
             </button>
             <div
