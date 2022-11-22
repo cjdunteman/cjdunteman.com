@@ -8,7 +8,6 @@ import ThemeSwitch from './ThemeSwitch'
 import { AnalyticsWrapper } from './components/analytics'
 import Nav from './components/nav'
 import Footer from "./footer";
-import Avatar from "./components/avatar"
 
 const inter = Inter({
   variable: '--font-inter',
