@@ -23,12 +23,12 @@ export default function Skills() {
   return (
     <div>
       <p className="text-black font-semibold dark:text-white pb-1">Skills</p>
-      <div className="text-gray dark:text-lightGray flex">
+      <div className="text-gray dark:text-lightGray flex flex-wrap">
         {skills.map((skill, index) => {
           return (
             <li
               key={index}
-              className={`list-none flex p-1 mr-6 border border-solid rounded-full border-${skill.color}`}
+              className={`list-none flex p-1 mt-2 mr-6 border border-solid rounded-full border-${skill.color}`}
             >
               <Icon path={skill.iconPath} size={1} />
               {skill.name}

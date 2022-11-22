@@ -80,7 +80,7 @@ select {
   }
 
 .prose pre {
-	@apply border rounded-lg border-purple bg-gray dark:bg-gray;
+	@apply border rounded-lg border-purple bg-dark dark:bg-dark;
 	overflow: auto;
 }
 

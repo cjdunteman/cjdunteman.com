@@ -6,7 +6,9 @@ import Link from "next/link";
 import Inspect from "inspx";
 import ThemeSwitch from './ThemeSwitch'
 import { AnalyticsWrapper } from './components/analytics'
+import Nav from './components/nav'
 import Footer from "./footer";
+import Avatar from "./components/avatar"
 
 const inter = Inter({
   variable: '--font-inter',
@@ -22,42 +24,9 @@ export default async function RootLayout({
   // This will be populated with nested layouts or pages
     return (
       <html lang="en" className={`${inter.variable} font-sans min-h-full`}>
-        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl min-h-screen">
+        <body className="bg-white text-black dark:bg-black dark:text-white container mx-auto max-w-2xl min-h-screen px-2">
             <Providers>
-              <nav className="flex justify-between items-center py-6 mb-6 font-4xl">
-                <div className="flex gap-8">
-                  <Link
-                    href="/"
-                    className="text-gray hover:text-black dark:text-lightGray"
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="/blog"
-                    className="text-gray dark:text-lightGray hover:text-black"
-                  >
-                    Blog
-                  </Link>
-                <div>
-                  <button className="text-gray hover:text-black dark:text-lightGray peer">
-                    Projects
-                  </button>
-                  <div
-                    className="absolute left hidden peer-hover:flex hover:flex
-                w-[200px]
-                flex-col rounded-md"
-                  >
-                    <a
-                      className="text-gray hover:text-black px-5 py-3 m-1 shadow-md rounded dark:bg-white"
-                      href="https://frontend-mentor-challenges-rosy.vercel.app/"
-                    >
-                      Frontend Mentor
-                    </a>
-                  </div>
-                  </div>
-                </div>
-                <ThemeSwitch />
-              </nav>
+              <Nav />
               {children}
             </Providers>
             <AnalyticsWrapper />
