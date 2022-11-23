@@ -22,7 +22,9 @@ export default function Skills() {
 
   return (
     <div>
-      <p className="text-black font-semibold dark:text-white pb-1">Skills</p>
+      <h5 className="text-2xl text-black font-semibold dark:text-white pb-1">
+        Skills
+      </h5>
       <div className="text-gray dark:text-darkGray flex flex-wrap">
         {skills.map((skill, index) => {
           return (

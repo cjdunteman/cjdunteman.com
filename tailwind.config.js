@@ -12,7 +12,7 @@ module.exports = {
     colors: {
       white: "#F4F5F8",
       black: "#000000",
-      gray: "hsl(246,0%,3%)",
+      gray: "hsl(0, 0%, 26.7%)",
       darkGray: "hsl(246, 6%, 54%)",
       // purple: "hsl(234, 56.3%, 59.6%)",
       purple: {

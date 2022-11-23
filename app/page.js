@@ -7,11 +7,13 @@ export default function Home() {
     <div>
       <div>
         <h1 className="text-black dark:text-white">CJ Dunteman</h1>
-        <p className="dark:text-darkGray">Madison, Wisconsin</p>
+        <p className="text-gray dark:text-darkGray">Madison, Wisconsin</p>
         <br></br>
       </div>
       <div className="text-gray dark:text-darkGray">
-        <p className="font-semibold dark:text-white">About</p>
+        <h2 className="text-2xl font-semibold text-black dark:text-white">
+          About
+        </h2>
         <p>I like to code, learn about all things tech, and ski.</p>
         <br></br>
         <p>
@@ -27,10 +29,13 @@ export default function Home() {
       </div>
       <br></br>
       <Skills />
-      <div className="border-dashed border-purple">
-        <br></br>
-        <p className="text-black font-semibold dark:text-white">Contact</p>
-        <div className="grid grid-cols-12 text-black dark:text-darkGray">
+      <br></br>
+      {/* CONTACT DIV */}
+      <div>
+        <h2 className="text-black text-2xl font-semibold dark:text-white">
+          Contact
+        </h2>
+        <div className="grid grid-cols-12 text-gray dark:text-darkGray">
           <div className="grid col-span-3">
             <p>Email</p>
             <p>Twitter</p>
