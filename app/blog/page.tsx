@@ -8,7 +8,7 @@ function PostCard(post) {
       <h2 className="text-lg">
         <Link
           href={post.url}
-          className="text-2xl font-bold text-purple hover:text-lightBlue"
+          className="text-2xl font-bold text-purple-600 dark:text-purple-600 hover:text-black dark:hover:text-white"
         >
           {post.title}
         </Link>
@@ -30,9 +30,12 @@ export default function BlogPage() {
 
     return (
       <div>
-        {posts?.map((post, idx) => (
-          <PostCard key={idx} {...post} />
-        ))}
+        <h1>Blog</h1>
+        <div className="mt-6">
+          {posts?.map((post, idx) => (
+            <PostCard key={idx} {...post} />
+          ))}
+        </div>
       </div>
   );
 }

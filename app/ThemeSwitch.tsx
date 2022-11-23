@@ -19,7 +19,7 @@ const ThemeSwitch = () => {
 
   if (resolvedTheme === "dark") {
     return (
-      <button onClick={() => setTheme("light")}>
+      <button onClick={() => setTheme("light")} className="hover:dark:text-purple">
         <SunIcon />
       </button>
     );

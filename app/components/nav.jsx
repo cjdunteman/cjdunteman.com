@@ -4,22 +4,22 @@ import ThemeSwitch from "app/ThemeSwitch"
 
 export default function nav() {
     return (
-    <nav className="flex justify-between items-center py-6 mb-6 font-4xl text-black dark:text-white">
+    <nav className="flex justify-between items-center p-3 mt-2 mb-6 text-black dark:text-white bg-purple-900 dark:bg-purple-100 border rounded-md shadow-md border-purple-600 shadow-purple-600 dark:border-purple-400 dark:shadow-purple">
         <div className="flex gap-8">
         <Link
             href="/"
-            className="hover:text-black"
+            className="hover:text-purple-600 dark:hover:text-purple-800"
         >
             Home
         </Link>
         <Link
             href="/blog"
-            className=""
+            className="hover:text-purple-600 dark:hover:text-purple-800"
         >
             Blog
         </Link>
         <div>
-            <button className="">
+            <button className="hover:text-purple-600 dark:hover:text-purple-800">
             Projects
             </button>
             <div
