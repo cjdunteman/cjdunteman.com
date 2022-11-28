@@ -1,4 +1,6 @@
-// import ArrowTopRightIcon from "@radix-ui/react-icons";
+'use client'
+
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 export default function Stack() {
   return (
@@ -8,40 +10,45 @@ export default function Stack() {
       <p>Tools and apps that I use.</p>
       <br></br>
       <p>
-        <a href="https://nextjs.org/">
+        <a href="https://nextjs.org/" className="flex">
           Next.js
-          {/* <ArrowTopRightIcon /> */}
+          <ArrowTopRightIcon />
         </a>
       </p>
       <p>
-        <a href="https://tailwindcss.com/">
+        <a href="https://tailwindcss.com/" className="flex">
           TailwindCSS
-          {/* <ArrowTopRightIcon /> */}
+          <ArrowTopRightIcon />
         </a>
       </p>
       <p>
-        <a href="https://vercel.com/home">
+        <a href="https://vercel.com/home" className="flex">
           Vercel
-          {/* <ArrowTopRightIcon /> */}
+          <ArrowTopRightIcon />
         </a>
       </p>
-      <p>VS Code</p>
       <p>
-        <a href="https://www.figma.com/">
+        <a href="https://code.visualstudio.com/" className="flex">
+          VS Code
+          <ArrowTopRightIcon />
+        </a>
+      </p>
+      <p>
+        <a href="https://www.figma.com/" className="flex">
           Figma
-          {/* <ArrowTopRightIcon /> */}
+          <ArrowTopRightIcon />
         </a>
       </p>
       <p>
-        <a href="https://www.raycast.com/">
+        <a href="https://www.raycast.com/" className="flex">
           Raycast
-          {/* <ArrowTopRightIcon /> */}
+          <ArrowTopRightIcon />
         </a>
       </p>
       <p>
-        <a href="https://get.mem.ai/">
+        <a href="https://get.mem.ai/" className="flex">
           Mem
-          {/* <ArrowTopRightIcon /> */}
+          <ArrowTopRightIcon />
         </a>
       </p>
     </div>

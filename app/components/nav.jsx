@@ -18,7 +18,7 @@ export default function nav() {
         >
             Blog
         </Link>
-        <div>
+        {/* <div>
             <button className="hover:text-purple-600 dark:hover:text-purple-800">
             Projects
             </button>
@@ -32,7 +32,7 @@ export default function nav() {
                 Frontend Mentor
             </a>
             </div>
-        </div>
+        </div> */}
         </div>
         {/* <AvatarDemo /> */}
         <ThemeSwitch />

@@ -24,9 +24,12 @@
   p {
     @apply text-base;
   }
+  a {
+    @apply text-purple-600 dark:text-purple-600
+  }
   a:hover {
     @apply dark:text-white;
-    @apply text-purple-400;
+    @apply text-black;
   }
 }
 
