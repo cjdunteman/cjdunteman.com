@@ -1,4 +1,4 @@
-import ArrowTopRightIcon from "@radix-ui/react-icons";
+// import ArrowTopRightIcon from "@radix-ui/react-icons";
 
 export default function Stack() {
   return (
@@ -10,38 +10,38 @@ export default function Stack() {
       <p>
         <a href="https://nextjs.org/">
           Next.js
-          <ArrowTopRightIcon />
+          {/* <ArrowTopRightIcon /> */}
         </a>
       </p>
       <p>
         <a href="https://tailwindcss.com/">
           TailwindCSS
-          <ArrowTopRightIcon />
+          {/* <ArrowTopRightIcon /> */}
         </a>
       </p>
       <p>
         <a href="https://vercel.com/home">
           Vercel
-          <ArrowTopRightIcon />
+          {/* <ArrowTopRightIcon /> */}
         </a>
       </p>
       <p>VS Code</p>
       <p>
         <a href="https://www.figma.com/">
           Figma
-          <ArrowTopRightIcon />
+          {/* <ArrowTopRightIcon /> */}
         </a>
       </p>
       <p>
         <a href="https://www.raycast.com/">
           Raycast
-          <ArrowTopRightIcon />
+          {/* <ArrowTopRightIcon /> */}
         </a>
       </p>
       <p>
         <a href="https://get.mem.ai/">
           Mem
-          <ArrowTopRightIcon />
+          {/* <ArrowTopRightIcon /> */}
         </a>
       </p>
     </div>
