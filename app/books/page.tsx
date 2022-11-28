@@ -3,7 +3,7 @@ import React from "react";
 export default function Books() {
   return (
     <div className="flex max-w-2xl mx-auto flex-col py-8">
-      <h1 className="text-lg text-bold dark:text-bold">Books</h1>
+      <h1 className="text-bold dark:text-bold">Books</h1>
       <hr className="text-lightGray dark:text-darkGray"></hr>
       <p>
         A list of some of my favorite books (or series), in no particular order.
@@ -25,7 +25,6 @@ export default function Books() {
         1984{" "}
         <span className="text-gray dark:text-darkGray">by George Orwell</span>
       </p>
-      {/* <p>Dune <span className="text-gray dark:text-darkGray">by Frank Herbert</span></p> */}
       <p>
         The Mistborn Trilogy{" "}
         <span className="text-gray dark:text-darkGray">
