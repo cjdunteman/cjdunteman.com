@@ -30,7 +30,7 @@ export default function Skills() {
           return (
             <li
               key={index}
-              className={`list-none flex p-1 mt-2 mr-6 border border-solid rounded-full border-${skill.color}`}
+              className={`list-none flex p-1 mt-2 mr-6 border border-solid rounded-full`}
             >
               <Icon path={skill.iconPath} size={1} />
               {skill.name}

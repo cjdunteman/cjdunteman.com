@@ -34,6 +34,9 @@ export default function Stack() {
         </a>
       </p>
       <p>
+        <a href="https://brave.com/" className="flex">Brave<ArrowTopRightIcon /></a>
+      </p>
+      <p>
         <a href="https://www.figma.com/" className="flex">
           Figma
           <ArrowTopRightIcon />

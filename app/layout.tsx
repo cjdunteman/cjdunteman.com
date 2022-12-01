@@ -7,6 +7,7 @@ import Inspect from "inspx";
 import ThemeSwitch from './ThemeSwitch'
 import { AnalyticsWrapper } from './components/analytics'
 import Nav from './components/nav'
+// import nav from "./components/nav";
 import Footer from "./footer";
 
 const inter = Inter({
