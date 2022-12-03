@@ -14,6 +14,11 @@ export default async function Head() {
             property="og:image"
             content={`https://cjdunteman.com/api/og`}
         />
+
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:site" content="@cjdunteman" />
+        <meta name="twitter:creator" content="@cjdunteman" />
+
       </>
     )
   }
