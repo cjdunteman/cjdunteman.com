@@ -10,8 +10,10 @@ function getPost(slug) {
       const post = {
         // ...rawPost,
         date: format(parseISO(rawPost.date), "LLLL d, yyyy"),
-        title: rawPost.title
+        title: rawPost.title,
+        description: rawPost.description.raw
       };
+      console.log(post.description)
     return post
 }
 export default function Head({ params }: { params: { slug: string } }) {
@@ -20,10 +22,14 @@ export default function Head({ params }: { params: { slug: string } }) {
     return (
         <>
         <title>{post.title}</title>
+        <meta property='og:title' content={post.title} />
+        <meta property='og:description' content={post.description} />
+        <meta property='og:url' content={`https://cjdunteman.com/blog/${params.slug}`} />
         <meta
             property="og:image"
             content={`https://cjdunteman.com/api/og?title=${post.title}`}
         />
+
         </>
     )
 }
