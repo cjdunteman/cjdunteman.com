@@ -30,6 +30,15 @@ export default function Home() {
       <br></br>
       <Skills />
       <br></br>
+      {/* <div>
+        <h2 className="text-black text-2xl font-semibold dark:text-white">Projects</h2>
+        <div>
+          <img></img>
+          <div>
+            Jot
+          </div>
+        </div>
+      </div> */}
       {/* CONTACT DIV */}
       <div>
         <h2 className="text-black text-2xl font-semibold dark:text-white">

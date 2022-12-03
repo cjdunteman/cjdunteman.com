@@ -38,7 +38,7 @@
     "**/*.tsx",
     ".contentlayer/generated",
     ".next/types/**/*.ts"
-, "app/skiing/page.js", "app/page.js", "app/components/avatar.tsx"  ],
+, "app/skiing/page.tsx", "app/page.ts", "app/components/avatar.tsx", "app/components/analytics.jsx"  ],
   "exclude": [
     "node_modules"
   ]
