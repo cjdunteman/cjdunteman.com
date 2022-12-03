@@ -12,7 +12,7 @@ export default async function Head() {
         <meta property='og:url' content={`https://cjdunteman.com`} />
         <meta
             property="og:image"
-            content={`https://cjdunteman.com/api/og?title=${post.title}`}
+            content={`https://cjdunteman.com/api/og`}
         />
       </>
     )

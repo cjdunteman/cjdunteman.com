@@ -13,7 +13,7 @@ try {
     const hasTitle = searchParams.has('title');
     const title = hasTitle
         ? searchParams.get('title')?.slice(0, 100)
-        : 'My default title';
+        : 'CJ Dunteman';
 
   return new ImageResponse(
     (
