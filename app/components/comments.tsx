@@ -1,29 +1,32 @@
-"use client"
+'use client'
 
-import prisma from "../../lib/prisma"
+import useSWR from "swr"
+import { Post } from "lib/types"
+import fetcher from "lib/fetcher"
+import { fetchData } from "next-auth/client/_utils"
+import { Comment } from "lib/types"
 
-export default async function Comments() {
-    const data = await prisma.comment.findMany();
-    const comment = data[0].body;
+export default function Comments({post}: { post: Post }) {
+    const { data } = useSWR(`/api/comments`, fetcher)
+    // if (error) return <div>An error occured.</div>
+    // if (!data) return <div>Loading ...</div>
 
-    // const createComment = async (event) => {
-    //     event.preventDefault()
+    console.log(data)
+    // data.forEach(comment => {
+    //     for (let key in comment) {
+    //         <li key={comment}>{comment.body}</li>
+    //     }
+    // })
+    // const comments = data.comments
+    // console.log(comments[0].body)
 
-    //     const newComment = await prisma.Comment.create({
-    //         data: {
-    //             body: event.target.first.value, 
-    //         }
-    //     })
-    // }
+    // const commentItems = comments.map((comment) =>
+    //     <li key={comment}>{comment.body}</li>
+    // )
 
     return (
         <div>
-            {/* <form>
-                <label>Leave a comment</label>
-                <input type="text" id="comment" name="comment"></input>
-                <button type="submit">Submit</button>
-            </form> */}
-            <p>{comment}</p>
+            {/* <ul>{commentItems}</ul> */}
         </div>
     )
 }

@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     screens: {
-      xs: "540px",
+      // xs: "540px",
     },
     colors: {
       white: "#F4F5F8",
@@ -35,6 +35,9 @@ module.exports = {
         700: "hsl(265, 70%, 29%)",
         800: "hsl(266, 80%, 19%)",
         900: "hsl(266, 79%, 10%)",
+      },
+      blue: {
+        500: "hsl(256, 83%, 52%)",
       },
       dark: "hsl(250, 24%, 9%)",
       another: "hsl(250, 24%, 93%)",

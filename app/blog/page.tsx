@@ -8,7 +8,7 @@ function PostCard(post) {
       <h2 className="text-lg">
         <Link
           href={post.url}
-          className="text-2xl font-bold text-purple-600 dark:text-purple-600 hover:text-black dark:hover:text-white"
+          className="text-2xl font-bold text-purple-500 dark:text-purple-500 hover:text-black dark:hover:text-white"
         >
           {post.title}
         </Link>

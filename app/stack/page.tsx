@@ -2,6 +2,15 @@
 
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
+const tools = [
+  { name: '', link: ''},
+  { name: '', link: ''},
+  { name: '', link: ''},
+  { name: '', link: ''},
+  { name: '', link: ''},
+  { name: '', link: ''},
+]
+
 export default function Stack() {
   return (
     <div className="flex max-w-2xl mx-auto flex-col">

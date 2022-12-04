@@ -13,7 +13,6 @@ function getPost(slug) {
         title: rawPost.title,
         description: rawPost.description.raw
       };
-      console.log(post.description)
     return post
 }
 export default function Head({ params }: { params: { slug: string } }) {
@@ -22,6 +21,10 @@ export default function Head({ params }: { params: { slug: string } }) {
     return (
         <>
         <title>{post.title}</title>
+
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:site" content="@cjdunteman" />
+        <meta name="twitter:creator" content="@cjdunteman" />
         <meta property='og:title' content={post.title} />
         <meta property='og:description' content={post.description} />
         <meta property='og:url' content={`https://cjdunteman.com/blog/${params.slug}`} />

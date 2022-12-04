@@ -25,7 +25,7 @@
     @apply text-base;
   }
   a {
-    @apply text-purple-600 dark:text-purple-500
+    /* @apply text-purple-600 dark:text-purple-500 */
   }
   a:hover {
     @apply dark:text-white;
@@ -66,7 +66,7 @@ select {
   }
 
   .prose a {
-	@apply text-purple-500 dark:text-purple-600 transition-all;
+	@apply text-purple-500 dark:text-purple-300 transition-all;
   }
   
   .prose .anchor:after {

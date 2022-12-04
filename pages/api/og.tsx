@@ -18,7 +18,7 @@ try {
   return new ImageResponse(
     (
       <div
-        tw="bg-white text-9xl flex w-full h-full text-center items-center justify-center text-purple-500 capitalize"
+        tw="bg-white text-9xl flex w-full h-full text-center items-center justify-center font-bold capitalize p-[40px]"
       >
         {title}
       </div>

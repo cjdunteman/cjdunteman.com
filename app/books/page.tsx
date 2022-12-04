@@ -1,60 +1,24 @@
 import React from "react";
 
+const books = [
+  { title: 'The Kite Runner', author: 'Khaled Hosseini'},
+  { title: 'The Outsiders', author: 'S.E. Hilton'},
+  { title: 'How to Win Friends and Influence People', author: 'Dale Carnegie'},
+  { title: '1984', author: 'George Orwell'},
+  { title: 'The Mistborn Trilogy', author: 'Brandon Sanderson'},
+  { title: 'A Song of Ice and Fire', author: 'George R.R. Martin'},
+]
+
 export default function Books() {
+  const listItems = books.map((book) =>
+    <li className="border-0 border-solid rounded-lg p-4 transition hover:delay-700 hover:bg-gradient-to-r from-purple-200 to-purple-100 dark:hover:bg-gradient-to-r dark:from-purple-700 dark:to-purple-900">{book.title} by {book.author}</li>
+  );
+
   return (
-    <div className="flex max-w-2xl mx-auto flex-col py-8">
+    <div className="flex max-w-2xl mx-auto flex-col py-8 sm:text-md">
       <h1 className="text-bold dark:text-bold">Books</h1>
-      <hr className="text-lightGray dark:text-darkGray"></hr>
-      <p>
-        A list of some of my favorite books (or series), in no particular order.
-      </p>
-      <br></br>
-      <p>
-        The Kite Runner{" "}
-        <span className="text-gray dark:text-darkGray">by Khaled Hosseini</span>
-      </p>
-      <p>
-        The Outsiders{" "}
-        <span className="text-gray dark:text-darkGray">by S.E. Hilton</span>
-      </p>
-      <p>
-        How to Win Friends and Influence People{" "}
-        <span className="text-gray dark:text-darkGray">by Dale Carnegie</span>
-      </p>
-      <p>
-        1984{" "}
-        <span className="text-gray dark:text-darkGray">by George Orwell</span>
-      </p>
-      <p>
-        The Mistborn Trilogy{" "}
-        <span className="text-gray dark:text-darkGray">
-          by Brandon Sanderson
-        </span>
-      </p>
-      <p>
-        A Song of Ice and Fire{" "}
-        <span className="text-gray dark:text-darkGray">
-          by George R.R. Martin
-        </span>
-      </p>
-      <p>
-        Shoe Dog{" "}
-        <span className="text-gray dark:text-darkGray">by Phil Knight</span>
-      </p>
-      <p>
-        Principles: Life and Work{" "}
-        <span className="text-gray dark:text-darkGray">by Ray Dalio</span>
-      </p>
-      <p>
-        Quiet{" "}
-        <span className="text-gray dark:text-darkGray">by Susan Cain</span>
-      </p>
-      <p>
-        Outliers{" "}
-        <span className="text-gray dark:text-darkGray">
-          by Malcolm Gladwell
-        </span>
-      </p>
+      {/* <hr className="text-lightGray dark:text-darkGray"></hr> */}
+      <ul className="mt-4">{listItems}</ul>
     </div>
   );
 }
