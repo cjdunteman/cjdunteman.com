@@ -18,10 +18,13 @@ export default function nav() {
         >
             Blog
         </Link>
-        {/* <div>
-            <button className="hover:text-purple-600 dark:hover:text-purple-800">
+        {/* <Link
+            href="/projects"
+            className="text-purple-500 dark:text-purple-300"
+        >
             Projects
-            </button>
+        </Link> */}
+        {/* <div>
             <div
             className="absolute left hidden peer-hover:flex hover:flex w-[200px] flex-col rounded-md"
             >
