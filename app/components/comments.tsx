@@ -3,6 +3,7 @@ import { Post } from "lib/types"
 async function getComments() {
     const res = await fetch('https://www.cjdunteman.com/api/comments?postid=2', {
         method: 'GET',
+        cache: "no-store"
     })
 
     if (!res.ok) {
@@ -10,11 +11,15 @@ async function getComments() {
         throw new Error('Failed to fetch comments')
     }
 
-    return res.json()
+    const comments = await res.json()
+
+    // console.log(res)
+    return comments 
 }
 
 export default async function Comments({post}: { post: Post }) { 
     const comments = await getComments();
+    console.log("COMMENTS: ", comments)
 
     const commentItems = comments.map(comment => (
             // <li key={comment.id}>{comment.body} - {comment.author}</li>

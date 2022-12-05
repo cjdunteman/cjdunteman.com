@@ -10,34 +10,33 @@ const prisma = new PrismaClient()
 //     comment: Array<comment>
 // }
 
-type comment = {
-  id: number,
-  author: { name: string },
-  body: string,
-  postedAt: Date,
-  postId: number
-}
+// type comment = {
+//   id: number,
+//   author: { name: string },
+//   body: string,
+//   postedAt: Date,
+//   postId: number
+// }
 
 // LINK - https://www.prisma.io/blog/satisfies-operator-ur8ys8ccq7zb 
 
 // strongly typed `CommentSelect` object with satisfies
-const commentSelect = {
-  id: true,
-  author: {
-    select: {
-      name: true
-    },
-  },
-  body: true,
-  postedAt: true,
-} satisfies Prisma.CommentSelect;
+// const commentSelect = {
+//   id: true,
+//   author: {
+//     select: {
+//       name: true
+//     },
+//   },
+//   body: true,
+//   postedAt: true,
+// } satisfies Prisma.CommentSelect;
 
 // infer the resulting payload type
-type MyCommentPayload = Prisma.CommentGetPayload<{ select: typeof commentSelect}>;
+// type MyCommentPayload = Prisma.CommentGetPayload<{ select: typeof commentSelect}>;
 
 export default async function handle(req: NextApiRequest, res: NextApiResponse) {
-  console.log("QUERY:", req.query)
-  const method = req.method
+  const { method } = req
 
   switch (method) {
     case 'GET':
@@ -47,9 +46,17 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         // 
         // 1 - get a post and then get all the comments attached to it
         // 2 - go through all comments and grab those with matching postId
+        console
         const comments = await prisma.comment.findMany({
           where: { postId: 1 },
-          select: commentSelect
+          // select: commentSelect
+          include: {
+            author: {
+              select: {
+                name: true
+              }
+            }
+          }
         })
         console.log(comments)
         res.status(200).json(comments)
