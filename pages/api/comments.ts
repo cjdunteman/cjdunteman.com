@@ -47,11 +47,12 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         // 1 - get a post and then get all the comments attached to it
         // 2 - go through all comments and grab those with matching postId
         const comments = await prisma.comment.findMany({
-          where: { id: 1 },
+          where: { postId: 1 },
           include: {
             author: true
           }
         })
+        console.log(comments)
         return res.status(200).json(comments)
         }
         catch (e) {

@@ -20,7 +20,6 @@ async function getComments() {
 
     const comments = await res.json()
 
-    // console.log(res)
     return comments 
 }
 
