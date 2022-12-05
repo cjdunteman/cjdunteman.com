@@ -1,8 +1,13 @@
 import { Post } from "lib/types"
+// import { use } from "react"
+// import { useState } from "react";
 
 async function getComments() {
-    const res = await fetch('https://www.cjdunteman.com/api/comments?postid=2', {
+    // const [APIResponse, setAPIResponse] = useState(null);
+
+    const res = await fetch('https://www.cjdunteman.com/api/comments', {
         method: 'GET',
+        headers: {"Content-Type": "application/json"},
         cache: "no-store"
     })
 
@@ -10,6 +15,8 @@ async function getComments() {
         // Activate closest `error.js` Error boundary
         throw new Error('Failed to fetch comments')
     }
+
+    // setAPIResponse(await res.json())
 
     const comments = await res.json()
 

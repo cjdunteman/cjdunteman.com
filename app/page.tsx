@@ -17,8 +17,7 @@ export default function Home() {
         <p>I like to code, learn about all things tech, and ski.</p>
         <br></br>
         <p>
-          The programming languages I am most comfortable with are JavaScript
-          and Python. For front-end web dev I like to use Next.js with
+          When it comes to programming, I am most comfortable with JavaScript and Python. For front-end web dev I like to use Next.js with
           TailwindCSS.
         </p>
         <br></br>

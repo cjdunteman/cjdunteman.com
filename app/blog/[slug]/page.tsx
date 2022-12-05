@@ -1,11 +1,11 @@
 import { format, parseISO } from "date-fns";
-import { allPosts } from "contentlayer/generated";
+import { allPosts, Post } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 // import { Share1Icon } from "@radix-ui/react-icons";
 
 import Comments from "../../components/comments";
 
-import { Post } from "lib/types";
+// import { Post } from "lib/types";
 
 export default function PostLayout({ params }) {
   const rawPost = allPosts.find(

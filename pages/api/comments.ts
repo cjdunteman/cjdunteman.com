@@ -46,26 +46,21 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         // 
         // 1 - get a post and then get all the comments attached to it
         // 2 - go through all comments and grab those with matching postId
-        console
         const comments = await prisma.comment.findMany({
-          where: { postId: 1 },
-          // select: commentSelect
+          where: { id: 1 },
           include: {
-            author: {
+            author: { 
               select: {
                 name: true
               }
             }
           }
         })
-        console.log(comments)
-        res.status(200).json(comments)
-        break
+        return res.status(200).json(comments)
         }
         catch (e) {
         console.error('Request error', e)
-        res.status(500).json({ error: 'Error fetching comments' })
-        break
+        return res.status(500).json({ error: 'Error fetching comments' })
       }
     // TODO: case 'PUT'
     // TODO: case 'DELETE'
