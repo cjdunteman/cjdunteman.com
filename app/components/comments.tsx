@@ -1,32 +1,36 @@
-'use client'
-
-import useSWR from "swr"
 import { Post } from "lib/types"
-import fetcher from "lib/fetcher"
-import { fetchData } from "next-auth/client/_utils"
-import { Comment } from "lib/types"
 
-export default function Comments({post}: { post: Post }) {
-    const { data } = useSWR(`/api/comments`, fetcher)
-    // if (error) return <div>An error occured.</div>
-    // if (!data) return <div>Loading ...</div>
+async function getComments() {
+    const res = await fetch('https://www.cjdunteman.com/api/comments?postid=2', {
+        method: 'GET',
+    })
 
-    console.log(data)
-    // data.forEach(comment => {
-    //     for (let key in comment) {
-    //         <li key={comment}>{comment.body}</li>
-    //     }
-    // })
-    // const comments = data.comments
-    // console.log(comments[0].body)
+    if (!res.ok) {
+        // Activate closest `error.js` Error boundary
+        throw new Error('Failed to fetch comments')
+    }
 
-    // const commentItems = comments.map((comment) =>
-    //     <li key={comment}>{comment.body}</li>
-    // )
+    return res.json()
+}
+
+export default async function Comments({post}: { post: Post }) { 
+    const comments = await getComments();
+
+    const commentItems = comments.map(comment => (
+            // <li key={comment.id}>{comment.body} - {comment.author}</li>
+            <div key={comment.id} className="border border-solid rounded-md border-purple-200 dark:border-purple-800 mb-4 p-4">
+                <p className="text-md">{comment.body}</p>
+                <br></br>
+                <p className="text-darkGray dark:text-gray text-sm">{comment.postedAt}</p>
+            </div>
+        ))
 
     return (
+        <>
         <div>
-            {/* <ul>{commentItems}</ul> */}
+            <p>Comments</p>
+            <ul>{commentItems}</ul>
         </div>
+        </>
     )
 }

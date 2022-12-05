@@ -1,47 +1,59 @@
-import { PrismaClient } from "@prisma/client"
+import { mdiPageLayoutSidebarLeft } from "@mdi/js"
+import { Prisma, PrismaClient } from "@prisma/client"
 import { NextApiRequest, NextApiResponse } from 'next'
 
-// TODO: add type for response data
-// type ResponseData = {
-//   message: string
-// }
 
 const prisma = new PrismaClient()
 
+// TODO: add type for response data
+// type ResponseData = {
+//     comment: Array<comment>
+// }
+
+type comment = {
+  id: number,
+  author: { name: string },
+  body: string,
+  postedAt: Date,
+  postId: number
+}
+
+// LINK - https://www.prisma.io/blog/satisfies-operator-ur8ys8ccq7zb 
+
+// strongly typed `CommentSelect` object with satisfies
+const commentSelect = {
+  id: true,
+  author: {
+    select: {
+      name: true
+    },
+  },
+  body: true,
+  postedAt: true,
+} satisfies Prisma.CommentSelect;
+
+// infer the resulting payload type
+type MyCommentPayload = Prisma.CommentGetPayload<{ select: typeof commentSelect}>;
+
 export default async function handle(req: NextApiRequest, res: NextApiResponse) {
-  const { method } = req
+  console.log("QUERY:", req.query)
+  const method = req.method
 
   switch (method) {
     case 'GET':
       try {
-        //REVIEW -
+        // REVIEW -
         // 2 methods to get all the comments for a post, which is better?
         // 
         // 1 - get a post and then get all the comments attached to it
         // 2 - go through all comments and grab those with matching postId
         const comments = await prisma.comment.findMany({
-          where: {
-            postId: 1
-          },
-          select: {
-            author: true,
-            body: true,
-            postedAt: true
-          },
-          orderBy: {
-            postedAt: 'desc'
-          }
-        }
-        )
-        console.log("COMMENTS:", comments)
-        res.status(200).json(
-          comments.map((comment) => ({
-            author: true,
-            body: comment.body,
-            postedAt: comment.postedAt,
-          }))
-          );
-          break
+          where: { postId: 1 },
+          select: commentSelect
+        })
+        console.log(comments)
+        res.status(200).json(comments)
+        break
         }
         catch (e) {
         console.error('Request error', e)
