@@ -39,8 +39,6 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
   const { method } = req
   const { postid } = req.query
 
-  console.log("QUERY:", postid)
-
   switch (method) {
     case 'GET':
       try {
@@ -50,7 +48,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         // 1 - get a post and then get all the comments attached to it
         // 2 - go through all comments and grab those with matching postId
         const comments = await prisma.comment.findMany({
-          where: { postId: 1 },
+          where: { postId: Number(postid) },
           include: {
             author: true
           }
