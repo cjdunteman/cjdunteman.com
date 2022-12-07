@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
-// import { Share1Icon } from "@radix-ui/react-icons";
 
 import Comments from "../../components/comments";
 
@@ -15,12 +14,13 @@ export default function PostLayout({ params }) {
 
   const post: Post = {
     ...rawPost,
+    id: rawPost.id,
     title: rawPost.title,
     // body: rawPost.html,
     date: format(parseISO(rawPost.date), "LLLL d, yyyy"),
   };
 
-  // console.log(post.title)
+  console.log(post.id)
   const MDXContent = useMDXComponent(post.body.code);
 
   // NOTE - temporary workaround for using async/await in jsx

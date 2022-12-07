@@ -32,6 +32,11 @@ const Post = defineDocumentType(() => ({
       description: "Brief descripiton of the post",
       required: true,
     },
+    id: {
+      type: "number",
+      description: "Unique id of post",
+      required: true,
+    },
   },
   computedFields: {
     url: {
