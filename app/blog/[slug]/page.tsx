@@ -19,8 +19,7 @@ export default function PostLayout({ params }) {
     // body: rawPost.html,
     date: format(parseISO(rawPost.date), "LLLL d, yyyy"),
   };
-
-  console.log(post.id)
+  
   const MDXContent = useMDXComponent(post.body.code);
 
   // NOTE - temporary workaround for using async/await in jsx

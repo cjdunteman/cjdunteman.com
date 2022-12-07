@@ -2,8 +2,8 @@ import { Post } from "lib/types"
 
 async function getComments(post) {
 
-    console.log("POST ID:", post.id)
-    const res = await fetch(`https://www.cjdunteman.com/api/comments?postid=${post.id}`, {
+    console.log("PASSING POSTID: ", typeof(post.id))
+    const res = await fetch(`https://www.cjdunteman.com/api/comments?`, {
         method: 'GET',
         headers: {"Content-Type": "application/json"},
         cache: "no-store"

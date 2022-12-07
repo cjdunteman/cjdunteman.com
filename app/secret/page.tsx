@@ -13,7 +13,6 @@ async function getUser() {
 
 export default async function secret() {
   const data = await getUser();
-  console.log(data);
   return (
     <div>
       <SignIn />
