@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
@@ -49,8 +50,10 @@ export default function PostLayout({ params }) {
       <br></br>
       <br></br>
 
-      {/* @ts-expect-error Server Component */}
-      <Comments post={post}/>
+      <Suspense fallback={<p>Loading comments...</p>}>
+        {/* @ts-expect-error Server Component */}
+        <Comments post={post}/>
+      </Suspense>
     </div>
   );
 }

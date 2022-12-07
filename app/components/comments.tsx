@@ -1,9 +1,6 @@
 import { Post } from "lib/types"
-// import { use } from "react"
-// import { useState } from "react";
 
 async function getComments() {
-    // const [APIResponse, setAPIResponse] = useState(null);
 
     const res = await fetch('https://www.cjdunteman.com/api/comments', {
         method: 'GET',
@@ -19,6 +16,7 @@ async function getComments() {
     // setAPIResponse(await res.json())
 
     const comments = await res.json()
+    console.log("COMMENTS: ", comments)
 
     return comments 
 }

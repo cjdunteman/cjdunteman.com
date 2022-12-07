@@ -53,7 +53,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
           }
         })
         console.log(comments)
-        return res.status(200).json(comments)
+        return res.status(200).json(await comments)
         }
         catch (e) {
         console.error('Request error', e)
