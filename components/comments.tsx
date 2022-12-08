@@ -26,7 +26,7 @@ export default async function Comments({post}: { post: Post }) {
             <div key={comment.id} className="border border-solid rounded-md border-purple-200 dark:border-purple-800 mb-4 p-4">
                 <p className="text-md">{comment.body}</p>
                 <br></br>
-                <p className="text-darkGray dark:text-gray text-sm">{comment.postedAt}</p>
+                <p className="text-darkGray dark:text-gray text-sm">{comment.author.name} {comment.postedAt}</p>
             </div>
         ))
 

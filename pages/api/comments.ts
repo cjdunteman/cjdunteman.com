@@ -1,5 +1,6 @@
 import { mdiPageLayoutSidebarLeft } from "@mdi/js"
 import { Prisma, PrismaClient } from "@prisma/client"
+import { BorderStyleIcon } from "@radix-ui/react-icons"
 import { NextApiRequest, NextApiResponse } from 'next'
 
 
@@ -50,7 +51,11 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         const comments = await prisma.comment.findMany({
           where: { postId: Number(postid) },
           include: {
-            author: true
+            author: {
+              select: {
+                name: true,
+              }
+            },
           }
         })
         return res.status(200).json(await comments)
@@ -59,7 +64,20 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         console.error('Request error', e)
         return res.status(500).json({ error: 'Error fetching comments' })
       }
-    // TODO: case 'PUT'
+    // case 'POST':
+    //   try {
+    //     await prisma.comment.create({
+    //       data:
+    //         body: body,
+    //         user: {
+    //           connect: [{ id: }]
+    //         }
+    //         postId: postid,
+    //         post: {
+    //           connect: [{ id:postId }]
+    //         }
+    //     })
+    //   }
     // TODO: case 'DELETE'
     default: 
       res.setHeader('Allow', ['GET'])

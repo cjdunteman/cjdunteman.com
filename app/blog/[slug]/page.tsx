@@ -5,6 +5,7 @@ import { format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import { unstable_getServerSession } from "next-auth";
 import SignIn from "components/SignIn";
+import CommentForm from "components/CommentForm";
 
 import Comments from "../../../components/comments";
 import { Mdx } from "components/mdx";
@@ -56,15 +57,7 @@ export default async function PostLayout({ params }) {
       <br></br>
       <br></br>
       <br></br>
-      {session ? <SignIn /> :
-        <form>
-          <input 
-            aria-label="Leave a comment" 
-            placeholder="Leave a comment..."
-            className="pl-4 mb-2 py-4 w-full bg-purple-100 dark:bg-purple-900 border border-solid rounded-md border-purple-900 focus:outline-none" 
-          />
-          <button className="pl-4">Submit</button>
-        </form>
+      {!session ? <SignIn /> : <CommentForm post={post}/>
       }
       <br></br>
       {/* <SignIn /> */}
