@@ -1,4 +1,4 @@
-import SignIn from "../components/SignIn";
+import SignIn from "../../components/SignIn";
 
 async function getUser() {
   const res = await fetch("https://api.github.com/users/cjdunteman");

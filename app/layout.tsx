@@ -6,8 +6,8 @@ import { Providers } from './providers'
 import Link from "next/link";
 import Inspect from "inspx";
 import ThemeSwitch from './ThemeSwitch'
-import { AnalyticsWrapper } from './components/analytics'
-import Nav from './components/nav'
+import { AnalyticsWrapper } from '../components/analytics'
+import Nav from '../components/nav'
 // import nav from "./components/nav";
 import Footer from "./footer";
 import { unstable_getServerSession } from "next-auth";

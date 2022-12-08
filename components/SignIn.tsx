@@ -1,5 +1,5 @@
 'use client'
-import { signIn, signOut } from "next-auth/react"
+import { signIn } from "next-auth/react"
 
 // export default function SignIn() {
 //   const { data: session } = useSession()
@@ -18,18 +18,8 @@ import { signIn, signOut } from "next-auth/react"
 //   )
 // }
 
-import { unstable_getServerSession } from "next-auth/next"
+export default function SignIn() {
 
-export default async function SignIn() {
-  const session = await unstable_getServerSession()
-  
-    if (session) {
-    return (
-      <>
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    )
-  }
   return (
     <>
       <button onClick={() => signIn()}>Sign in</button>

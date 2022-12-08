@@ -1,11 +1,13 @@
+import "server-only"
+
 import { Suspense } from "react";
 import { format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
-import { useMDXComponent } from "next-contentlayer/hooks";
-
-import SignIn from '../../components/SignIn'
-import Comments from "../../components/comments";
 import { unstable_getServerSession } from "next-auth";
+import SignIn from "components/SignIn";
+
+import Comments from "../../../components/comments";
+import { Mdx } from "components/mdx";
 
 function getPost(params: { slug: string; }) {
   const rawPost = allPosts.find(
@@ -20,14 +22,13 @@ function getPost(params: { slug: string; }) {
     date: format(parseISO(rawPost.date), "LLLL d, yyyy"),
   };
 
-  const MDXContent = useMDXComponent(post.body.code);
-
-  return { post, MDXContent }
+  return { post }
 }
 
-export default function PostLayout({ params }) {
-  const { post, MDXContent } = getPost(params)
-  // const MDXContent = useMDXComponent(post.body.code);
+export default async function PostLayout({ params }) {
+  const session = unstable_getServerSession
+  const { post } = getPost(params)
+
 
   // NOTE - temporary workaround for using async/await in jsx
   // https://beta.nextjs.org/docs/data-fetching/fetching
@@ -50,21 +51,23 @@ export default function PostLayout({ params }) {
             </time>
           </p>
         )}
-        <MDXContent />
+        <Mdx code={post.body.code} />
       </article>
       <br></br>
       <br></br>
       <br></br>
-      {/* <SignIn /> */}
-      <form>
-        <input 
-          aria-label="Leave a comment" 
-          placeholder="Leave a comment..."
-          className="pl-4 mb-2 py-4 w-full bg-purple-100 dark:bg-purple-900 border border-solid rounded-md border-purple-900 focus:outline-none" 
-        />
-        <button className="pl-4">Submit</button>
-      </form>
+      {session ? <SignIn /> :
+        <form>
+          <input 
+            aria-label="Leave a comment" 
+            placeholder="Leave a comment..."
+            className="pl-4 mb-2 py-4 w-full bg-purple-100 dark:bg-purple-900 border border-solid rounded-md border-purple-900 focus:outline-none" 
+          />
+          <button className="pl-4">Submit</button>
+        </form>
+      }
       <br></br>
+      {/* <SignIn /> */}
       <Suspense fallback={<p>Loading comments...</p>}>
         {/* @ts-expect-error Server Component */}
         <Comments post={post}/>

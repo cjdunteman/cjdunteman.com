@@ -1,7 +1,7 @@
-export default function Snippets() {
+export default function Uses() {
     return (
         <div>
-            <h1>Snippets</h1>
+            <h1>Uses</h1>
         </div>
     )
 }
