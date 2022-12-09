@@ -1,6 +1,6 @@
 import { Post } from "lib/types"
 
-async function getComments(post) {
+async function getComments(post: Post) {
 
     const res = await fetch(`https://www.cjdunteman.com/api/comments?postid=${post.id}`, {
         method: 'GET',

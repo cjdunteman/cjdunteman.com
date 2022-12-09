@@ -1,4 +1,9 @@
+export type User = {
+  id: number,
+}
+
 export type Post = {
+    id: any
     body: any
     dateModified: string
     date: string
@@ -12,3 +17,5 @@ export type Comment = {
   authorId: number
   postId: number
 }
+
+export type UserPosts = User & { posts: Post[]}

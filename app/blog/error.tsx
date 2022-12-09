@@ -16,7 +16,7 @@ export default function Error({
 
   return (
     <div>
-      <p>Something went wrong!</p>
+      <p>Something went wrong with /blog!</p>
       <button onClick={() => reset()}>Reset error boundary</button>
     </div>
   );

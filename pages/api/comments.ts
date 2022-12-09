@@ -51,14 +51,10 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         const comments = await prisma.comment.findMany({
           where: { postId: Number(postid) },
           include: {
-            author: {
-              select: {
-                name: true,
-              }
-            },
+            author: true
           }
         })
-        return res.status(200).json(await comments)
+        return res.status(200).json(comments)
         }
         catch (e) {
         console.error('Request error', e)
