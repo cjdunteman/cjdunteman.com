@@ -38,7 +38,7 @@ const prisma = new PrismaClient()
 
 export default async function handle(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req
-  const { postid } = req.query
+  const postid = req.query.postid
 
   switch (method) {
     case 'GET':
@@ -60,21 +60,21 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         console.error('Request error', e)
         return res.status(500).json({ error: 'Error fetching comments' })
       }
-    // case 'POST':
-    //   const comment = JSON.stringify(req.query.body)
-    //   try {
-    //     await prisma.comment.create({
-    //       data:
-    //         body: comment,
-    //         user: {
-    //           connect: [{ id: userid }]
-    //         }
-    //         postId: postid,
-    //         post: {
-    //           connect: [{ id:postid }]
-    //         }
-    //     })
-    //   }
+    case 'POST':
+      const commentBody = JSON.stringify(req.body)
+      try {
+        await prisma.comment.create({
+          data: {
+            body: commentBody,
+            authorId: 'clbgv92vp0000dlz8qwx01dkk',
+            postId: 3,
+          },
+        })
+      }
+      catch (e) {
+        console.error('Request error', e)
+        return res.status(500).json({ error: 'Error posting comment' })
+      }
     // TODO: case 'DELETE'
     default: 
       res.setHeader('Allow', ['GET'])

@@ -29,13 +29,5 @@ module.exports = withContentlayer({
       },
     ];
   },
-  async rewrites() {
-    return [
-      {
-        source: "/running",
-        destination: "/(@[a-zA-Z0-9]+)/:running",
-      },
-    ];
-  },
   ...nextConfig,
 });
