@@ -33,7 +33,7 @@ module.exports = withContentlayer({
     return [
       {
         source: "/running",
-        destination: "/(@[a-zA-Z0-9]+)running",
+        destination: "/(@[a-zA-Z0-9]+)/:running",
       },
     ];
   },
