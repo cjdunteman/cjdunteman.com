@@ -6,6 +6,7 @@ import { AnalyticsWrapper } from '../components/analytics'
 import Nav from '../components/Nav'
 import Footer from "./footer";
 import { unstable_getServerSession } from "next-auth";
+import { authOptions } from "pages/api/auth/[...nextauth]";
 
 const inter = Inter({
   variable: '--font-inter',
@@ -16,7 +17,7 @@ export default async function RootLayout({
   children, }: {
     children: React.ReactNode; 
   }) {
-    const session = await unstable_getServerSession()
+    const session = await unstable_getServerSession(authOptions)
 
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages

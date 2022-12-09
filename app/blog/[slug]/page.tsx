@@ -57,7 +57,7 @@ export default async function PostLayout({ params }) {
       <br></br>
       <br></br>
       <br></br>
-      {!session ? <SignIn /> : <CommentForm post={post}/>
+      {!session ? <SignIn /> : <CommentForm props={ post }/>
       }
       <br></br>
       {/* <SignIn /> */}

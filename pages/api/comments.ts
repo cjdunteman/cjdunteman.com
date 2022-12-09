@@ -65,16 +65,17 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         return res.status(500).json({ error: 'Error fetching comments' })
       }
     // case 'POST':
+    //   const comment = JSON.stringify(req.query.body)
     //   try {
     //     await prisma.comment.create({
     //       data:
-    //         body: body,
+    //         body: comment,
     //         user: {
-    //           connect: [{ id: }]
+    //           connect: [{ id: userid }]
     //         }
     //         postId: postid,
     //         post: {
-    //           connect: [{ id:postId }]
+    //           connect: [{ id:postid }]
     //         }
     //     })
     //   }

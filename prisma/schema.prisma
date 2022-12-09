@@ -12,11 +12,54 @@ datasource db {
   relationMode = "prisma"
 }
 
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
 model User {
-  id       Int       @id @default(autoincrement())
-  name     String?
-  posts    Post[]
-  comments Comment[]
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  posts         Post[]
+  comments      Comment[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
 }
 
 model Comment {
@@ -24,7 +67,7 @@ model Comment {
   body     String   @db.VarChar(500)
   postedAt DateTime @default(now())
   author   User     @relation(fields: [authorId], references: [id])
-  authorId Int
+  authorId String
   postId   Int
   post     Post     @relation(fields: [postId], references: [id])
 
@@ -38,7 +81,7 @@ model Post {
   updatedAt DateTime? @updatedAt
   title     String    @db.VarChar(255)
   author    User      @relation(fields: [authorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  authorId  Int
+  authorId  String
   comments  Comment[]
 
   @@unique([authorId, title]) // no post should have same author and title
