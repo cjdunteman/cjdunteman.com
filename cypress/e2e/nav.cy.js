@@ -1,11 +1,11 @@
 describe("Navigation", () => {
   beforeEach(() => {
-      cy.visit("/")
-  })
+    cy.visit("/");
+  });
 
   it("should navigate to the blog page", () => {
     cy.get('a[href*="blog"]').click();
     cy.url().should("include", "/blog");
-    cy.get("h1").contains("Writing");
+    cy.get("h1").contains("Blog");
   });
 });

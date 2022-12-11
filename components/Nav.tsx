@@ -1,12 +1,18 @@
+'use client'
+
 import Link from "next/link"
 import ThemeSwitch from "./ThemeSwitch"
 import UserAvatar from "./Avatar"
 import SignIn from "./SignIn"
 import { unstable_getServerSession } from "next-auth";
+import { authOptions } from "pages/api/auth/[...nextauth]";
+import { useSession } from "next-auth/react";
 
 
 export default function Nav() {
-    const session = unstable_getServerSession()
+    // const session = await unstable_getServerSession(authOptions)
+    // console.log(session)
+    const { data: session } = useSession()
     console.log(session)
 
     return (

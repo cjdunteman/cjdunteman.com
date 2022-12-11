@@ -13,6 +13,10 @@ async function createComment(event) {
       cache: "no-store",
       body: JSONdata,
     })
+    if (!res.ok) {
+      // Activate closest `error.js` Error boundary
+      throw new Error('Failed to fetch comments')
+  }
   }
 
 export default function CommentForm({post}: { post: Post }) {

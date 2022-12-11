@@ -1,14 +1,17 @@
 'use client'
 
-import { SessionProvider } from "next-auth/react"
 import { ThemeProvider } from 'next-themes'
+import { SessionProvider } from "next-auth/react";
 
-export function Providers({ session, children }: any ) {
+export interface AuthContextProps {
+  children: React.ReactNode;
+}
+
+export default function Providers({ children }: AuthContextProps) {
   return (
-      <ThemeProvider attribute="class">
-        <SessionProvider session={session}>
-          {children}
-        </SessionProvider>
+    <SessionProvider>
+      <ThemeProvider attribute="class">{children}
       </ThemeProvider>
+    </SessionProvider>
   )
 }

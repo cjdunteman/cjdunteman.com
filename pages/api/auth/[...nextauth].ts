@@ -2,10 +2,14 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import NextAuth from "next-auth";
 import { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
-// import TwitterProvider from "next-auth/providers/twitter";
 import prisma from "lib/prisma"
 
 export const authOptions: NextAuthOptions = {
+  callbacks: {
+    session({ session, token, user }) {
+      return session // The return type will match the one returned in `useSession()`
+    },
+  },
   // Configure one or more authentication providers
   adapter: PrismaAdapter(prisma),
   providers: [
