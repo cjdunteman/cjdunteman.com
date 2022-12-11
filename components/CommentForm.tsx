@@ -1,5 +1,7 @@
 'use client'
 
+import { Post } from "lib/types"
+
 async function createComment(event) {
 
     const postId = event.target.postId.value
@@ -13,7 +15,7 @@ async function createComment(event) {
     })
   }
 
-export default function CommentForm(post) {
+export default function CommentForm({post}: { post: Post }) {
     return (
         <form onSubmit={createComment}>
         <input type="hidden" name="postId" value={post.id}/>

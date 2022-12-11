@@ -1,10 +1,12 @@
+import { MDX } from "contentlayer/core"
+
 export type User = {
   id: number,
 }
 
 export type Post = {
-    id: any
-    body: any
+    id: string
+    body: MDX
     dateModified: string
     date: string
     title: string

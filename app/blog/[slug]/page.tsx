@@ -7,7 +7,7 @@ import { unstable_getServerSession } from "next-auth";
 import SignIn from "components/SignIn";
 import CommentForm from "components/CommentForm";
 
-import Comments from "../../../components/comments";
+import Comments from "../../../components/Comments";
 import { Mdx } from "components/mdx";
 
 function getPost(params: { slug: string; }) {
@@ -23,12 +23,12 @@ function getPost(params: { slug: string; }) {
     date: format(parseISO(rawPost.date), "LLLL d, yyyy"),
   };
 
-  return { post }
+  return post
 }
 
 export default async function PostLayout({ params }) {
-  const session = unstable_getServerSession
-  const { post } = getPost(params)
+  const session = await unstable_getServerSession()
+  const post = getPost(params)
 
 
   // NOTE - temporary workaround for using async/await in jsx
@@ -57,10 +57,8 @@ export default async function PostLayout({ params }) {
       <br></br>
       <br></br>
       <br></br>
-      {!session ? <SignIn /> : <CommentForm props={ post }/>
-      }
+      {!session ? <SignIn /> : <CommentForm post={post}/>}
       <br></br>
-      {/* <SignIn /> */}
       <Suspense fallback={<p>Loading comments...</p>}>
         {/* @ts-expect-error Server Component */}
         <Comments post={post}/>

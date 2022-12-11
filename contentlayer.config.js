@@ -33,7 +33,7 @@ const Post = defineDocumentType(() => ({
       required: true,
     },
     id: {
-      type: "number",
+      type: "string",
       description: "Unique id of post",
       required: true,
     },

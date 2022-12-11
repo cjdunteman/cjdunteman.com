@@ -1,5 +1,5 @@
 import Link from "next/link"
-import ThemeSwitch from "app/ThemeSwitch"
+import ThemeSwitch from "./ThemeSwitch"
 import UserAvatar from "./Avatar"
 import SignIn from "./SignIn"
 import { unstable_getServerSession } from "next-auth";
