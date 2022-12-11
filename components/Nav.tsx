@@ -13,7 +13,7 @@ export default function Nav() {
     // const session = await unstable_getServerSession(authOptions)
     // console.log(session)
     const { data: session } = useSession()
-    console.log(session)
+    console.log(session?.user?.name)
 
     return (
     <nav className="flex justify-between items-center p-3 mt-2 mb-6 bg-purple-100 dark:bg-purple-900 border rounded-md shadow-md border-purple-200 shadow-purple-200 dark:border-purple-800 dark:shadow-purple-800 text-purple-500 dark:text-purple-300">

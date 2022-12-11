@@ -17,7 +17,6 @@ export interface LayoutProps {
 }
 
 export default async function RootLayout({ children }: LayoutProps) {
-    const session = await unstable_getServerSession(authOptions)
 
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
@@ -27,7 +26,7 @@ export default async function RootLayout({ children }: LayoutProps) {
           <Providers>
               <Nav />
               {children}
-            {/* <AnalyticsWrapper /> */}
+            <AnalyticsWrapper />
           </Providers>
           </body>
       </html>

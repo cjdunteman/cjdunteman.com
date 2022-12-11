@@ -1,9 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
-  // previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
@@ -13,22 +9,20 @@ datasource db {
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String? @db.Text
-  access_token       String? @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String? @db.Text
-  session_state      String?
-  oauth              String?
-  oauth_token_secret String?
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                       String  @id @default(cuid())
+  userId                   String
+  type                     String
+  provider                 String
+  providerAccountId        String
+  refresh_token            String? @db.Text
+  refresh_token_expires_in Int?
+  access_token             String? @db.Text
+  expires_at               Int?
+  token_type               String?
+  scope                    String?
+  id_token                 String? @db.Text
+  session_state            String?
+  user                     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
   @@index([userId])
@@ -46,16 +40,16 @@ model Session {
 
 model User {
   id            String    @id @default(cuid())
-  username      String
-  firstName     String?
-  lastName      String?
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  firstName     String?
+  lastName      String?
+  username      String
   accounts      Account[]
   sessions      Session[]
-  posts         Post[]
   comments      Comment[]
+  posts         Post[]
 }
 
 model VerificationToken {
@@ -70,12 +64,12 @@ model Comment {
   id       Int      @id @default(autoincrement())
   body     String   @db.VarChar(500)
   postedAt DateTime @default(now())
-  author   User     @relation(fields: [authorId], references: [id])
   authorId String
   postId   Int
+  author   User     @relation(fields: [authorId], references: [id])
   post     Post     @relation(fields: [postId], references: [id])
 
-  @@index(authorId)
+  @@index([authorId])
   @@index([postId])
 }
 
@@ -84,10 +78,10 @@ model Post {
   createdAt DateTime  @default(now())
   updatedAt DateTime? @updatedAt
   title     String    @db.VarChar(255)
-  author    User      @relation(fields: [authorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   authorId  String
   comments  Comment[]
+  author    User      @relation(fields: [authorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
 
-  @@unique([authorId, title]) // no post should have same author and title
+  @@unique([authorId, title])
   @@index([authorId])
 }

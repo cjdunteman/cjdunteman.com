@@ -27,6 +27,11 @@ module.exports = withContentlayer({
         destination: "https://github.com/cjdunteman",
         permanent: true,
       },
+      {
+        source: "/live",
+        destination: "https://www.twitch.tv/cliffj",
+        permanent: true,
+      },
     ];
   },
   ...nextConfig,

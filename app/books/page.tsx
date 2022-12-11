@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import notebook from "/public/static/notebook.png"
 
 const books = [
   { title: 'The Kite Runner', author: 'Khaled Hosseini'},
@@ -16,8 +18,12 @@ export default function Books() {
 
   return (
     <div className="flex max-w-2xl mx-auto flex-col py-8 sm:text-md">
-      <h1 className="text-bold dark:text-bold">Books</h1>
-      {/* <hr className="text-lightGray dark:text-darkGray"></hr> */}
+      <div className="flex">
+      <h1 className="text-bold dark:text-bold pr-4">Books</h1>
+      <Image src={notebook} alt="book" width={50} height={50}/>
+      </div>
+      <br></br>
+      <p>Currently reading <a className="italic text-purple-500 dark:text-purple-300" href="https://www.goodreads.com/book/show/7235533-the-way-of-kings">The Way of Kings</a></p>
       <ul className="mt-4">{listItems}</ul>
     </div>
   );
