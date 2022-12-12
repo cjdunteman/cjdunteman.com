@@ -19,15 +19,18 @@ export const authOptions: NextAuthOptions = {
     //   version: "2.0",
     // })
   ],
-  callbacks: {
-    async session({ session, user }) {
-      if (user) {
-        session.user.id = Number(user.id);
-        session.user.name = user.name;
-
-      }
-      return session;
-    }
-  }
+  // callbacks: {
+  //   async session({ token, session }) {
+  //     if (token) {
+  //       session.user.name = token.name
+  //       session.user.email = token.email
+  //       session.user.image = token.picture
+  //     }
+  //   }
+  // },
+  //     }
+  //     return session;
+  //   }
+  // }
 };
 export default NextAuth(authOptions);

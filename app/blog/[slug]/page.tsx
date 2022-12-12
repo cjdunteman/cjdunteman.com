@@ -30,6 +30,7 @@ function getPost(params: { slug: string; }) {
 export default async function PostLayout({ params }) {
   const session = await unstable_getServerSession(authOptions)
   const post = getPost(params)
+  console.log(session);
 
 
   // NOTE - temporary workaround for using async/await in jsx

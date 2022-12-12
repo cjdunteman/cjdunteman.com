@@ -1,7 +1,7 @@
-import { mdiPageLayoutSidebarLeft } from "@mdi/js"
 import { Prisma, PrismaClient } from "@prisma/client"
-import { BorderStyleIcon } from "@radix-ui/react-icons"
 import { NextApiRequest, NextApiResponse } from 'next'
+import { unstable_getServerSession } from "next-auth"
+import { authOptions } from "./auth/[...nextauth]"
 
 
 const prisma = new PrismaClient()
@@ -39,6 +39,7 @@ const prisma = new PrismaClient()
 export default async function handle(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req
   const postid = req.query.postid
+  const session = await unstable_getServerSession(req, res, authOptions)
 
   switch (method) {
     case 'GET':
@@ -61,21 +62,29 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         return res.status(500).json({ error: 'Error fetching comments' })
       }
     case 'POST':
+      if (!session) {
+        return res.status(401).json({ error: 'Not authenticated' })
+      }
+
       const commentBody = JSON.stringify(req.body)
+
       try {
+        const user = await prisma.user.findUnique({
+          where: { email: session.user.email}
+        })
         await prisma.comment.create({
           data: {
             body: commentBody,
-            authorId: 'clbgv92vp0000dlz8qwx01dkk',
-            postId: 3,
+            authorId: user.id,
+            postId: Number(postid),
           },
         })
+        return res.status(200).json({ message: 'Comment posted' })
       }
       catch (e) {
         console.error('Request error', e)
         return res.status(500).json({ error: 'Error posting comment' })
       }
-    // TODO: case 'DELETE'
     default: 
       res.setHeader('Allow', ['GET'])
       res.status(405).end(`Method ${method} Not Allowed`)

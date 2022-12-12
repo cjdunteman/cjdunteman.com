@@ -1,16 +1,19 @@
 'use client'
 
-import { Post } from "lib/types"
+// import { Post } from "lib/types"
 
 async function createComment(event) {
 
     const postId = event.target.postId.value
     const body = event.target.comment.value
     const JSONdata = JSON.stringify(body)
+    console.log("POSTID: " + postId)
+    console.log("BODY: " + body)
+    console.log("JSON: " + JSONdata)
     const res = await fetch(`https://www.cjdunteman.com/api/comments?postid=${postId}`, {
-      method: 'GET',
+      method: 'POST',
       headers: {"Content-Type": "application/json"},
-      cache: "no-store",
+      // cache: "no-store",
       body: JSONdata,
     })
     if (!res.ok) {
@@ -19,7 +22,7 @@ async function createComment(event) {
   }
   }
 
-export default function CommentForm({post}: { post: Post }) {
+export default function CommentForm({post}) {
     return (
         <form onSubmit={createComment}>
         <input type="hidden" name="postId" value={post.id}/>

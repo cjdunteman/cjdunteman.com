@@ -1,6 +1,6 @@
-import { Post } from "lib/types"
+// import { Post } from "lib/types"
 
-async function getComments(post: Post) {
+async function getComments(post) {
 
     const res = await fetch(`https://www.cjdunteman.com/api/comments?postid=${post.id}`, {
         method: 'GET',
@@ -18,7 +18,7 @@ async function getComments(post: Post) {
     return comments 
 }
 
-export default async function Comments({post}: { post: Post }) { 
+export default async function Comments({post}) { 
     const comments = await getComments(post);
 
     const commentItems = comments.map(comment => (
