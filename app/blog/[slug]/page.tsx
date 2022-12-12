@@ -9,6 +9,7 @@ import CommentForm from "components/CommentForm";
 
 import Comments from "../../../components/Comments";
 import { Mdx } from "components/mdx";
+import { authOptions } from "pages/api/auth/[...nextauth]";
 
 function getPost(params: { slug: string; }) {
   const rawPost = allPosts.find(
@@ -27,7 +28,7 @@ function getPost(params: { slug: string; }) {
 }
 
 export default async function PostLayout({ params }) {
-  const session = await unstable_getServerSession()
+  const session = await unstable_getServerSession(authOptions)
   const post = getPost(params)
 
 
