@@ -17,7 +17,6 @@ export interface LayoutProps {
 }
 
 export default async function RootLayout({ children }: LayoutProps) {
-
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
     return (

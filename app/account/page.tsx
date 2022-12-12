@@ -2,10 +2,11 @@ import SignOut from "components/SignOut";
 import { unstable_getServerSession } from "next-auth";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
+import { authOptions } from "pages/api/auth/[...nextauth]";
 
 export default async function Account() {
-    const { data: session } = useSession()
-    console.log(session)
+    const session = await unstable_getServerSession(authOptions);
+    console.log(session.user)
     if (!session) {
         redirect("https://www.cjdunteman.com")
     }

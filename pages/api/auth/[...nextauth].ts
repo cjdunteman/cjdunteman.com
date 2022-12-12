@@ -5,14 +5,6 @@ import GithubProvider from "next-auth/providers/github";
 import prisma from "lib/prisma"
 
 export const authOptions: NextAuthOptions = {
-  // callbacks: {
-  //   session({ session, token, user }) {
-  //     return session // The return type will match the one returned in `useSession()`
-  //   },
-  // },
-  // pages: {
-  //   signIn: "/api/auth/sigin",
-  // },
   // Configure one or more authentication providers
   adapter: PrismaAdapter(prisma),
   providers: [
@@ -27,5 +19,15 @@ export const authOptions: NextAuthOptions = {
     //   version: "2.0",
     // })
   ],
+  callbacks: {
+    async session({ session, user }) {
+      if (user) {
+        session.user.id = Number(user.id);
+        session.user.name = user.name;
+
+      }
+      return session;
+    }
+  }
 };
 export default NextAuth(authOptions);
