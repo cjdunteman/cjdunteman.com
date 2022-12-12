@@ -65,16 +65,13 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
       if (!session) {
         return res.status(401).json({ error: 'Not authenticated' })
       }
-
-      const commentBody = JSON.stringify(req.body)
-
       try {
         const user = await prisma.user.findUnique({
           where: { email: session.user.email}
         })
         await prisma.comment.create({
           data: {
-            body: commentBody,
+            body: req.body,
             authorId: user.id,
             postId: Number(postid),
           },
