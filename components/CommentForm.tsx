@@ -4,7 +4,7 @@
 
 async function createComment(event) {
 
-    const postId = event.target.postId.value
+    const postId: number = event.target.postId.value
     const body = event.target.comment.value
     const JSONdata = JSON.stringify(body)
     console.log("POSTID: " + postId)

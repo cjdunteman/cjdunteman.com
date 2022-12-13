@@ -71,7 +71,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         })
         await prisma.comment.create({
           data: {
-            body: req.body,
+            body: req.body.body,
             authorId: user.id,
             postId: Number(postid),
           },
