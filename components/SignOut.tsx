@@ -4,7 +4,6 @@ import { redirect } from 'next/navigation'
 
 async function handleClick() {
     signOut({ callbackUrl: "/"})
-    console.log("executed")
     redirect("/")
 }
 

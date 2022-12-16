@@ -3,9 +3,8 @@ import "/styles/globals.css";
 import { Inter } from '@next/font/google';
 import { AnalyticsWrapper } from '../components/analytics'
 import Nav from '../components/Nav'
-import { unstable_getServerSession } from "next-auth";
 import Providers from "./providers";
-import { authOptions } from "pages/api/auth/[...nextauth]";
+import CommandBar from "components/CommandBar";
 
 const inter = Inter({
   variable: '--font-inter',
@@ -21,10 +20,13 @@ export default async function RootLayout({ children }: LayoutProps) {
   // This will be populated with nested layouts or pages
     return (
       <html lang="en" className={`${inter.variable} font-sans min-h-full`}>
-        <body className="text-black dark:text-white bg-white dark:bg-dark container mx-auto max-w-2xl min-h-screen px-2">
+        <body className="text-black dark:text-white bg-white dark:bg-dark  min-h-screen px-2">
           <Providers>
+            <CommandBar />
+            <div className="container mx-auto max-w-2xl">
               <Nav />
               {children}
+              </div>
             <AnalyticsWrapper />
           </Providers>
           </body>

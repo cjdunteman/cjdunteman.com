@@ -24,9 +24,9 @@
   p {
     @apply text-base;
   }
-  a {
+  /* a {
     /* @apply text-purple-600 dark:text-purple-500 */
-  }
+  /* } */
   a:hover {
     @apply dark:text-white;
     @apply text-black;
@@ -52,64 +52,77 @@ select {
 /* ---------------- */
 
 .prose .anchor {
-	@apply absolute invisible no-underline;
-  
-	margin-left: -1em;
-	padding-right: 0.5em;
-	width: 80%;
-	max-width: 700px;
-	cursor: pointer;
-  }
+  @apply absolute invisible no-underline;
 
-  .anchor:hover {
-	@apply visible;
-  }
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
 
-  .prose a {
-	@apply text-purple-500 dark:text-purple-300 transition-all;
-  }
-  
-  .prose .anchor:after {
-    @apply text-purple-400;
-    content: '#';
-  }
-  
-  .prose *:hover > .anchor {
-	@apply visible;
-  }
+.anchor:hover {
+  @apply visible;
+}
 
-  pre::-webkit-scrollbar {
-	display: none;
-  }
+.prose h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-white;
+}
+
+.prose a {
+  @apply text-purple-500 dark:text-purple-300 transition-all;
+}
+
+.prose a > h3 {
+  @apply text-white;
+}
+
+.prose .anchor:after {
+  @apply text-purple-400;
+  content: "#";
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
 
 .prose pre {
-	@apply border rounded-lg border-purple-400 bg-dark dark:bg-dark;
-	overflow: auto;
+  @apply border rounded-lg border-purple-400 bg-dark dark:bg-dark;
+  overflow: auto;
 }
 
 .prose code {
-	@apply text-purple-300 dark:text-white p-0.5 border border-purple-200 rounded-md
+  @apply text-purple-300 dark:text-white p-0.5 border border-purple-200 rounded-md;
 }
 
 /* Code blocks */
 .prose pre code {
-	@apply text-white;
-	border: initial;
+  @apply text-white;
+  border: initial;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #6272a4;
+  color: #6272a4;
 }
 
 .token.punctuation {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .namespace {
-	opacity: .7;
+  opacity: 0.7;
 }
 
 .token.property,
@@ -117,12 +130,12 @@ select {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: hsl(44, 95%, 48%);
+  color: hsl(44, 95%, 48%);
 }
 
 .token.boolean,
 .token.number {
-	color: #bd93f9;
+  color: #bd93f9;
 }
 
 .token.selector,
@@ -131,7 +144,7 @@ select {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #50fa7b;
+  color: #50fa7b;
 }
 
 .token.operator,
@@ -140,42 +153,42 @@ select {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-	color: #f1fa8c;
+  color: #f1fa8c;
 }
 
 .token.keyword {
-	color: #8be9fd;
+  color: #8be9fd;
 }
 
 .token.regex,
 .token.important {
-	color: #ffb86c;
+  color: #ffb86c;
 }
 
 .token.important,
 .token.bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .token.italic {
-	font-style: italic;
+  font-style: italic;
 }
 
 .token.entity {
-	cursor: help;
+  cursor: help;
 }
 
 .rehype-code-title {
-	@apply px-5 py-3 text-sm font-bold text-white dark:text-white bg-gray border border-purple-400 rounded-t-lg dark:border-purple-400 dark:bg-gray;
-  }
+  @apply px-5 py-3 text-sm font-bold text-white dark:text-white bg-gray border border-purple-400 rounded-t-lg dark:border-purple-400 dark:bg-gray;
+}
 
-  .rehype-code-title + pre {
-	@apply mt-0 rounded-t-none;
-  }
+.rehype-code-title + pre {
+  @apply mt-0 rounded-t-none;
+}

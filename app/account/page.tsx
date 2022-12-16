@@ -6,7 +6,6 @@ import { authOptions } from "pages/api/auth/[...nextauth]";
 
 export default async function Account() {
     const session = await unstable_getServerSession(authOptions);
-    console.log(session.user)
     if (!session) {
         redirect("https://www.cjdunteman.com")
     }
