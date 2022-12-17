@@ -86,3 +86,27 @@ model Post {
   @@unique([authorId, title])
   @@index([authorId])
 }
+
+model Book {
+  id       Int        @id @default(autoincrement())
+  title    String     @db.VarChar(255)
+  author   String     @db.VarChar(255)
+  rating   Rating?
+  mustRead Boolean
+  synopsis String?    @db.VarChar(255)
+  status   ReadStatus
+}
+
+enum ReadStatus {
+  READING
+  READ
+  TO_READ
+}
+
+enum Rating {
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+}

@@ -31,6 +31,24 @@ I started building the website without any Typescript, as I wanted to make sure 
 
 The blog posts are written in markdown and sourced locally using ContentLayer. In order to style the markdown while using Tailwind, I needed to install the `tailwindcss/typography` plugin.
 
+## PlanetScale and Prisma
+
+Prisma makes it super easy to edit the database schema, and works great with PlanetScale.
+
+Making changes to the schema:
+
+```
+pscale branch create [database_name] [branch_name]
+
+pscale connect [database_name] [branch_name] --port 3309
+
+npx prisma db push
+
+pscale deploy-request create [database_name] [branch_name]
+
+pscale deploy-request deploy [database_name] [deply_request_number]
+```
+
 ## Testing
 
 ### Cypress
