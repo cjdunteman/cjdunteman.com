@@ -45,6 +45,7 @@ export default async function Books() {
       {/* { session?.user?.email === "cjdunteman@gmail.com" ? <EditBooks /> : null} */}
       <Image src={notebook} alt="book" width={50} height={50}/>
       </div>
+      {/* <EditBooks /> */}
       { session?.user?.email === "cjdunteman@gmail.com" ? <EditBooks /> : null}
       <br></br>
       <p>Currently reading <a className="italic text-purple-500 dark:text-purple-300" href="https://www.goodreads.com/book/show/7235533-the-way-of-kings">The Way of Kings</a></p>

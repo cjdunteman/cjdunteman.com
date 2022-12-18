@@ -1,10 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { PrismaClient } from "@prisma/client";
+import { Book, PrismaClient } from "@prisma/client";
+import { quartersInYear } from "date-fns";
 
 const prisma = new PrismaClient();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
+  console.log(req.query);
 
   switch (method) {
     case "GET":
@@ -15,13 +17,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(500).json({ error: 'Error fetching books' });
       }
     case 'POST':
+      let status;
+      if (req.query.status === 'READ') {
+        status = 'READ';
+      } else if (req.query.status === 'READING') {
+        status = 'READING';
+      } else {
+        status = 'TO_READ';
+      }
+
       try {
         const book = await prisma.book.create({
           data: {
-            title: req.body.title,
-            author: req.body.author,
-            mustRead: req.body.mustRead,
-            status: req.body.status,
+            title: req.query.title as string,
+            author: req.query.author as string,
+            mustRead: Boolean(req.query.mustRead),
+            status: req.query.status as Book['status'],
           },
         });
         console.log(book);
