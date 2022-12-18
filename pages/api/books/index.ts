@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             title: req.query.title as string,
             author: req.query.author as string,
             mustRead: Boolean(req.query.mustRead),
-            status: req.query.status as Book['status'],
+            status: status,
           },
         });
         console.log(book);
