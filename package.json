@@ -14,7 +14,7 @@
     "cypress": "cypress open"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.5",
+    "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.13",
     "@mdi/js": "^7.0.96",
     "@mdi/react": "^1.6.1",
