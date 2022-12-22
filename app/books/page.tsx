@@ -14,7 +14,7 @@ import notebook from "/public/static/notebook.png"
 // ]
 
 async function getBooks() {
-  const res = await fetch('https://www.cjdunteman.com/api/books', {
+  const res = await fetch('https://cjdunteman.com/api/books', {
     method: 'GET',
     headers: {"Content-Type": "application/json"},
     cache: "no-store"

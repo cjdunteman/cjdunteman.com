@@ -2,7 +2,7 @@
 
 async function getComments(post) {
 
-    const res = await fetch(`https://www.cjdunteman.com/api/comments?postid=${post.id}`, {
+    const res = await fetch(`https://cjdunteman.com/api/comments?postid=${post.id}`, {
         method: 'GET',
         headers: {"Content-Type": "application/json"},
         cache: "no-store"

@@ -19,7 +19,7 @@ module.exports = withContentlayer({
       },
       {
         source: "/linkedin",
-        destination: "https://www.linkedin.com/in/cjdunteman",
+        destination: "https://linkedin.com/in/cjdunteman",
         permanent: true,
       },
       {
@@ -29,7 +29,7 @@ module.exports = withContentlayer({
       },
       {
         source: "/live",
-        destination: "https://www.twitch.tv/cliffj",
+        destination: "https://twitch.tv/cliffj",
         permanent: true,
       },
     ];

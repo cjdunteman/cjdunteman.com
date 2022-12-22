@@ -7,7 +7,7 @@ async function createComment(event) {
     const postId: number = event.target.postId.value
     const body = event.target.comment.value
     const JSONdata = JSON.stringify(body)
-    const res = await fetch(`https://www.cjdunteman.com/api/comments?postid=${postId}`, {
+    const res = await fetch(`https://cjdunteman.com/api/comments?postid=${postId}`, {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
       // cache: "no-store",

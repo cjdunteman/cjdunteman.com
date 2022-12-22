@@ -7,7 +7,7 @@ import { authOptions } from "pages/api/auth/[...nextauth]";
 export default async function Account() {
     const session = await unstable_getServerSession(authOptions);
     if (!session) {
-        redirect("https://www.cjdunteman.com")
+        redirect("https://cjdunteman.com/")
     }
 
     return (

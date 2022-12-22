@@ -5,7 +5,7 @@ async function createBook(event) {
     const author = event.target.author.value
     const mustread = event.target.mustread.value
     const status = event.target.status.value
-    const res = await fetch('https://www.cjdunteman.com/api/books?' + new URLSearchParams({
+    const res = await fetch('https://cjdunteman.com/api/books?' + new URLSearchParams({
       title: title,
       author: author,
       mustread: mustread,
