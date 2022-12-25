@@ -45,7 +45,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.13",
-    "cypress": "^12.1.0",
+    "cypress": "^12.2.0",
     "inspx": "^0.0.1-alpha.6",
     "postcss": "^8.4.20",
     "prettier": "2.8.1",
