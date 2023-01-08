@@ -7,6 +7,14 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'tailwindcss.com',
+      }
+    ]
+  }
 };
 
 module.exports = withContentlayer({
