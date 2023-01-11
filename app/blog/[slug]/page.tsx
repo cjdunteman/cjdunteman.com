@@ -11,7 +11,7 @@ import Comments from "../../../components/Comments";
 import { Mdx } from "components/mdx";
 import { authOptions } from "pages/api/auth/[...nextauth]";
 
-function getPost(params: { slug: string; }) {
+function getPost(params: { slug: string }) {
   const rawPost = allPosts.find(
     (post) => post._raw.flattenedPath === params.slug
   );
@@ -30,7 +30,6 @@ function getPost(params: { slug: string; }) {
 export default async function PostLayout({ params }) {
   const session = await unstable_getServerSession(authOptions)
   const post = getPost(params)
-  console.log(session);
 
 
   // NOTE - temporary workaround for using async/await in jsx
@@ -59,11 +58,11 @@ export default async function PostLayout({ params }) {
       <br></br>
       <br></br>
       <br></br>
-      {!session ? <SignIn /> : <CommentForm post={post}/>}
+      {!session ? <SignIn /> : <CommentForm post={post} />}
       <br></br>
       <Suspense fallback={<p>Loading comments...</p>}>
         {/* @ts-expect-error Server Component */}
-        <Comments post={post}/>
+        <Comments post={post} />
       </Suspense>
     </div>
   );

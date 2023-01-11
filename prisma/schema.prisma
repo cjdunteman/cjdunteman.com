@@ -79,7 +79,9 @@ model Post {
   createdAt DateTime  @default(now())
   updatedAt DateTime? @updatedAt
   title     String    @db.VarChar(255)
+  published Boolean   @default(false)
   authorId  String
+  content   String?
   comments  Comment[]
   author    User      @relation(fields: [authorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
 

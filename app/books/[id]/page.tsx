@@ -1,7 +1,7 @@
 import { StarIcon } from "@heroicons/react/24/solid"
 
 async function getBook(params: { id: string }) {
-    const res = await fetch(`http://localhost:3000/api/books/${params.id}`, {
+    const res = await fetch(`https://cjdunteman.com/api/books/${params.id}`, {
         method: 'GET',
         headers: { "Content-Type": "application/json" }
     })
