@@ -16,8 +16,7 @@ export default function Home() {
         <p>I like to code, learn about all things tech, and ski.</p>
         <br></br>
         <p>
-          When it comes to programming, I am most comfortable with JavaScript and Python. For front-end web dev I like to use Next.js with
-          TailwindCSS.
+          When it comes to programming, I am most comfortable with JavaScript and Python. For web development I like to work in the React ecosystem, particularly using Next.js.
         </p>
         <br></br>
         <p>

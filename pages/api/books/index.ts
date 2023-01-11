@@ -11,8 +11,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   switch (method) {
     case "GET":
       try {
-          const books = await prisma.book.findMany();
-          return res.status(200).json(books);
+        const books = await prisma.book.findMany();
+        return res.status(200).json(books);
       } catch (e) {
         return res.status(500).json({ error: 'Error fetching books' });
       }
@@ -40,7 +40,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } catch (e) {
         return res.status(500).json({ error: 'Error creating book' });
       }
+    default:
+      res.setHeader('Allow', ['GET', 'POST'])
+      res.status(405).end(`Method ${method} Not Allowed`)
   }
-    
-  return res.status(405).end(`Method ${req.method} Not Allowed`);
 }

@@ -5,6 +5,7 @@ import {
   mdiLanguageJavascript,
   mdiLanguageTypescript,
   mdiTailwind,
+  mdiReact,
 } from "@mdi/js";
 import Image from "next/image";
 
@@ -16,6 +17,7 @@ export default function Skills() {
     { name: "CSS3", iconPath: mdiLanguageCss3 },
     { name: "JavaScript", iconPath: mdiLanguageJavascript },
     { name: "TypeScript", iconPath: mdiLanguageTypescript },
+    { name: "React", iconPath: mdiReact },
     { name: "Next.js", iconPath: nextjs },
     { name: "Tailwind", iconPath: mdiTailwind },
   ];

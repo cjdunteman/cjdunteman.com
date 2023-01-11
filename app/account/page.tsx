@@ -9,6 +9,7 @@ export default async function Account() {
     if (!session) {
         redirect("https://cjdunteman.com/")
     }
+    console.log(session);
 
     return (
         <div>
