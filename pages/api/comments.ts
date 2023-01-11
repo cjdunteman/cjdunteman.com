@@ -56,8 +56,8 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
           }
         })
         return res.status(200).json(comments)
-        }
-        catch (e) {
+      }
+      catch (e) {
         console.error('Request error', e)
         return res.status(500).json({ error: 'Error fetching comments' })
       }
@@ -67,22 +67,23 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
       }
       try {
         const user = await prisma.user.findUnique({
-          where: { email: session.user.email}
+          where: { email: session.user.email }
         })
-        await prisma.comment.create({
+        const comment = await prisma.comment.create({
           data: {
             body: req.body.body,
             authorId: user.id,
             postId: Number(postid),
           },
-        })
+        });
+        console.log(comment);
         return res.status(200).json({ message: 'Comment posted' })
       }
       catch (e) {
         console.error('Request error', e)
         return res.status(500).json({ error: 'Error posting comment' })
       }
-    default: 
+    default:
       res.setHeader('Allow', ['GET'])
       res.status(405).end(`Method ${method} Not Allowed`)
   }

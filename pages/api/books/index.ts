@@ -10,6 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   switch (method) {
     case "GET":
+      // Get all book data from db
       try {
         const books = await prisma.book.findMany();
         return res.status(200).json(books);
@@ -17,6 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(500).json({ error: 'Error fetching books' });
       }
     case 'POST':
+      // Create a book in db
       let status;
       if (req.query.status === 'READ') {
         status = 'READ';
