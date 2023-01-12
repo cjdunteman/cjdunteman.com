@@ -94,9 +94,9 @@ model Book {
   title    String     @db.VarChar(255)
   author   String     @db.VarChar(255)
   rating   Rating?
-  mustRead Boolean
+  mustRead Boolean    @default(false)
   synopsis String?    @db.VarChar(255)
-  status   ReadStatus
+  status   ReadStatus @default(TO_READ)
 }
 
 enum ReadStatus {
