@@ -26,7 +26,7 @@
     "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-tooltip": "^1.0.2",
     "@vercel/analytics": "^0.1.8",
-    "@vercel/og": "^0.0.22",
+    "@vercel/og": "^0.0.27",
     "cmdk": "^0.1.21",
     "contentlayer": "^0.2.9",
     "date-fns": "^2.29.3",
