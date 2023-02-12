@@ -18,7 +18,7 @@
     "@heroicons/react": "^2.0.15",
     "@mdi/js": "^7.1.96",
     "@mdi/react": "^1.6.1",
-    "@mdx-js/react": "^2.2.1",
+    "@mdx-js/react": "^2.3.0",
     "@next-auth/prisma-adapter": "^1.0.5",
     "@next/font": "^13.1.6",
     "@prisma/client": "^4.10.1",
