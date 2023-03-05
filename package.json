@@ -30,7 +30,7 @@
     "cmdk": "^0.1.22",
     "contentlayer": "^0.3.0",
     "date-fns": "^2.29.3",
-    "eslint-config-next": "^13.2.1",
+    "eslint-config-next": "^13.2.3",
     "next": "^13.2.1",
     "next-auth": "^4.19.2",
     "next-contentlayer": "^0.3.0",
