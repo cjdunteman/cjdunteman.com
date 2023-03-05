@@ -25,7 +25,7 @@
     "@radix-ui/react-avatar": "^1.0.1",
     "@radix-ui/react-icons": "^1.2.0",
     "@radix-ui/react-tooltip": "^1.0.4",
-    "@vercel/analytics": "^0.1.10",
+    "@vercel/analytics": "^0.1.11",
     "@vercel/og": "^0.3.0",
     "cmdk": "^0.2.0",
     "contentlayer": "^0.3.0",
