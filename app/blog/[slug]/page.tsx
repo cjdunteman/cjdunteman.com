@@ -1,35 +1,73 @@
-import "server-only"
+// import "server-only"
+
+import type { Metadata } from 'next';
 
 import { Suspense } from "react";
 import { format, parseISO } from "date-fns";
-import { allPosts, Post } from "contentlayer/generated";
-import { unstable_getServerSession } from "next-auth";
+import { allPosts } from "contentlayer/generated";
+import { getServerSession } from "next-auth";
 import SignIn from "components/SignIn";
 import CommentForm from "components/CommentForm";
-
 import Comments from "../../../components/Comments";
 import { Mdx } from "components/mdx";
 import { authOptions } from "pages/api/auth/[...nextauth]";
+import { notFound } from "next/navigation";
 
-function getPost(params: { slug: string }) {
-  const rawPost = allPosts.find(
-    (post) => post._raw.flattenedPath === params.slug
-  );
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
-  const post: Post = {
-    ...rawPost,
-    id: rawPost.id,
-    title: rawPost.title,
-    // body: rawPost.html,
-    date: format(parseISO(rawPost.date), "LLLL d, yyyy"),
+export async function generateMetadata({
+  params,
+}): Promise<Metadata | undefined> {
+  const post = allPosts.find((post) => post.slug === params.slug);
+  if (!post) {
+    return;
+  }
+
+  const {
+    title,
+    date: date,
+    description: description,
+    // image,
+    slug,
+  } = post;
+
+  // const ogImage = image ? `https://cjdunteman.com${image}` : `https://cjdunteman.com/api/og?title=${title}`;
+
+  return {
+    title,
+    description,
+    // openGraph: {
+    //   title,
+    //   description,
+    //   // type: 'article',
+    //   date,
+    //   url: `https://cjdunteman.com/blog/${slug}`,
+    //   images: [
+    //     {
+    //       url: ogImage,
+    //     },
+    //   ]
+    // },
+    // twitter: {
+    //   card: 'summary_large_image',
+    //   title,
+    //   description,
+    //   images: [ogImage],
+    // },
   };
-
-  return post
 }
 
 export default async function PostLayout({ params }) {
-  const session = await unstable_getServerSession(authOptions)
-  const post = getPost(params)
+  const session = await getServerSession(authOptions)
+  const post = allPosts.find((post) => post.slug === params.slug)
+
+  if (!post) {
+    notFound();
+  }
 
 
   // NOTE - temporary workaround for using async/await in jsx

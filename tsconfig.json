@@ -30,15 +30,21 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".contentlayer/generated",
-    ".next/types/**/*.ts"
-, "app/skiing/page.tsx", "app/page.ts", "components/Avatar.tsx", "components/analytics.jsx", "cypress/components/CommentForm.cy.js"  ],
+    ".next/types/**/*.ts",
+    "app/skiing/page.tsx",
+    "app/page.ts",
+    "components/Avatar.tsx",
+    "components/analytics.jsx",
+    "cypress/components/CommentForm.cy.js"
+  ],
   "exclude": [
     "node_modules"
   ]

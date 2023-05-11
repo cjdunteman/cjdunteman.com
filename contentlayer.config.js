@@ -6,6 +6,17 @@ import rehypeCodeTitles from "rehype-code-titles";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrism from "rehype-prism-plus";
 
+const computedFields = {
+  url: {
+    type: "string",
+    resolve: (post) => `/blog/${post._raw.flattenedPath}`,
+  },
+  slug: {
+    type: 'string',
+    resolve: (doc) => doc._raw.flattenedPath,
+  },
+}
+
 const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.mdx`,
@@ -28,7 +39,7 @@ const Post = defineDocumentType(() => ({
       required: true,
     },
     description: {
-      type: "markdown",
+      type: "string",
       description: "Brief descripiton of the post",
       required: true,
     },
@@ -38,12 +49,7 @@ const Post = defineDocumentType(() => ({
       required: true,
     },
   },
-  computedFields: {
-    url: {
-      type: "string",
-      resolve: (post) => `/blog/${post._raw.flattenedPath}`,
-    },
-  },
+  computedFields,
 }));
 
 const contentLayerConfig = makeSource({
