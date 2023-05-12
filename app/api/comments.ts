@@ -1,45 +1,18 @@
 import { PrismaClient } from "@prisma/client"
 import { NextApiRequest, NextApiResponse } from 'next'
-import { unstable_getServerSession } from "next-auth"
+import { getServerSession } from "next-auth"
 import { authOptions } from "./auth/[...nextauth]"
 
 
 const prisma = new PrismaClient()
 
-// TODO: add type for response data
-// type ResponseData = {
-//     comment: Array<comment>
-// }
-
-// type comment = {
-//   id: number,
-//   author: { name: string },
-//   body: string,
-//   postedAt: Date,
-//   postId: number
-// }
-
-// LINK - https://www.prisma.io/blog/satisfies-operator-ur8ys8ccq7zb 
-
-// strongly typed `CommentSelect` object with satisfies
-// const commentSelect = {
-//   id: true,
-//   author: {
-//     select: {
-//       name: true
-//     },
-//   },
-//   body: true,
-//   postedAt: true,
-// } satisfies Prisma.CommentSelect;
-
-// infer the resulting payload type
-// type MyCommentPayload = Prisma.CommentGetPayload<{ select: typeof commentSelect}>;
-
-export default async function handle(req: NextApiRequest, res: NextApiResponse) {
+export default async function handle(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { method } = req
   const postid = req.query.postid
-  const session = await unstable_getServerSession(req, res, authOptions)
+  const session = await getServerSession(req, res, authOptions)
 
   switch (method) {
     case 'GET':

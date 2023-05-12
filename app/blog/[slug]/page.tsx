@@ -1,17 +1,15 @@
-// import "server-only"
-
 import type { Metadata } from 'next';
-
 import { Suspense } from "react";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import { getServerSession } from "next-auth";
+import { Mdx } from "components/mdx";
+import { authOptions } from "app/api/auth/[...nextauth]";
+import { notFound } from "next/navigation";
+
 import SignIn from "components/SignIn";
 import CommentForm from "components/CommentForm";
 import Comments from "../../../components/Comments";
-import { Mdx } from "components/mdx";
-import { authOptions } from "pages/api/auth/[...nextauth]";
-import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -35,29 +33,9 @@ export async function generateMetadata({
     slug,
   } = post;
 
-  // const ogImage = image ? `https://cjdunteman.com${image}` : `https://cjdunteman.com/api/og?title=${title}`;
-
   return {
     title,
     description,
-    // openGraph: {
-    //   title,
-    //   description,
-    //   // type: 'article',
-    //   date,
-    //   url: `https://cjdunteman.com/blog/${slug}`,
-    //   images: [
-    //     {
-    //       url: ogImage,
-    //     },
-    //   ]
-    // },
-    // twitter: {
-    //   card: 'summary_large_image',
-    //   title,
-    //   description,
-    //   images: [ogImage],
-    // },
   };
 }
 

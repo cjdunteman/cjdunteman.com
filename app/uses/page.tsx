@@ -1,6 +1,5 @@
 'use client'
 
-import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from 'next/image'
 import nextjs from 'public/static/nextjs-icon-light-background.png'
 import vercel from 'public/static/vercel-icon-light.png'
@@ -24,22 +23,24 @@ const tools = [
 export default function Uses() {
 
   const listItems = tools.map((tool) =>
-    <div>
-      <a href={tool.link}>
-        <li key={tool.id} className="flex border-0 border-solid rounded-lg p-4 transition hover:delay-700 hover:bg-gradient-to-r from-purple-200 to-purple-100 dark:hover:bg-gradient-to-r dark:from-purple-700 dark:to-purple-900">
-          <div className="pr-4"><Image src={tool.image} width={32} height={32} alt={tool.name} />
-          </div>
-          <div className="flex flex-col">
-            <div>
-              <p className="font-semibold">{tool.name}</p>
+    <>
+      <div>
+        <a href={tool.link}>
+          <li key={tool.id} className="flex border-0 border-solid rounded-lg p-4 transition hover:delay-700 hover:bg-gradient-to-r from-purple-200 to-purple-100 dark:hover:bg-gradient-to-r dark:from-purple-700 dark:to-purple-900">
+            <div className="pr-4"><Image src={tool.image} width={32} height={32} alt={tool.name} />
             </div>
-            <div>
-              <p className="text-darkGray">{tool.desc}</p>
+            <div className="flex flex-col">
+              <div>
+                <p className="font-semibold">{tool.name}</p>
+              </div>
+              <div>
+                <p className="text-darkGray">{tool.desc}</p>
+              </div>
             </div>
-          </div>
-        </li>
-      </a>
-    </div>
+          </li>
+        </a>
+      </div>
+    </>
   );
 
   return (

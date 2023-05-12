@@ -3,6 +3,11 @@ import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Blog',
+  description: 'My ramblings about tech and stuff.'
+}
+
 function PostCard(post) {
   return (
     <div className="mb-6">
