@@ -6,10 +6,10 @@ export default function Home() {
     <div>
       <div>
         <h1 className="text-black dark:text-white">CJ Dunteman</h1>
-        <p className="text-gray dark:text-darkGray">Madison, Wisconsin</p>
+        <p className="text-gray dark:text-white">Madison, Wisconsin</p>
         <br></br>
       </div>
-      <div className="text-gray dark:text-darkGray">
+      <div className="text-gray dark:text-white">
         <h2 className="text-2xl font-semibold text-black dark:text-white">
           About
         </h2>
@@ -20,7 +20,7 @@ export default function Home() {
         </p>
         <br></br>
         <p>
-          I am looking for new opportunities, please reach out if you are
+          I am looking for new opportunities within IT, please reach out if you are
           interested in talking with me.
         </p>
       </div>
@@ -42,7 +42,7 @@ export default function Home() {
               href="mailto: hello@cjdunteman.com"
               className="text-bold hover:text-black"
             >
-              hello@cjdunteman.com
+              cj@cjdunteman.com
             </a>
             <p>
               <a

@@ -6,9 +6,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      // xs: "540px",
-    },
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)"],

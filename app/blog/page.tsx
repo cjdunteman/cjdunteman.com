@@ -20,9 +20,9 @@ function PostCard(post) {
         </Link>
       </h2>
       {post.date === post.dateModified
-        ? <time dateTime={post.date} className="text-sm text-darkGray">
+        ? <time dateTime={post.date} className="text-sm text-black dark:text-white">
           {format(parseISO(post.date), "LLLL d, yyyy")}</time>
-        : <p className="text-sm text-darkGray">Updated <time dateTime={post.dateModified} className="text-sm text-darkGray">{format(parseISO(post.dateModified), "LLLL d, yyyy")}</time></p>
+        : <p className="text-sm text-black dark:text-white">Updated <time dateTime={post.dateModified} className="text-sm text-black dark:text-white">{format(parseISO(post.dateModified), "LLLL d, yyyy")}</time></p>
       }
       <div>{post.description.raw}</div>
     </div>

@@ -2,8 +2,6 @@
 
 import Link from "next/link"
 import ThemeSwitch from "./ThemeSwitch"
-import UserAvatar from "./Avatar"
-import SignIn from "./SignIn"
 import { useSession } from "next-auth/react";
 
 
@@ -25,7 +23,6 @@ export default function Nav() {
                 </Link>
             </div>
             <div className="flex gap-4">
-                {session ? <UserAvatar avatar={session.user.image} /> : <SignIn />}
                 <ThemeSwitch />
             </div>
         </nav>

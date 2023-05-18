@@ -34,7 +34,7 @@ export default function Uses() {
                 <p className="font-semibold">{tool.name}</p>
               </div>
               <div>
-                <p className="text-darkGray">{tool.desc}</p>
+                <p className="text-black">{tool.desc}</p>
               </div>
             </div>
           </li>

@@ -51,6 +51,10 @@ select {
 /*  Prose           */
 /* ---------------- */
 
+.prose {
+  @apply text-black dark:text-white;
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 
@@ -79,7 +83,7 @@ h6 {
 }
 
 .prose a > h3 {
-  @apply text-white;
+  @apply text-white dark:text-white;
 }
 
 .prose .anchor:after {

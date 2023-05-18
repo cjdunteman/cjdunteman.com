@@ -27,7 +27,7 @@ export default function Skills() {
       <h5 className="text-2xl text-black font-semibold dark:text-white pb-1">
         Skills
       </h5>
-      <div className="text-gray dark:text-darkGray flex flex-wrap">
+      <div className="text-gray dark:text-white flex flex-wrap">
         {skills.map((skill, index) => {
           return (
             <li
