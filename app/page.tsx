@@ -31,13 +31,13 @@ export default function Home() {
         <h2 className="text-black text-2xl font-semibold dark:text-white">
           Contact
         </h2>
-        <div className="grid grid-cols-12 text-gray dark:text-darkGray">
+        <div className="grid grid-cols-12 text-gray dark:text-gray">
           <div className="grid col-span-3">
             <p>Email</p>
             <p>Twitter</p>
             <p>LinkedIn</p>
           </div>
-          <div className="text-purple-500">
+          <div className="text-violet-500">
             <a
               href="mailto: hello@cjdunteman.com"
               className="text-bold hover:text-black"

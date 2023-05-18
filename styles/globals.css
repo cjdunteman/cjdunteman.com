@@ -25,7 +25,7 @@
     @apply text-base;
   }
   /* a {
-    /* @apply text-purple-600 dark:text-purple-500 */
+    /* @apply text-white dark:text-white */
   /* } */
   a:hover {
     @apply dark:text-white;
@@ -96,7 +96,7 @@ pre::-webkit-scrollbar {
 }
 
 .prose pre {
-  @apply border rounded-lg border-purple-400 bg-dark dark:bg-dark;
+  @apply border rounded-lg border-black bg-black dark:bg-black;
   overflow: auto;
 }
 
@@ -186,7 +186,7 @@ pre::-webkit-scrollbar {
 }
 
 .rehype-code-title {
-  @apply px-5 py-3 text-sm font-bold text-white dark:text-white bg-gray border border-purple-400 rounded-t-lg dark:border-purple-400 dark:bg-gray;
+  @apply px-5 py-3 text-sm font-bold text-white dark:text-white bg-slate-950 border border-black rounded-t-lg dark:border-black dark:bg-slate-950;
 }
 
 .rehype-code-title + pre {
