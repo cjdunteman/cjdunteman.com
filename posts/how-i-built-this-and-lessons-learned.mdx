@@ -17,25 +17,27 @@ I recognize the stack I used for this website may be "overengineering". This cou
 - Database: [PlanetScale](https://planetscale.com/)
 - Testing: [Cypress](https://www.cypress.io/)
 
-## Styling
+### Next.js
 
-I am using Tailwind to set up a mini design system in the config file.
+This website is running Next.js 13.
 
-The [Typography](https://tailwindcss.com/docs/typography-plugin) plugin enables adding styling to HTML rendered from Markdown. It would also work if I choose to transition to a CMS.
+### TailwindCSS
 
-## TypeScript
+I am using Tailwind for styling.
 
-I started building the website without any Typescript, as I wanted to make sure I had practical knowledge of JavaScript before moving on. Over time, I TypeScript into the mix.
+### Vercel
 
-## Blog
+Being that Next.js is developed by the team at Vercel, it makes sense to host projects there. The Vercel experience is as simple and easy as it gets. 
 
-The blog posts are written in markdown and sourced locally using ContentLayer. In order to style the markdown while using Tailwind, I needed to install the `tailwindcss/typography` plugin.
+### NextAuth.js
 
-The problem with doing locally source markdown is that whenever I edit a document I have to make a whole new commit and push to the repository. In the future I plan on making this a better experience with a CMS or editor within the website itself that is connected to my database.
+NextAuth.js works great with Next.js (I'd hope so).
 
-## PlanetScale and Prisma
+### PlanetScale
 
-Prisma makes it super easy to edit the database schema, and works great with PlanetScale.
+After seeing [Lee Robinson](https://leerob.io/) from Vercel using PlanetScale, I decided to give it a go. This is the first time I have used a serverless database, and PlanetScale made it really easy. 
+
+To go alongside PlanetScale, I am using Prisma. Prisma makes it super easy to edit the database schema.
 
 Making changes to the schema:
 
@@ -51,6 +53,15 @@ pscale deploy-request create [database_name] [branch_name]
 pscale deploy-request deploy [database_name] [deply_request_number]
 ```
 
-## Cypress
+### Cypress
 
 Currently only have one simple test for navigation, but planning on expanding testing for end-to-end and components.
+
+## TypeScript
+I started building the website without any Typescript, as I wanted to make sure I had practical knowledge of JavaScript before moving on. Over time, I added TypeScript into the mix.
+
+## Blog
+
+The blog posts are written in markdown and sourced locally using ContentLayer. In order to style the markdown while using Tailwind, I needed to install the `tailwindcss/typography` plugin.
+
+In the future I plan on making this a better experience using a CMS, or adding my own edit functionality on the website itself.

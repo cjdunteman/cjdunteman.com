@@ -16,12 +16,12 @@ export default function Home() {
         <p>I like to code, learn about all things tech, and ski.</p>
         <br></br>
         <p>
-          When it comes to programming, I am most comfortable with JavaScript and Python. For web development I like to work in the React ecosystem, particularly using Next.js.
+          My skills in programming include Python, JavaScript, and C. I also have web development knowledge using HTML, CSS, ReactJS, and Next.js. Common dev tools I use are VSCode, VIM, Git, and GitHub.
         </p>
         <br></br>
         <p>
           I am looking for new opportunities within IT, please reach out if you are
-          interested in talking with me.
+          interested in speaking with me.
         </p>
       </div>
       <br></br>
