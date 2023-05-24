@@ -43,7 +43,8 @@
     "app/page.ts",
     "components/Avatar.tsx",
     "components/analytics.jsx",
-    "cypress/components/CommentForm.cy.js"
+    "cypress/components/CommentForm.cy.js",
+    "app/api/auth/[...nextauth]/route.js"
   ],
   "exclude": [
     "node_modules"
