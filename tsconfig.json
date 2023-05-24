@@ -44,7 +44,8 @@
     "components/Avatar.tsx",
     "components/analytics.jsx",
     "cypress/components/CommentForm.cy.js",
-    "app/api/auth/[...nextauth]/route.js"
+    "app/api/auth/[...nextauth]/route.js",
+    "lib/auth.js"
   ],
   "exclude": [
     "node_modules"

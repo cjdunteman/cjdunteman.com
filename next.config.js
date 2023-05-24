@@ -79,4 +79,7 @@ module.exports = withContentlayer({
     ]
   },
   ...nextConfig,
+  env: {
+    
+  }
 });

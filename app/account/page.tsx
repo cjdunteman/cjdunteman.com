@@ -1,9 +1,15 @@
 import { getServerSession } from "next-auth"
 import { redirect } from "next/navigation"
-import { authOptions } from '../api/auth/[...nextauth]/route'
+import { authOptions } from "lib/auth"
+import { Metadata } from "next"
 
-export default async function Account(req, res) {
-    const session = await getServerSession(req, res, authOptions)
+export const metadata: Metadata = {
+    title: 'Account',
+    description: 'Account page.'
+}
+
+export default async function Account() {
+    const session = await getServerSession(authOptions)
 
     if (!session) {
         redirect('/signin?callbackUrl=/account')
