@@ -6,10 +6,7 @@
 
 ## Stack
 
-- Framework: Next.js
+- Web Framework: Next.js
 - Styling: TailwindCSS
 - Content: Markdown w/ ContentLayer
-- ORM: Prisma
-- Database: PlanetScale
 - Deployment: Vercel
-- Testing: Cypress

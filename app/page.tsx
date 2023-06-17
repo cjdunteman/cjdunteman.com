@@ -18,11 +18,6 @@ export default function Home() {
         <p>
           My skills in programming include Python, JavaScript, and C. I also have web development knowledge using HTML, CSS, ReactJS, and Next.js. Common dev tools I use are VSCode, VIM, Git, and GitHub.
         </p>
-        <br></br>
-        <p>
-          I am looking for new opportunities within IT, please reach out if you are
-          interested in speaking with me.
-        </p>
       </div>
       <br></br>
       <Skills />
