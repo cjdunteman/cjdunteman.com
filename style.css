@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* PRIMARY NAVIGATION STYLING */
+#navbar ul {
+  padding: 0;
+}
+
+#navbar li {
+  display: inline;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* SKIP LINK STYLING */
+#skip a {
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  color: white;
+  border-bottom-right-radius: 8px;
+  background: #000;
+  -webkit-transition: top 0.5s ease-out;
+  transition: top 0.5s ease-out;
+  z-index: 100;
+}
+
+#skip a:focus {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  outline-color: transparent;
+  -webkit-transition: top 0.05s ease-in;
+  transition: top 0.05s ease-in;
+}
