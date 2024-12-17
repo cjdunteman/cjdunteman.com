@@ -23,6 +23,11 @@ footer {
   background-color: yellow;
 }
 
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
 .typewriter {
   overflow: hidden;
   white-space: no-wrap;
