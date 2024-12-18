@@ -1,13 +1,77 @@
+:root {
+  color-scheme: light dark;
+
+  /* Text vars */
+  --text-base: 16px;
+
+  /* Color vars */
+  --gray-50: #e3e3e3;
+  --gray-100: #d1d1d1;
+  --gray-200: #bebebe;
+  --gray-300: #acacac;
+  --gray-400: #999999;
+  --gray-500: #868686;
+  --gray-600: #747474;
+  --gray-700: #616161;
+  --gray-800: #4f4f4f;
+  --gray-900: #3c3c3c;
+  --gray-950: #1a1a1a;
+}
+
+/* Light mode colors */
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    background-color: var(--gray-50);
+    color: var(--gray-950);
+  }
+
+  a {
+    color: var(--gray-950);
+    text-decoration-color: var(--gray-400);
+  }
+  a:hover {
+    text-decoration-color: var(--gray-950);
+  }
+
+  #navbar {
+    box-shadow: var(--gray-200) 0px 7px 29px 0px;
+  }
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+    background-color: var(--gray-950);
+    color: var(--gray-50);
+  }
+
+  a {
+    color: var(--gray-50);
+    text-decoration-color: var(--gray-500);
+  }
+  a:hover {
+    text-decoration-color: var(--gray-50);
+  }
+
+  #navbar {
+    box-shadow: var(--gray-900) 0px 0px 27px 0px;
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-  margin-bottom: 60px;
+a {
+  transition: all 0.4s ease;
 }
 
-a {
-  color: black;
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 ul {
@@ -24,7 +88,7 @@ footer {
 }
 
 .container {
-  width: 1280px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -32,7 +96,8 @@ footer {
   overflow: hidden;
   white-space: no-wrap;
   margin: 0 auto;
-  border-right: 0.15em solid black;
+  border-right: 0.15em solid;
+  border-color: light-dark(var(--gray-50), var(--gray-950));
   letter-spacing: 0.1em;
   animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
@@ -52,22 +117,26 @@ footer {
     border-color: transparent;
   }
   50% {
-    border-color: black;
+    border-color: light-dark(var(--gray-50), var(--gray-950));
   }
 }
 
 /* PRIMARY NAVIGATION STYLING */
-#navbar ul {
-  padding: 0;
+#navbar {
+  width: fit-content;
+  height: fit-content;
+  padding: 2px 16px 2px 16px;
+  border-radius: 16px;
 }
 
-#navbar li {
-  display: inline;
+#navbar ul {
+  padding: 0;
+  display: flex;
+  gap: 24px;
 }
 
 #navbar a {
   text-decoration: none;
-  color: #000;
 }
 
 #navbar a:hover {
@@ -80,9 +149,9 @@ footer {
   position: absolute;
   top: -40px;
   left: 0px;
-  color: white;
+  color: light-dark(var(--gray-50), var(--gray-950));
   border-bottom-right-radius: 8px;
-  background: #000;
+  background-color: light-dark(var(--gray-950), var(--gray-50));
   -webkit-transition: top 0.5s ease-out;
   transition: top 0.5s ease-out;
   z-index: 100;
