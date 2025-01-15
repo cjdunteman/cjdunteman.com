@@ -1,34 +1,22 @@
 ---
 import '../../styles/style.css'
-import Header from '../../components/Header.astro'
-import Footer from '../../components/Footer.astro'
+import Layout from '../../layouts/Layout.astro'
+
+const title = 'Blog - CJ Dunteman'
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - CJ Dunteman</title>
-  </head>
-  <body>
-    <div class="container">
-      <Header />
-      <main id="main-content">
-        <ul>
-          <li>
-            <a href="/blog/how-i-use-raycast">How I Use Raycast</a>
-          </li>
-          <li>
-            <a href="/blog/how-i-use-raycast">How I Use Raycast</a>
-          </li>
-          <li>
-            <a href="/blog/how-i-use-raycast">How I Use Raycast</a>
-          </li>
-        </ul>
-      </main>
-      <Footer />
-    </div>
-  </body>
-</html>
-
+<Layout title={title}>
+  <main id="main-content">
+    <ul>
+      <li>
+        <a href="/blog/how-i-use-raycast">How I Use Raycast</a>
+      </li>
+      <li>
+        <a href="/blog/how-i-use-raycast">How I Use Raycast</a>
+      </li>
+      <li>
+        <a href="/blog/how-i-use-raycast">How I Use Raycast</a>
+      </li>
+    </ul>
+  </main>
+</Layout>
