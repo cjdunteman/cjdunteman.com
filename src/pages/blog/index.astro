@@ -1,5 +1,6 @@
 ---
 import '../../styles/style.css'
+import Header from '../../components/Header.astro'
 ---
 
 <!DOCTYPE html>
@@ -11,14 +12,7 @@ import '../../styles/style.css'
   </head>
   <body>
     <div class="container">
-      <header>
-        <nav id="navbar" aria-labelledby="primary-navigation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <main id="main-content">
         <ul>
           <li>

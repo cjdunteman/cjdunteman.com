@@ -1,5 +1,6 @@
 ---
 import '../styles/style.css'
+import Header from '../components/Header.astro'
 ---
 
 <!DOCTYPE html>
@@ -20,14 +21,7 @@ import '../styles/style.css'
   <body>
     <div class="container">
       <div id="skip"><a href="#main-content">Skip to main content</a></div>
-      <header>
-        <nav id="navbar" aria-labelledby="primary-navigation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/uses.html">Uses</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <main id="main-content" style="max-width: 720px; margin: 0 auto">
         <section>
           <h2>Productivity</h2>

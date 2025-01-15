@@ -1,5 +1,6 @@
 ---
 import '../styles/style.css'
+import Header from '../components/Header.astro'
 ---
 
 <!DOCTYPE html>
@@ -13,15 +14,7 @@ import '../styles/style.css'
     <div class="container">
       <div id="skip"><a href="#main-content">Skip to main content</a></div>
       <!-- The header takes an identical meaning to the banner landmark in this usage. -->
-      <header>
-        <nav id="navbar" aria-labelledby="primary-navigation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-          </ul>
-        </nav>
-        <!-- <form>Search</form> -->
-      </header>
+      <Header />
       <main id="main-content">
         <h1 style="font-size: var(--step-4)">CJ Dunteman</h1>
         <p>

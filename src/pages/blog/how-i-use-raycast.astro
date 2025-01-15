@@ -1,5 +1,6 @@
 ---
 import '../../styles/style.css'
+import Header from '../../components/Header.astro'
 ---
 
 <!DOCTYPE html>
@@ -12,14 +13,7 @@ import '../../styles/style.css'
   <body>
     <div id="skip"><a href="#main-content">Skip to main content</a></div>
     <div class="container">
-      <header>
-        <nav id="navbar" aria-labelledby="primary-navigation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <article>
         <section style="margin-bottom: 80px">
           <h1 class="blog-title">How I Use Raycast</h1>
