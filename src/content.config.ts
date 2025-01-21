@@ -31,5 +31,15 @@ const notes = defineCollection({
       })
  });
 
+ const posts = defineCollection({ 
+    loader: glob({ pattern: "**/*.md", base: "./blog" }),
+    schema: z.object({
+        isDraft: z.boolean(),
+        title: z.string(),
+        publishDate: z.string().or(z.date()).transform((str) => new Date(str)).optional(),
+        updatedDate: z.string().or(z.date()).transform((str) => new Date(str)),
+    })
+ });
+
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { notes };
+export const collections = { notes, posts };

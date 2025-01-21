@@ -4,7 +4,17 @@ import { getCollection } from 'astro:content';
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
-const { title } = Astro.props
+interface Props {
+  frontmatter: {
+    title: string;
+    isDraft: boolean;
+    tags?: string[];
+    publishDate?: Date;
+    updatedDate: Date;
+  };
+}
+
+const { frontmatter } = Astro.props
 
 const { pathname } = Astro.url;
 const allLinks = {};
@@ -39,13 +49,14 @@ const backlinks = allLinks[pathname] || [];
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{ title }</title>
+    <title>{ frontmatter.title }</title>
   </head>
   <body>
     <Header />
     <div class="container">
         <div id="skip"><a href="#main-content">Skip to main content</a></div>
         <!-- The header takes an identical meaning to the banner landmark in this usage. -->
+        <p>Updated { frontmatter.updatedDate.toDateString() } </p>
         <slot />
         {backlinks.length > 0 && (
           <div style="margin-top: var(--space-2xl);">

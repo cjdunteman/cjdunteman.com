@@ -1,0 +1,627 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Web Development</title><style>:root{color-scheme:light dark;--step--2: clamp(.7813rem, .7747rem + .0326vw, .8rem);--step--1: clamp(.9375rem, .9158rem + .1087vw, 1rem);--step-0: clamp(1.125rem, 1.0815rem + .2174vw, 1.25rem);--step-1: clamp(1.35rem, 1.2761rem + .3696vw, 1.5625rem);--step-2: clamp(1.62rem, 1.5041rem + .5793vw, 1.9531rem);--step-3: clamp(1.944rem, 1.771rem + .8651vw, 2.4414rem);--step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);--step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);--text-base: 16px;--gray-50: #e3e3e3;--gray-100: #d1d1d1;--gray-200: #bebebe;--gray-300: #acacac;--gray-400: #999999;--gray-500: #868686;--gray-600: #747474;--gray-700: #616161;--gray-800: #4f4f4f;--gray-900: #3c3c3c;--gray-950: #1a1a1a;--space-3xs: clamp(.3125rem, .3125rem + 0vw, .3125rem);--space-2xs: clamp(.5625rem, .5408rem + .1087vw, .625rem);--space-xs: clamp(.875rem, .8533rem + .1087vw, .9375rem);--space-s: clamp(1.125rem, 1.0815rem + .2174vw, 1.25rem);--space-m: clamp(1.6875rem, 1.6223rem + .3261vw, 1.875rem);--space-l: clamp(2.25rem, 2.163rem + .4348vw, 2.5rem);--space-xl: clamp(3.375rem, 3.2446rem + .6522vw, 3.75rem);--space-2xl: clamp(4.5rem, 4.3261rem + .8696vw, 5rem);--space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);--space-3xs-2xs: clamp(.3125rem, .2038rem + .5435vw, .625rem);--space-2xs-xs: clamp(.5625rem, .4321rem + .6522vw, .9375rem);--space-xs-s: clamp(.875rem, .7446rem + .6522vw, 1.25rem);--space-s-m: clamp(1.125rem, .8641rem + 1.3043vw, 1.875rem);--space-m-l: clamp(1.6875rem, 1.4049rem + 1.413vw, 2.5rem);--space-l-xl: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);--space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);--space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);--space-s-l: clamp(1.125rem, .6467rem + 2.3913vw, 2.5rem)}@media (prefers-color-scheme: light){:root{color-scheme:light;background-color:var(--gray-50);color:var(--gray-950)}a{color:var(--gray-950);text-decoration-color:var(--gray-400)}a:hover{text-decoration-color:var(--gray-950)}}@media (prefers-color-scheme: dark){:root{color-scheme:light;background-color:var(--gray-950);color:var(--gray-50)}a{color:var(--gray-50);text-decoration-color:var(--gray-500)}a:hover{text-decoration-color:var(--gray-50)}}body{font-family:Arial,Helvetica,sans-serif;min-height:100vh;display:flex;flex-direction:column}main{flex:1}footer{margin-top:auto}a{transition:all .4s ease}article{max-width:720px;margin:0 auto}header{display:flex;justify-content:space-around;align-items:center}ul{list-style-type:none}p{font-size:var(--step-0)}::target-text{background-color:#ff0}.container{width:90%;margin:0 auto}.typewriter{overflow:hidden;white-space:no-wrap;margin:0 auto;border-right:.15em solid;border-color:light-dark(var(--gray-50),var(--gray-950));letter-spacing:.1em;animation:typing 5s steps(40,end),blink-caret .75s step-end infinite}@keyframes typing{0%{width:0}to{width:100%}}@keyframes blink-caret{0%,to{border-color:transparent}50%{border-color:light-dark(var(--gray-50),var(--gray-950))}}#navbar{width:fit-content;height:fit-content;padding:2px 16px;border-radius:16px}#navbar ul{padding:0;display:flex;gap:24px}#navbar a{text-decoration:none}#navbar a:hover{text-decoration:underline}#skip a{padding:6px;position:absolute;top:-40px;left:0;color:light-dark(var(--gray-50),var(--gray-950));border-bottom-right-radius:8px;background-color:light-dark(var(--gray-950),var(--gray-50));-webkit-transition:top .5s ease-out;transition:top .5s ease-out;z-index:100}#skip a:focus{position:absolute;left:0;top:0;outline-color:transparent;-webkit-transition:top .05s ease-in;transition:top .05s ease-in}.blog-title{font-size:var(--step-3)}
+</style></head> <body> <header> <nav id="navbar" aria-labelledby="primary-navigation"> <ul> <li><a href="/">Home</a></li> <li><a href="/blog">Blog</a></li> <li><a href="/notes">Notes</a></li> </ul> </nav> </header> <div class="container"> <div id="skip"><a href="#main-content">Skip to main content</a></div> <!-- The header takes an identical meaning to the banner landmark in this usage. --> <p>Fri May 26 2023 19:00:00 GMT-0500 (Central Daylight Time) </p>  <h1 id="web-development">Web Development</h1>
+<p>Considerations:</p>
+<ul>
+<li>UI - how users consume and interact w/ your application</li>
+<li>Routing - how users navigate</li>
+<li>Data Fetching - where your data lives nad how to get it</li>
+<li>Rendering - when and hwere you render static or dynamic content</li>
+<li>Integrations - 3rd party services and how to connect them</li>
+<li>Performance - how to optimize</li>
+<li>Scalability - how your app adapts to growth</li>
+<li>Dev Experience - exp building and maintaining your app</li>
+</ul>
+<h2 id="client-and-server">Client and Server</h2>
+<p>Client refers to the browser on a user’s device
+Server refers to the computer storing application code and responds to client requests</p>
+<h2 id="rendering">Rendering</h2>
+<h4 id="server-side">Server-side</h4>
+<p>Fetching of external data and transformation of React components into HTML happens before result is sent to client. HTML is generated once at build time and stored in a [[CDN]] and re-used for each request.</p>
+<h4 id="static-site-generation">Static site generation</h4>
+<p>Fetching of external data and transformation of React components into HTML happens before result is sent to client</p>
+<h4 id="client-side-rendering">Client-side rendering</h4>
+<p>Client’s browser receives empty HTML shell from server along with JavaScript instructions to construct the UI.</p>
+<p>📝 <strong>Web Development in 2020</strong></p>
+<p>Notes from Traversy Media’s Video <a href="https://www.youtube.com/watch?v=0pThnRneDjw&#x26;t=972s">https://www.youtube.com/watch?v=0pThnRneDjw&#x26;t=972s</a></p>
+<p><strong>Frontend</strong></p>
+<p><strong>Responsive Design</strong></p>
+<ul>
+<li>
+<p>Viewport</p>
+</li>
+<li>
+<p>Media queries</p>
+</li>
+<li>
+<p>Fluid widths</p>
+</li>
+<li>
+<p>REM over px</p>
+</li>
+<li>
+<p>Mobile first</p>
+</li>
+<li>
+<p>Create mobile media queries first</p>
+</li>
+</ul>
+<p><strong>Custom Reusable CSS Components</strong></p>
+<p>Create your own modular, reusable CSS components. Makes CSS more efficient and functional.</p>
+<ul>
+<li>
+<p>Variables</p>
+</li>
+<li>
+<p>Nesting</p>
+</li>
+<li>
+<p>Conditionals</p>
+</li>
+</ul>
+<p><strong>CSS Frameworks</strong></p>
+<p>Downward trend, but still relevant. Good for developers who struggle at design</p>
+<ul>
+<li>
+<p>Bootstrap</p>
+</li>
+<li>
+<p>Tailwind CSS</p>
+</li>
+<li>
+<p>Upward trend</p>
+</li>
+<li>
+<p>Set of utility classes</p>
+</li>
+<li>
+<p>Highly customizable</p>
+</li>
+<li>
+<p>Materialize</p>
+</li>
+<li>
+<p>Bulma</p>
+</li>
+</ul>
+<p><strong>Vanilla JS</strong></p>
+<p>Makes pages dynamic</p>
+<ul>
+<li>
+<p>Fundamentals</p>
+</li>
+<li>
+<p>DOM</p>
+</li>
+<li>
+<p>JSON (JS Object Notation)</p>
+</li>
+<li>
+<p>Fetch API (Request / Response / Ajax)</p>
+</li>
+<li>
+<p>Modern JS</p>
+</li>
+</ul>
+<p><strong>Basic Deployment</strong></p>
+<p>Get project to web server</p>
+<ul>
+<li>
+<p>Domain Registration</p>
+</li>
+<li>
+<p>Managed Hosting (Hostgator, Bluehost, etc.)</p>
+</li>
+<li>
+<p>Static Hosting (Netlify, Github Pages)</p>
+</li>
+<li>
+<p>SSL Certificate </p>
+</li>
+</ul>
+<p><strong>Front-End Framework</strong></p>
+<p>Allow powerful single page applications with organized and interactive UIs. Great for teams.</p>
+<ul>
+<li>
+<p>React</p>
+</li>
+<li>
+<p>Most popular</p>
+</li>
+<li>
+<p>Vue</p>
+</li>
+<li>
+<p>Gaining traction</p>
+</li>
+<li>
+<p>Angular</p>
+</li>
+<li>
+<p>Used more in enterprise</p>
+</li>
+</ul>
+<p><strong>Svelte</strong></p>
+<p>JS compiler that produces vanilla JS and builds UI easily.</p>
+<ul>
+<li>
+<p>Write less code</p>
+</li>
+<li>
+<p>No virtual DOM</p>
+</li>
+<li>
+<p>Very fast</p>
+</li>
+</ul>
+<p><strong>State Management</strong></p>
+<p>App level state. Downward trend.</p>
+<ul>
+<li>
+<p>React - Redux</p>
+</li>
+<li>
+<p>Context API with hooks on upward trend</p>
+</li>
+<li>
+<p>Vue - Vuex</p>
+</li>
+<li>
+<p>Angular - NGRX, Services</p>
+</li>
+<li>
+<p>Apollo Client</p>
+</li>
+</ul>
+<p><strong>Server Side Rendering</strong></p>
+<p>Render React and Vue on server as oppose to a client side SPA. NEXT for React and NUXT for Vue.</p>
+<ul>
+<li>
+<p>Better SEO</p>
+</li>
+<li>
+<p>File system routing</p>
+</li>
+<li>
+<p>Automatic code splitting</p>
+</li>
+<li>
+<p>Static exploring</p>
+</li>
+<li>
+<p>CSS-in-JS</p>
+</li>
+</ul>
+<p><strong>Static Site Generators</strong></p>
+<p>Gatsby (React) and Gridsome (Vue). Generate static web pages.</p>
+<ul>
+<li>
+<p>Better SEO</p>
+</li>
+<li>
+<p>File system routing</p>
+</li>
+<li>
+<p>Data fetching from local files, during build time</p>
+</li>
+<li>
+<p>Plugin system</p>
+</li>
+<li>
+<p>GraphQL for data</p>
+</li>
+</ul>
+<p><strong>TypeScript</strong></p>
+<p>Superset of JS allowing for optional static typing and more.</p>
+<ul>
+<li>
+<p>Static typing</p>
+</li>
+<li>
+<p>Tooling support with IntelliSense</p>
+</li>
+<li>
+<p>Modules, decorators, classes</p>
+</li>
+<li>
+<p>Compiles into clean JS code</p>
+</li>
+<li>
+<p>Built into Angular</p>
+</li>
+</ul>
+<p><strong>Backend</strong></p>
+<p><strong>Server-side language and framework</strong></p>
+<ul>
+<li>
+<p>Node.js</p>
+</li>
+<li>
+<p>Express</p>
+</li>
+<li>
+<p>Feathers.js</p>
+</li>
+<li>
+<p>Next.js</p>
+</li>
+<li>
+<p>PHP</p>
+</li>
+<li>
+<p>Laravel</p>
+</li>
+<li>
+<p>Python</p>
+</li>
+<li>
+<p>Django, Flask</p>
+</li>
+<li>
+<p>C#</p>
+</li>
+<li>
+<p><a href="http://ASP.NET">ASP.NET</a> MVC</p>
+</li>
+<li>
+<p>Java</p>
+</li>
+<li>
+<p>Spring MVC, Grails</p>
+</li>
+<li>
+<p>Ruby</p>
+</li>
+<li>
+<p>Ruby on Rails</p>
+</li>
+<li>
+<p>Sinatra</p>
+</li>
+<li>
+<p>Go</p>
+</li>
+<li>
+<p>Revel</p>
+</li>
+</ul>
+<p><strong>Databases</strong></p>
+<ul>
+<li>
+<p>Relational (most popular)</p>
+</li>
+<li>
+<p>PostgreSQL (upward trend)</p>
+</li>
+<li>
+<p>MySQL</p>
+</li>
+<li>
+<p>MS SQL</p>
+</li>
+<li>
+<p>NoSQL (faster, more freedom)</p>
+</li>
+<li>
+<p>MongoDB (most popular)</p>
+</li>
+<li>
+<p>Mongo Atlas for cloud</p>
+</li>
+<li>
+<p>RethinkDB</p>
+</li>
+<li>
+<p>CouchDB</p>
+</li>
+<li>
+<p>Cloud - </p>
+</li>
+<li>
+<p>Firebase</p>
+</li>
+<li>
+<p>For small - medium projects</p>
+</li>
+<li>
+<p>Azure Cloud</p>
+</li>
+<li>
+<p>AWS</p>
+</li>
+<li>
+<p>Lightweight &#x26; Cache</p>
+</li>
+<li>
+<p>Redis</p>
+</li>
+<li>
+<p>SQLlite</p>
+</li>
+<li>
+<p>NeDB</p>
+</li>
+</ul>
+<p><strong>GraphQL</strong></p>
+<ul>
+<li>
+<p>Query language for your API</p>
+</li>
+<li>
+<p>Single endpoint </p>
+</li>
+<li>
+<p>Simple syntax, similar to JSON</p>
+</li>
+<li>
+<p>Fairly easy to implement</p>
+</li>
+<li>
+<p>Apollo is a client to interact with the GraphQL server</p>
+</li>
+</ul>
+<p><strong>Content Management</strong></p>
+<p>A CMS is used to add content to your website / application. Good for clients to update without programming knowledge.</p>
+<ul>
+<li>
+<p>Traditional</p>
+</li>
+<li>
+<p>Wordpress</p>
+</li>
+<li>
+<p>Drupal</p>
+</li>
+<li>
+<p>Keystone</p>
+</li>
+<li>
+<p>Enduro</p>
+</li>
+<li>
+<p>Headless - just the data</p>
+</li>
+<li>
+<p>Contentful</p>
+</li>
+<li>
+<p><a href="http://Prismic.io">Prismic.io</a></p>
+</li>
+<li>
+<p>Sanity</p>
+</li>
+<li>
+<p>Strapi</p>
+</li>
+</ul>
+<p><strong>Deployment and DevOps</strong></p>
+<p>Understand how to create / manage environments and deploy to the web</p>
+<ul>
+<li>
+<p>SSH</p>
+</li>
+<li>
+<p>Web Server Environment</p>
+</li>
+<li>
+<p>NGINX</p>
+</li>
+<li>
+<p>Apache</p>
+</li>
+<li>
+<p>App Hosting</p>
+</li>
+<li>
+<p>Linode</p>
+</li>
+<li>
+<p>Heroku</p>
+</li>
+<li>
+<p>AWS</p>
+</li>
+<li>
+<p>Large-scale</p>
+</li>
+<li>
+<p>Azure</p>
+</li>
+<li>
+<p>Large-scale</p>
+</li>
+<li>
+<p>Now</p>
+</li>
+<li>
+<p>Virtualization</p>
+</li>
+<li>
+<p>Docker</p>
+</li>
+<li>
+<p>Have same environment on multiple platforms</p>
+</li>
+<li>
+<p>Vagrant</p>
+</li>
+<li>
+<p>Testing</p>
+</li>
+<li>
+<p>Unit</p>
+</li>
+<li>
+<p>Functional</p>
+</li>
+<li>
+<p>Integration</p>
+</li>
+<li>
+<p>Load balancing, monitoring, security</p>
+</li>
+<li>
+<p>Usually done by a separate DevOps professional</p>
+</li>
+</ul>
+<p><strong>Mobile Development</strong></p>
+<ul>
+<li>
+<p>Flutter</p>
+</li>
+<li>
+<p>Native mobile apps SDK from Google using Dart</p>
+</li>
+<li>
+<p>React Native</p>
+</li>
+<li>
+<p>Native mobile apps using React</p>
+</li>
+<li>
+<p>NativeScript </p>
+</li>
+<li>
+<p>Native mobile apps with JS, TS, Angular, or Cue</p>
+</li>
+<li>
+<p>Ionic</p>
+</li>
+<li>
+<p>Hybrid mobile apps with JS</p>
+</li>
+<li>
+<p>Xamarin</p>
+</li>
+<li>
+<p>Native mobile apps with C#</p>
+</li>
+</ul>
+<p><strong>PWA: Progressive Web Apps</strong></p>
+<p>Regular web apps that have a native feel</p>
+<ul>
+<li>
+<p>Look great on all screen sizes</p>
+</li>
+<li>
+<p>Offline content with service workers</p>
+</li>
+<li>
+<p>Installable</p>
+</li>
+<li>
+<p>Splash screen</p>
+</li>
+<li>
+<p>Must be HTTPS</p>
+</li>
+<li>
+<p>Reliable, fast, and engaging</p>
+</li>
+</ul>
+<p><strong>Desktop Apps with Electron</strong></p>
+<p>Allows cross-platform app with JS</p>
+<ul>
+<li>
+<p>Uses Node.js &#x26; Chromium</p>
+</li>
+<li>
+<p>High data security</p>
+</li>
+<li>
+<p>High performance</p>
+</li>
+<li>
+<p>Accessibility</p>
+</li>
+<li>
+<p>VSCode, Atom, Postman, Discord</p>
+</li>
+</ul>
+<p><strong>JAMstack</strong></p>
+<p>“JavaScript, APIs &#x26; Markup” is a modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup. Upward trend.</p>
+<ul>
+<li>
+<p>No restriction on framework or library</p>
+</li>
+<li>
+<p>Websites are served as static html files generated from source files, such as markdown using a static site generator like Gatsby</p>
+</li>
+<li>
+<p>High performance, generated at deploy time</p>
+</li>
+<li>
+<p>Cheaper and easy to scale</p>
+</li>
+<li>
+<p>Easy to host (Netlify)</p>
+</li>
+</ul>
+<p><strong>Serverless Architecture</strong></p>
+<p>Server operations without actually needing your own server</p>
+<ul>
+<li>
+<p>“Backend” or “Functions” as a service (FaaS)</p>
+</li>
+<li>
+<p>Reduce complexity and costs</p>
+</li>
+<li>
+<p>Less infrastructure to manage</p>
+</li>
+<li>
+<p>AWS Lambda &#x26; Netlify</p>
+</li>
+</ul>
+<p><strong>API-First Design</strong></p>
+<p>With more and more IoT expect to see api-focused design</p>
+<ul>
+<li>
+<p>Traditionally we start with UI and then backend with a strict connection to the web app</p>
+</li>
+<li>
+<p>With API-first design, you start with the appropriate APIs and then build products on top of it</p>
+</li>
+</ul>
+<p><strong>Machine Learning / AI &#x26; the Web</strong></p>
+<p>Growing in all areas of tech and can be useful in web apps / services</p>
+<ul>
+<li>
+<p>Alternative to conventional data mining</p>
+</li>
+<li>
+<p>Remove security threats</p>
+</li>
+<li>
+<p>Machine learning APIs</p>
+</li>
+<li>
+<p>Producing content</p>
+</li>
+<li>
+<p>Study user behavior</p>
+</li>
+<li>
+<p>Python is king</p>
+</li>
+</ul>
+<p><strong>Speech Recognition</strong></p>
+<p>Major trend. </p>
+<ul>
+<li>
+<p>HTML5 Web Speech API</p>
+</li>
+<li>
+<p>Google Speech-To-Text</p>
+</li>
+<li>
+<p>Dialog Flow</p>
+</li>
+</ul>
+<p><strong>Web Assembly</strong></p>
+<p>Low-level bytemode run in browser</p>
+<ul>
+<li>Generated by C, C++, and Rust</li>
+<li>Much faster than JS</li>
+<li>Not replacement for JS, works alongside it</li>
+<li>Next level video games, tools in browser</li>
+</ul>   </div> <footer aria-labelledby="footer-navigation"> <small>Copyright © 2024 CJ Dunteman. All Rights Reserved.</small> </footer> </body></html>
