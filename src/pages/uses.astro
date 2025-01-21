@@ -1,16 +1,9 @@
 ---
 import '../styles/style.css'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import Layout from '../layouts/Layout.astro'
+const title = 'Uses - CJ Dunteman'
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uses - CJ Dunteman</title>
-  </head>
   <style>
     section {
       margin-bottom: var(--step-5);
@@ -18,14 +11,12 @@ import Footer from '../components/Footer.astro'
     p {
       margin-bottom: var(--step-1);
     }
-  </style>
-  <body>
-    <div class="container">
-      <div id="skip"><a href="#main-content">Skip to main content</a></div>
-      <Header />
-      <main id="main-content" style="max-width: 720px; margin: 0 auto">
-        <section>
-          <h2>Productivity</h2>
+    </style>
+
+<Layout title={title}>
+  <main id="main-content" style="max-width: 720px; margin: 0 auto">
+    <section>
+      <h2>Productivity</h2>
           <p>
             <a href="https://www.raycast.com/">Raycast</a
             ><i>
@@ -74,8 +65,5 @@ import Footer from '../components/Footer.astro'
             ><i> for hosting Next.js projects</i>
           </p>
         </section>
-      </main>
-      <Footer />
-    </div>
-  </body>
-</html>
+  </main>
+</Layout>

@@ -1,24 +1,11 @@
 ---
 import '../styles/style.css'
-import Header from '../components/Header.astro'
+import Layout from '../layouts/Layout.astro'
+const title = 'Skiing - CJ Dunteman'
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <div id="skip"><a href="#main-content">Skip to main content</a></div>
-      <Header />
-        <!-- <form>Search</form> -->
-      </header>
-      <main id="main-content">
-        <p>I love to ski! Check out where I've been this year!</p>
-      </main>
-    </div>
-  </body>
-</html>
+<Layout title={title}>
+  <main id="main-content">
+    <p>I love to ski! Check out where I've been this year!</p>
+  </main>
+</Layout>

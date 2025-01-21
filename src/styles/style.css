@@ -95,10 +95,6 @@
   a:hover {
     text-decoration-color: var(--gray-950);
   }
-
-  #navbar {
-    box-shadow: var(--gray-200) 0px 7px 29px 0px;
-  }
 }
 
 /* Dark mode colors */
@@ -115,10 +111,6 @@
   }
   a:hover {
     text-decoration-color: var(--gray-50);
-  }
-
-  #navbar {
-    box-shadow: var(--gray-900) 0px 0px 27px 0px;
   }
 }
 
