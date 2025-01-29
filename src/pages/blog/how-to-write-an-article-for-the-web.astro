@@ -1,37 +1,25 @@
 ---
-import '../../styles/style.css'
-import Header from '../../components/Header.astro'
+import "../../styles/style.css";
+import Header from "../../components/Header.astro";
+
+const title = "Blog - CJ Dunteman";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to write an article for the web</title>
-  </head>
-  <body>
-    <div id="skip"><a href="#main-content">Skip to main content</a></div>
-    <div class="container">
-      <Header />
-      <article id="main-content">
-        <h1>Fake article</h1>
-        <div class="byline">
-          <address>By <a rel="author" href="/">CJ Dunteman</a></address>
-        </div>
-        <p>
-          This is an article written to demonstrate how the HTML should be
-          structured for accessibility and search engine optimization.
-        </p>
-        <p>
-          Text fragments allow linking to a specific text on page that do not
-          have an ID. For an example, click on this
-          <a
-            href="/how-to-write-an-article-for-the-web.html#:~:text=This%20is%20an%20article%20written"
-            >link</a
-          >.
-        </p>
-      </article>
-    </div>
-  </body>
-</html>
+<article id="main-content">
+  <h1>Fake article</h1>
+  <div class="byline">
+    <address>By <a rel="author" href="/">CJ Dunteman</a></address>
+  </div>
+  <p>
+    This is an article written to demonstrate how the HTML should be structured
+    for accessibility and search engine optimization.
+  </p>
+  <p>
+    Text fragments allow linking to a specific text on page that do not have an
+    ID. For an example, click on this
+    <a
+      href="/how-to-write-an-article-for-the-web.html#:~:text=This%20is%20an%20article%20written"
+      >link</a
+    >.
+  </p>
+</article>

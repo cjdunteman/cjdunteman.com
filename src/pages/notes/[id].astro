@@ -15,6 +15,12 @@ const { Content } = await render(note);
 
 ---
 
-<NotesLayout frontmatter={note.data}>
+<NotesLayout frontmatter={{ 
+    title: note.data.title || "Default Title",
+    isDraft: note.data.isDraft || false,
+    tags: note.data.tags,
+    publishDate: note.data.publishDate,
+    updatedDate: note.data.updatedDate || new Date()
+}}>
     <Content />
 </NotesLayout>

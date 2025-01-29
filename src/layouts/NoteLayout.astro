@@ -57,6 +57,7 @@ const backlinks = allLinks[pathname] || [];
         <div id="skip"><a href="#main-content">Skip to main content</a></div>
         <!-- The header takes an identical meaning to the banner landmark in this usage. -->
         <p>Updated { frontmatter.updatedDate.toDateString() } </p>
+        <p>Tags: { frontmatter.tags?.join(', ') }</p>
         <slot />
         {backlinks.length > 0 && (
           <div style="margin-top: var(--space-2xl);">

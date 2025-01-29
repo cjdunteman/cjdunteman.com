@@ -16,8 +16,7 @@ const { title } = Astro.props
     <Header />
     <div class="container">
         <div id="skip"><a href="#main-content">Skip to main content</a></div>
-        <!-- The header takes an identical meaning to the banner landmark in this usage. -->
-        <slot />
+        <slot class="slot-container"/>
     </div>
     <Footer />
   </body>

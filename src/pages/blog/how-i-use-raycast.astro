@@ -1,6 +1,6 @@
 ---
 import '../../styles/style.css'
-import Header from '../../components/Header.astro'
+import Layout from '../../layouts/Layout.astro'
 ---
 
 <!DOCTYPE html>
@@ -11,10 +11,9 @@ import Header from '../../components/Header.astro'
     <title>How I Use Raycast - CJ Dunteman</title>
   </head>
   <body>
-    <div id="skip"><a href="#main-content">Skip to main content</a></div>
-    <div class="container">
-      <Header />
-      <article>
+    <Layout>
+    <div>
+      <article id="main-content">
         <section style="margin-bottom: 80px">
           <h1 class="blog-title">How I Use Raycast</h1>
           <div class="byline">
@@ -124,5 +123,6 @@ import Header from '../../components/Header.astro'
         </section>
       </article>
     </div>
+  </Layout>
   </body>
 </html>

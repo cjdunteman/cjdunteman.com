@@ -7,6 +7,8 @@ updatedDate: 2024-12-29
 ---
 # Home Building
 
+Some notes for when I someday, hopefully, build my own home.
+
 ## General
 Zero entry front entrance
 36” wide doorways to accomodate wheelchairs
