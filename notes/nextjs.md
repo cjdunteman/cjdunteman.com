@@ -1,5 +1,6 @@
 ---
 isDraft: true
+isPrivate: false
 title: Next.js
 tags: ["Web Development"]
 updatedDate: 2023-05-27

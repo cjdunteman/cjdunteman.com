@@ -1,5 +1,6 @@
 ---
 isDraft: true
+isPrivate: false
 title: Web Development
 updatedDate: 2023-05-27
 ---

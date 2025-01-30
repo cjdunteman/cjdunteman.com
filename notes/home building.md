@@ -1,6 +1,6 @@
-
 ---
 isDraft: true
+isPrivate: true
 title: Home Building
 publishDate: 2024-12-29
 updatedDate: 2024-12-29

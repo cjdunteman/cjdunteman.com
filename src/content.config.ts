@@ -1,14 +1,16 @@
 // 1. Import utilities from `astro:content`
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, getCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 // 2. Import loader(s)
-import { glob, file } from 'astro/loaders';
+import { file } from 'astro/loaders';
 
 // 3. Define your collection(s)
 const notes = defineCollection({ 
     loader: glob({ pattern: "**/*.md", base: "./notes" }),
     schema: z.object({
         isDraft: z.boolean(),
+        isPrivate: z.boolean(),
         title: z.string(),
         // sortOrder: z.number(),
         // image: z.object({
@@ -28,10 +30,11 @@ const notes = defineCollection({
     
         // authorContact: z.string().email(),
         // canonicalURL: z.string().url(),
-      })
- });
 
- const posts = defineCollection({ 
+      }),
+});
+
+const posts = defineCollection({ 
     loader: glob({ pattern: "**/*.md", base: "./blog" }),
     schema: z.object({
         isDraft: z.boolean(),
@@ -40,6 +43,12 @@ const notes = defineCollection({
         updatedDate: z.string().or(z.date()).transform((str) => new Date(str)),
     })
  });
+
+// 3. Export a function to get the collection with filtering
+export const getNotes = async () => {
+    const notesCollection = await getCollection('notes');
+    return notesCollection.filter(note => !note.data.isPrivate);
+};
 
 // 4. Export a single `collections` object to register your collection(s)
 export const collections = { notes, posts };

@@ -1,13 +1,10 @@
 ---
 import '../styles/style.css'
 import Layout from '../layouts/Layout.astro'
-import { getCollection } from 'astro:content';
+import { getNotes } from '../content.config';
 const title = 'Notes - CJ Dunteman'
 
-const notesPromise = await getCollection('notes', ({ data }) => {
-  // Optional filter
-  return data.isDraft === true;
-});
+const notesPromise = await getNotes();
 
 const notes = notesPromise.sort((a, b) => {
   // Sort from most recent to oldest

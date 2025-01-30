@@ -1,5 +1,6 @@
 ---
 isDraft: true
+isPrivate: false
 title: Blockchain
 updatedDate: 2023-05-27
 ---
