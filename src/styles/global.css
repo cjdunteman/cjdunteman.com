@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #6a6a6a;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+
+a {
+  color: #6a6a6a;
+  text-decoration: none;
+}

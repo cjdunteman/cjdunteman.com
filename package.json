@@ -2,8 +2,9 @@
   "name": "cjdunteman.com",
   "version": "1.0.0",
   "description": "This website is built purely in HTML, CSS, and JavaScript.",
-  "main": "markdownParser.js",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
@@ -12,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "astro": "^5.1.6"
+    "@fontsource/montserrat": "^5.2.5",
+    "astro": "^5.7.11"
   }
 }
