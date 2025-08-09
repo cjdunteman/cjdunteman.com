@@ -26,14 +26,6 @@
 		{
 			"src": "^/contact/?$",
 			"dest": "_render"
-		},
-		{
-			"src": "^/favorites/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/$",
-			"dest": "_render"
 		}
 	]
 }

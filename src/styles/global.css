@@ -17,5 +17,24 @@ a {
 }
 
 li {
-  list-style: none;
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+/* TYPOGRAPHY */
+h2 {
+  padding-bottom: 0.5rem;
+}
+
+p {
+  padding-bottom: 1rem;
+}
+
+/* MARKDOWN STYLES */
+.markdown-content ul,
+ol {
+  margin-left: 2rem;
+}
+.markdown-content li {
+  list-style-type: disc;
 }

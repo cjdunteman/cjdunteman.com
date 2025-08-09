@@ -1,8 +1,11 @@
 import { defineConfig } from "astro/config";
-// Import /serverless for a Serverless SSR site
-import vercelServerless from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
+
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  output: "server",
-  adapter: vercelServerless(),
+  output: "static",
+  adapter: vercel(),
+  site: "https://cjdunteman.com",
+  integrations: [sitemap()],
 });
