@@ -1,3 +1,3 @@
 # [CJ Dunteman](cjdunteman.com)
 
-This website is built purely in HTML, CSS, and JavaScript.
+My website, built with [Astro](https://astro.build).
