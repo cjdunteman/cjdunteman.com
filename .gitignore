@@ -1,4 +1,15 @@
-.node_modules
-node_modules
-notes/.obsidian/
+# Astro build output
+dist/
+.astro/
+
+# Node
+node_modules/
+
+# Vercel
 .vercel
+
+# VS Code settings
+.vscode/
+
+# Local environment files
+.env
