@@ -3,7 +3,7 @@ import { actions } from "astro:actions";
 import BaseLayout from "../layouts/BaseLayout.astro";
 export const prerender = false;
 
-const result = Astro.getActionResult(actions.send);
+const result = Astro.getActionResult(actions.email.send);
 if (result?.data) {
   return Astro.redirect("/");
 }
@@ -22,7 +22,7 @@ if (result?.error) {
 
 <BaseLayout>
   <form
-    action={actions.send}
+    action={actions.email.send}
     method="POST"
     style="display: flex; flex-direction: column; gap: 1rem;"
   >

@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-export const server = {
+export const email = {
   send: defineAction({
     accept: 'form',
     input: z.object({
@@ -13,7 +13,7 @@ export const server = {
     handler: async ( msg ) => {
       const { data, error } = await resend.emails.send({
         from: 'Contact Form <contact@cjdunteman.com>',
-        to: ['cjdunteman@gmail.com'],
+        to: ['cj@cjdunteman.com'],
         subject: 'New Contact Form Submission',
         html: `<strong>Message:</strong><br>${msg}`,
       })
