@@ -8,7 +8,7 @@ export const server = {
   send: defineAction({
     accept: 'form',
     input: z.object({
-      msg: z.string(),
+      msg: z.string().max(200),
     }),
     handler: async ( msg ) => {
       const { data, error } = await resend.emails.send({

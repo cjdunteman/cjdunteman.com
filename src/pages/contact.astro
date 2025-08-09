@@ -2,9 +2,19 @@
 import { actions } from "astro:actions";
 import BaseLayout from "../layouts/BaseLayout.astro";
 export const prerender = false;
+
+const result = Astro.getActionResult(actions.send);
+if (result?.data) {
+  return Astro.redirect("/");
+}
+
+if (result?.error) {
+  console.log(result.error);
+}
 ---
 
 <script>
+  // On load, user's cursor is placed in the msg textarea
   window.onload = () => {
     document.getElementById("msg").focus();
   };
