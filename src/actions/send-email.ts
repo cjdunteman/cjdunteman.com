@@ -10,12 +10,12 @@ export const email = {
     input: z.object({
       msg: z.string().max(200),
     }),
-    handler: async ( msg ) => {
+    handler: async ({ msg }) => {
       const { data, error } = await resend.emails.send({
         from: 'Contact Form <contact@cjdunteman.com>',
         to: ['cj@cjdunteman.com'],
         subject: 'New Contact Form Submission',
-        html: `<strong>Message:</strong><br>${msg}`,
+        html: `<strong>Message:</strong><br>${msg.replace(/\n/g, '<br>')}`,
       })
 
       if (error) {

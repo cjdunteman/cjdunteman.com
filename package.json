@@ -18,6 +18,6 @@
     "@fontsource/inter": "^5.2.5",
     "@fontsource/montserrat": "^5.2.5",
     "astro": "^5.7.11",
-    "resend": "^4.6.0"
+    "resend": "^6.0.1"
   }
 }
