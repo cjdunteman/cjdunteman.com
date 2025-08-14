@@ -15,7 +15,10 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BaseLayout>
+<BaseLayout
+  title={`${post.data.title} | CJ Dunteman`}
+  description={post.data.description}
+>
   <h1>{post.data.title}</h1>
   <div class="markdown-content">
     <Content />

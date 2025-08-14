@@ -1,0 +1,20 @@
+---
+const { title = "CJ Dunteman", description } = Astro.props;
+
+type Props = {
+  title: string;
+  description: string;
+};
+---
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+<title>{title}</title>
+<meta name="description" content="CJ Dunteman's personal website." />
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.cjdunteman.com/" />
+<meta property="og:image" content="https://www.cjdunteman.com/" />
+<meta property="og:locale" content="en_US" />
