@@ -4,12 +4,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 export const prerender = false;
 
 const result = Astro.getActionResult(actions.email.send);
+let errorMsg = "";
+
 if (result?.data) {
   return Astro.redirect("/");
 }
 
 if (result?.error) {
-  console.log(result.error);
+  errorMsg =
+    "Sorry, there was a problem sending your message. Please try again.";
 }
 ---
 
