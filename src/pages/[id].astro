@@ -19,8 +19,8 @@ const { Content } = await render(post);
   title={`${post.data.title} | CJ Dunteman`}
   description={post.data.description}
 >
-  <h1>{post.data.title}</h1>
   <div class="markdown-content">
+    <h1>{post.data.title}</h1>
     <Content />
   </div>
 </BaseLayout>
