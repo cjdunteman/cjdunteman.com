@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 export const prerender = false;
 
 const result = Astro.getActionResult(actions.email.send);
-let errorMsg = "";
+let errorMsg: string;
 
 if (result?.data) {
   return Astro.redirect("/");
