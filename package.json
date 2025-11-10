@@ -17,7 +17,7 @@
     "@astrojs/vercel": "^8.2.3",
     "@fontsource/inter": "^5.2.5",
     "@fontsource/montserrat": "^5.2.5",
-    "astro": "^5.13.2",
+    "astro": "^5.14.4",
     "resend": "^6.0.1"
   }
 }
