@@ -24,11 +24,16 @@ jobs:
         run: npm run build
 
       - name: Get SSH Key and set permissions
+        env:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
 
       - name: Deploy using SCP
+        env:
+          ssh-user: ${{ secrets.SSH_USER }}
+          ssh-host: ${{ secrets.SSH_HOST }}
         run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/cjdunteman.com/
 
       - name: Install 
