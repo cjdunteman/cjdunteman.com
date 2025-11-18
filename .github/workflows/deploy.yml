@@ -1,0 +1,35 @@
+name: Build and Deploy to Digital Ocean VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro site
+        run: npm run build
+    
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get SSH Key and set permissions
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+      - name: Deploy using SCP
+        run: scp -o StrictHostKeyChecking=no -r ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/srv/cjdunteman.com/
