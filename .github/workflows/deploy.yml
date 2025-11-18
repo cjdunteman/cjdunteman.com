@@ -27,5 +27,9 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+
       - name: Deploy using SCP
-        run: scp -o StrictHostKeyChecking=no -r ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/srv/cjdunteman.com/
+        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/srv/cjdunteman.com/
+
+      - name: Install 
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /srv/cjdunteman.com && npm install"
