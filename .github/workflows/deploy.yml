@@ -29,7 +29,8 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
 
       - name: Deploy using SCP
         env:
@@ -38,4 +39,7 @@ jobs:
         run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* "$SSH_USER@$SSH_HOST":/var/www/cjdunteman.com/
 
       - name: Install 
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
         run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "$SSH_USER@$SSH_HOST" "cd /var/www/cjdunteman.com && npm install"
