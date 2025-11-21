@@ -42,4 +42,4 @@ jobs:
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "$SSH_USER@$SSH_HOST" "cd /var/www/cjdunteman.com && npm ci"
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "$SSH_USER@$SSH_HOST" "cd /var/www/cjdunteman.com"
