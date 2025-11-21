@@ -1,4 +1,4 @@
-name: Build and Deploy to Digital Ocean VPS
+name: Build and Deploy
 
 on:
   push:
