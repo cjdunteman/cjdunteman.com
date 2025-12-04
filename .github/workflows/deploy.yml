@@ -37,7 +37,7 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
-          scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* "$SSH_USER@$SSH_HOST":/var/www/cjdunteman.com/
+          scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* "$SSH_USER@$SSH_HOST":/var/www/cjdunteman.com
 
       - name: Install 
         env:
