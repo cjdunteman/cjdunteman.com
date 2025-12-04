@@ -9,7 +9,7 @@ export default defineConfig({
     chromeDevtoolsWorkspace: true,
   },
 
-  output: "static",
+  output: "server",
   site: "https://cjdunteman.com",
   integrations: [sitemap()],
 
