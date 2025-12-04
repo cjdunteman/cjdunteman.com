@@ -15,13 +15,6 @@ if (result?.error) {
 }
 ---
 
-<script>
-  // On load, user's cursor is placed in the msg textarea
-  window.onload = () => {
-    document.getElementById("msg").focus();
-  };
-</script>
-
 <BaseLayout title="CJ Dunteman | Contact" description="Send an email to CJ.">
   <form
     action={actions.email.send}
@@ -36,6 +29,7 @@ if (result?.error) {
       minlength="10"
       maxlength="500"
       rows="4"
+      autofocus
       style="font-size: 16px; border: none; outline: none; caret-color: #6a6a6a; color: #6a6a6a; font-style: italic; font-weight: 200;"
     ></textarea>
     <button
