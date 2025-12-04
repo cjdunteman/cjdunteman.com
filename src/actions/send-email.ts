@@ -2,7 +2,7 @@ import { ActionError, defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 import { Resend } from 'resend';
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
+const apiKey = process.env.RESEND_API_KEY;
 
 export const email = {
   send: defineAction({
@@ -11,6 +11,15 @@ export const email = {
       msg: z.string().max(200),
     }),
     handler: async ({ msg }) => {
+      if (!apiKey) {
+        throw new ActionError({
+          code: 'INTERNAL_SERVER_ERROR',
+          message: 'Email service is not configured.',
+        });
+      }
+
+      const resend = new Resend(apiKey);
+      
       const { data, error } = await resend.emails.send({
         from: 'Contact Form <contact@cjdunteman.com>',
         to: ['cj@cjdunteman.com'],
