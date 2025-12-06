@@ -18,6 +18,25 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: npm list
+
       - name: Install dependencies
         run: npm ci
 
@@ -38,9 +57,10 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
           scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* "$SSH_USER@$SSH_HOST":/var/www/cjdunteman.com
+          scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa package.json package-lock.json "$SSH_USER@$SSH_HOST":/var/www/cjdunteman.com/
 
       - name: Install 
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "$SSH_USER@$SSH_HOST" "cd /var/www/cjdunteman.com"
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "$SSH_USER@$SSH_HOST" "cd /var/www/cjdunteman.com && npm ci"
