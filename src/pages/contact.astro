@@ -1,57 +1,13 @@
 ---
-import { actions } from "astro:actions";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const result = Astro.getActionResult(actions.email.send);
-let errorMsg: string;
-
-if (result?.data) {
-  return Astro.redirect("/");
-}
-
-if (result?.error) {
-  errorMsg =
-    "Sorry, there was a problem sending your message. Please try again.";
-}
 ---
 
-<BaseLayout title="CJ Dunteman | Contact" description="Send an email to CJ.">
-  <form
-    action={actions.email.send}
-    method="POST"
-    style="display: flex; flex-direction: column; gap: 1rem;"
-  >
-    <textarea
-      id="msg"
-      name="msg"
-      required
-      placeholder="your message..."
-      minlength="10"
-      maxlength="500"
-      rows="4"
-      autofocus
-      style="font-size: 16px; border: none; outline: none; caret-color: #6a6a6a; color: #6a6a6a; font-style: italic; font-weight: 200;"
-    ></textarea>
-    <button
-      type="submit"
-      style="color: #6a6a6a; font-size: 1rem; font-weight: 200; padding: 0.3rem; width: auto; align-self: flex-end; border: none; background: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;"
-    >
-      send email
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-send-icon lucide-send"
-        ><path
-          d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
-        ></path><path d="m21.854 2.147-10.94 10.939"></path></svg
-      >
-    </button>
-  </form>
+<BaseLayout title="CJ Dunteman | Contact" description="Reach out to CJ.">
+  <section class="contact">
+    <p>
+      You can reach me on <a href="https://linkedin.com/in/cjdunteman"
+        >linkedin</a
+      > or email me at <a href="mailto:cj@cjdunteman.com">cjdunteman.com</a>
+    </p>
+  </section>
 </BaseLayout>
