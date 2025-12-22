@@ -52,3 +52,62 @@ ol {
   font-size: 32px;
   font-weight: 800;
 }
+/* Images: make sure they fit the content area and are responsive */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  /* display: block; */
+  margin: 1rem auto;
+  /* border-radius: 6px; */
+  box-shadow: rgba(2, 6, 23, 0.04) 0px 1px 3px; /* subtle lift */
+}
+
+/* Helper classes for specific sizes (use HTML <img> in markdown to add a class) */
+/* .markdown-content img.img-small { max-width: 300px; }
+.markdown-content img.img-medium { max-width: 600px; }
+.markdown-content img.img-large { max-width: 100%; } */
+
+/* Optional: center figures */
+.markdown-content figure {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/* Indicate clickable images */
+.markdown-content a img {
+  cursor: zoom-in;
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+}
+.lightbox-overlay.show {
+  display: flex;
+}
+.lightbox-overlay img {
+  max-width: 95%;
+  max-height: 95%;
+  box-shadow: rgba(0,0,0,0.6) 0 10px 30px;
+  border-radius: 6px;
+}
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* small close hint */
+.lightbox-close-hint {
+  position: fixed;
+  top: 12px;
+  right: 18px;
+  color: #ddd;
+  font-size: 13px;
+  opacity: 0.9;
+  z-index: 10000;
+}
