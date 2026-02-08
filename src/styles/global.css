@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 li {
   list-style-type: none;
   margin-bottom: 0.5rem;
@@ -85,7 +89,7 @@ ol {
   display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 9999;
 }
 .lightbox-overlay.show {
@@ -94,7 +98,7 @@ ol {
 .lightbox-overlay img {
   max-width: 95%;
   max-height: 95%;
-  box-shadow: rgba(0,0,0,0.6) 0 10px 30px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 10px 30px;
   border-radius: 6px;
 }
 body.lightbox-open {
