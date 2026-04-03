@@ -17,6 +17,6 @@
     "@astrojs/sitemap": "^3.4.2",
     "@fontsource/inter": "^5.2.5",
     "@fontsource/montserrat": "^5.2.5",
-    "astro": "^5.14.4"
+    "astro": "^5.18.1"
   }
 }
