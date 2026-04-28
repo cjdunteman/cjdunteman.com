@@ -13,10 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/mdx": "^5.0.4",
     "@astrojs/sitemap": "^3.4.2",
     "@fontsource/inter": "^5.2.5",
     "@fontsource/montserrat": "^5.2.5",
-    "astro": "^5.18.1"
+    "astro": "^6.1.10"
   }
 }
