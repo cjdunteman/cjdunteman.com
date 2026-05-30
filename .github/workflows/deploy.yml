@@ -60,3 +60,10 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
           scp -o StrictHostKeyChecking=no -v -i ~/.ssh/id_rsa -r ./dist/* "$SSH_USER@$SSH_HOST":/var/www/cjdunteman.com
+
+      - name: Deploy API using SCP
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          scp -o StrictHostKeyChecking=no -v -i ~/.ssh/id_rsa -r ./api "$SSH_USER@$SSH_HOST":/opt/cjdunteman-com-api
