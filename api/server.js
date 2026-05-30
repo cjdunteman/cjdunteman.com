@@ -1,18 +1,42 @@
 import express from "express";
+import { paymentMiddleware, x402ResourceServer } from "@x402/express";
+import { HTTPFacilitatorClient } from "@x402/core/server";
 
 const app = express();
 
-app.use(express.json());
+const evmAddress = "0xecea927A5df75641714418F4925A26f999DbB444";
 
-app.get("/api/health", (req, res) => {
-  res.json({
-    status: "ok",
-  });
+// Create facilitator client (testnet)
+const facilitatorClient = new HTTPFacilitatorClient({
+  url: "https://x402.org/facilitator",
 });
 
-app.post("/api/pay", async (req, res) => {
-  res.json({
-    success: true,
+app.use(
+  paymentMiddleware(
+    {
+      "GET /pay": {
+        accepts: [
+          {
+            scheme: "exact",
+            price: "$0.001",
+            network: "eip155:84532", // Base Sepolia
+            payTo: evmAddress,
+          },
+        ],
+        description: "Test",
+        mimeType: "application/json",
+      },
+    },
+    new x402ResourceServer(facilitatorClient).register(
+      "eip155:84532",
+      new ExactEvmScheme(),
+    ),
+  ),
+);
+
+app.get("/test", (req, res) => {
+  res.send({
+    test: "success",
   });
 });
 
