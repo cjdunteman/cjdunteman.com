@@ -12,6 +12,11 @@ const facilitatorClient = new HTTPFacilitatorClient({
   url: "https://x402.org/facilitator",
 });
 
+const server = new x402ResourceServer(facilitatorClient).register(
+  "eip155:84532",
+  new ExactEvmScheme(),
+);
+
 app.use(
   paymentMiddleware(
     {
@@ -24,20 +29,17 @@ app.use(
             payTo: evmAddress,
           },
         ],
-        description: "Test",
+        description: "Pay Me",
         mimeType: "application/json",
       },
     },
-    new x402ResourceServer(facilitatorClient).register(
-      "eip155:84532",
-      new ExactEvmScheme(),
-    ),
+    server,
   ),
 );
 
 app.get("/pay", (req, res) => {
   res.send({
-    test: "success",
+    pay: "Thank you!",
   });
 });
 
