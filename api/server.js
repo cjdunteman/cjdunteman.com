@@ -35,7 +35,7 @@ app.use(
   ),
 );
 
-app.get("/test", (req, res) => {
+app.get("/pay", (req, res) => {
   res.send({
     test: "success",
   });
