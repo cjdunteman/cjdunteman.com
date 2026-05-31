@@ -66,4 +66,4 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
-          scp -o StrictHostKeyChecking=no -v -i ~/.ssh/id_rsa -r ./api "$SSH_USER@$SSH_HOST":/opt/cjdunteman-com-api
+          scp -o StrictHostKeyChecking=no -v -i ~/.ssh/id_rsa -r ./api/* "$SSH_USER@$SSH_HOST":/opt/cjdunteman-com-api
