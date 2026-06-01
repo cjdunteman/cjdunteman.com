@@ -20,7 +20,7 @@ const server = new x402ResourceServer(facilitatorClient).register(
 app.use(
   paymentMiddleware(
     {
-      "GET /pay": {
+      "GET /apipay": {
         accepts: [
           {
             scheme: "exact",
@@ -37,7 +37,7 @@ app.use(
   ),
 );
 
-app.get("/pay", (req, res) => {
+app.get("/api/pay", (req, res) => {
   res.send({
     pay: "Thank you!",
   });
