@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@astrojs/mdx": "^7.0.2",
-    "@astrojs/sitemap": "^3.4.2",
+    "@astrojs/sitemap": "^3.6.0",
     "@fontsource/inter": "^5.2.5",
     "@fontsource/montserrat": "^5.2.5",
     "astro": "^7.1.3"
