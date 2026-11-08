@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import { remarkObsidianLinks } from './scripts/remark-obsidian-links.js';
 
 import sitemap from "@astrojs/sitemap";
 
@@ -21,11 +20,5 @@ export default defineConfig({
       theme: "min-light",
       wrap: false,
     },
-    remarkPlugins: [
-      [
-        remarkObsidianLinks, 
-        { baseUrl: '/' } // Set your target domain here
-      ]
-    ],
   }
 });

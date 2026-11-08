@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "astro dev",
-    "prebuild": "node scripts/remark-obsidian-links.js",
     "build": "astro build",
     "preview": "astro preview"
   },
@@ -17,7 +16,6 @@
     "@astrojs/mdx": "^7.0.2",
     "@astrojs/sitemap": "^3.6.0",
     "@fontsource/inter": "^5.2.5",
-    "@fontsource/montserrat": "^5.2.5",
     "astro": "^7.3.5"
   }
 }
