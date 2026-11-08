@@ -16,7 +16,6 @@ To be honest, digital privacy feels like a lost cause. But here are some things 
 - [Brave Browser](https://brave.com/)
 - [Brave Search](https://search.brave.com/)
 - [Mullvad VPN](https://mullvad.net/)
-- [Privacy.com](https://privacy.com/)
 - [Yubikey](https://www.yubico.com/products/)
 - [Proton Mail](https://proton.me/mail)
 - [Tails OS](https://tails.net/)
