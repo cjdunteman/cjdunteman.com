@@ -1,18 +1,89 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/600.css";
+
+/* ============================================================
+   Tokens — see DESIGN.md
+   ============================================================ */
+:root {
+  /* Palette — monochrome only */
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #6a6a6a;
+  --code-bg: #f5f5f5;
+
+  /* Functional overlay (lightbox only — not page chrome) */
+  --overlay: rgba(0, 0, 0, 0.85);
+  --overlay-fg: #dddddd;
+
+  /* Type — one size */
+  --font: "Inter", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --size: 1rem; /* 16px — the only font size */
+  --line: 1.6;
+
+  /* Layout */
+  --measure: 37.5rem; /* ~600px content width */
+  --pad: 1rem; /* page edge only */
+  --indent: 1.5rem; /* prose list indent only */
+
+  /* Spacing scale — use these for gaps; do not invent new rem values */
+  --space-sm: 0.5rem; /* tight: list items, heading → body */
+  --space: 1rem; /* default vertical rhythm */
+  --space-lg: 2rem; /* open: section breaks, hr */
+}
+
+/* ============================================================
+   Reset
+   ============================================================ */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ============================================================
+   Base
+   ============================================================ */
+html {
+  font-size: 100%;
+}
+
 body {
-  color: #6a6a6a;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: "Inter", sans-serif;
-  font-weight: 200;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: var(--size);
+  font-weight: 400;
+  line-height: var(--line);
+}
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--pad);
+}
+
+/* ============================================================
+   Type — one size. Hierarchy = weight + spacing only.
+   ============================================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--size);
+  font-weight: 600;
+  line-height: var(--line);
+  padding-bottom: var(--space);
+}
+
+p {
+  padding-bottom: var(--space);
 }
 
 a {
-  color: #6a6a6a;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -20,98 +91,153 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Default lists are bare (home links, simple pages) */
+ul {
+  list-style: none;
+}
+
 li {
-  list-style-type: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
 }
 
-h1 {
-  padding-bottom: 2rem;
-  font-size: 24px;
-  color: #111827;
-  font-weight: 300;
-}
-
-/* TYPOGRAPHY */
-h2 {
-  padding-bottom: 0.5rem;
-}
-
-p {
-  padding-bottom: 1rem;
-}
-
-/* MARKDOWN STYLES */
+/* ============================================================
+   Markdown / long-form content
+   ============================================================ */
 .markdown-content ul,
-ol {
-  margin-left: 2rem;
-}
-.markdown-content li {
-  list-style-type: disc;
+.markdown-content ol {
+  margin-left: var(--indent);
+  margin-bottom: var(--space);
 }
 
-.markdown-content h1 {
-  padding-bottom: 0.2rem;
-  color: #6a6a6a;
-  font-size: 32px;
-  font-weight: 800;
+.markdown-content ul {
+  list-style: disc;
 }
-/* Images: make sure they fit the content area and are responsive */
+
+.markdown-content ol {
+  list-style: decimal;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  font-size: var(--size);
+  font-weight: 600;
+  padding-bottom: var(--space-sm);
+  padding-top: var(--space);
+}
+
+.markdown-content h1:first-child {
+  padding-top: 0;
+}
+
+/* Secondary text (dates, captions) — same size, muted color */
+.meta {
+  color: var(--muted);
+}
+
 .markdown-content img {
   max-width: 100%;
   height: auto;
-  /* display: block; */
-  margin: 1rem auto;
-  /* border-radius: 6px; */
-  box-shadow: rgba(2, 6, 23, 0.04) 0px 1px 3px; /* subtle lift */
+  margin: var(--space) auto;
+  display: block;
 }
 
-/* Helper classes for specific sizes (use HTML <img> in markdown to add a class) */
-/* .markdown-content img.img-small { max-width: 300px; }
-.markdown-content img.img-medium { max-width: 600px; }
-.markdown-content img.img-large { max-width: 100%; } */
-
-/* Optional: center figures */
 .markdown-content figure {
-  margin: 1rem auto;
+  margin: var(--space) auto;
   text-align: center;
 }
 
-/* Indicate clickable images */
+/* Prose links: always underlined so they scan without color */
+.markdown-content a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.markdown-content a:has(img) {
+  text-decoration: none;
+}
+
 .markdown-content a img {
   cursor: zoom-in;
 }
 
-/* Lightbox overlay */
+/* Inline code: `like this` */
+.markdown-content :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: var(--size);
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  overflow-wrap: break-word;
+}
+
+/* Fenced code blocks: ``` ... ``` */
+.markdown-content pre {
+  overflow-x: auto;
+  margin-bottom: var(--space);
+  padding: var(--space);
+  background: var(--code-bg);
+  color: var(--fg);
+  line-height: var(--line);
+}
+
+.markdown-content pre code {
+  font-family: var(--font-mono);
+  font-size: var(--size);
+  background: none;
+  padding: 0;
+  overflow-wrap: normal;
+}
+
+/* Shiki (Astro default highlighter) — neutral block ground; token colors stay */
+.markdown-content pre.astro-code {
+  background-color: var(--code-bg) !important;
+}
+
+.markdown-content blockquote {
+  border-left: 2px solid var(--fg);
+  padding-left: var(--space);
+  margin-bottom: var(--space);
+  color: var(--muted);
+}
+
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid var(--muted);
+  margin: var(--space-lg) 0;
+}
+
+/* ============================================================
+   Lightbox (functional, not decorative)
+   ============================================================ */
 .lightbox-overlay {
   position: fixed;
   inset: 0;
   display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--overlay);
   z-index: 9999;
 }
+
 .lightbox-overlay.show {
   display: flex;
 }
+
 .lightbox-overlay img {
   max-width: 95%;
   max-height: 95%;
-  box-shadow: rgba(0, 0, 0, 0.6) 0 10px 30px;
-  border-radius: 6px;
 }
+
 body.lightbox-open {
   overflow: hidden;
 }
 
-/* small close hint */
 .lightbox-close-hint {
   position: fixed;
-  top: 12px;
-  right: 18px;
-  color: #ddd;
-  font-size: 13px;
+  top: var(--space);
+  right: var(--space);
+  color: var(--overlay-fg);
+  font-size: var(--size);
   opacity: 0.9;
   z-index: 10000;
 }

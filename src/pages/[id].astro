@@ -13,6 +13,28 @@ export async function getStaticPaths() {
 // 2. For your template, you can get the entry directly from the prop
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const formatDate = (date) => {
+  if (!date) return "";
+  const day = date.getDate();
+  const ordinal = (d) => {
+    if (d >= 11 && d <= 13) return "th";
+    switch (d % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+  const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(
+    date,
+  );
+  return `${month} ${day}${ordinal(day)}, ${date.getFullYear()}`;
+};
 ---
 
 <BaseLayout
@@ -21,12 +43,14 @@ const { Content } = await render(post);
 >
   <div class="markdown-content">
     <h1>{post.data.title}</h1>
+    <p class="meta">
+      {formatDate(post.data.pubDate)}
+      {
+        post.data.updatedDate
+          ? ` · Updated ${formatDate(post.data.updatedDate)}`
+          : null
+      }
+    </p>
     <Content />
   </div>
 </BaseLayout>
-
-<style>
-  body {
-    line-height: 1.5;
-  }
-</style>
