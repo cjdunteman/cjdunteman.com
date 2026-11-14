@@ -16,6 +16,6 @@
     "@astrojs/mdx": "^7.0.2",
     "@astrojs/sitemap": "^3.6.0",
     "@fontsource/inter": "^5.2.5",
-    "astro": "^7.3.5"
+    "astro": "^7.4.12"
   }
 }
